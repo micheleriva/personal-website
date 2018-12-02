@@ -1,0 +1,49 @@
+[
+  {
+    "year": "Jan 2018 - Present",
+    "position": "Software Engineer",
+    "company": {
+      "name": "Openmind srl",
+      "url": "https://openmindonline.it"
+    },
+    "techStack": [
+      "Node.js",
+      "Vue.js",
+      "JavaScript",
+      "AWS"
+    ],
+    "summary": "Currently working with Vue.js on some big single page applications for very big customers. <br /> Also working on some standalone applications build on top of Node.js."
+  },
+  {
+    "year": "Dec 2014 - Jan 2018",
+    "position": "Software Engineer",
+    "company": {
+      "name": "GMDE srl",
+      "url": "https://gmde.it"
+    },
+    "techStack": [
+      "Node.js",
+      "React.js",
+      "JavaScript",
+      "Ruby",
+      "Php",
+      "AWS"
+    ],
+    "summary": "Worked on some of the biggest newspaper industry leader."
+  },
+  {
+    "year": "Jun 2014 - Dec 2014",
+    "position": "Full-stack Developer",
+    "company": {
+      "name": "Evolution Graphic srl"
+    },
+    "techStack": [
+      "Node.js",
+      "Ruby",
+      "Php",
+      "Elixir",
+      "Google Cloud",
+      "AWS"
+    ]
+  }
+]

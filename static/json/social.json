@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GitHub",
+    "url":  "https://github.com/micheleriva",
+    "icon": "fab fa-github"
+  },
+  {
+    "name": "HackerRank",
+    "url":  "https://www.hackerrank.com/master11",
+    "icon": "fab fa-hackerrank"
+  },
+  {
+    "name": "Medium",
+    "url":  "https://medium.com/@micheleriva",
+    "icon": "fab fa-medium-m"
+  },
+  {
+    "name": "LinkedIn",
+    "url":  "https://www.linkedin.com/in/micheleriva95/",
+    "icon": "fab fa-linkedin"
+  },
+  {
+    "name": "StackOverflow",
+    "url": "https://stackoverflow.com/story/micheleriva",
+    "icon": "fab fa-stack-overflow"
+  },
+  {
+    "name": "eMail",
+    "url":  "mailto:ciao@micheleriva.it",
+    "icon": "fas fa-at"
+  }
+]

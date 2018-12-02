@@ -10,19 +10,32 @@
 
 <script>
 
-import Presentation from '~/static/json/presentation.json'
-import TextRotator  from '~/components/TextRotator.vue'
+import { mapGetters } from 'vuex'
+import Presentation   from '~/static/json/presentation.json'
+import TextRotator    from '~/components/TextRotator.vue'
+import SocialBar      from '~/components/SocialBar.vue'
 
 export default {
   name: "Index",
+  
   components: {
-    TextRotator
+    TextRotator,
+    SocialBar
   },
+  
   data() {
     return {
       skills: Presentation
     }
+  },
+
+  computed: {
+    ...mapGetters(['getCurrentRotatorWord']),
+    asd() {
+      return this.$store.data.getCurrentRotatorWord
+    }
   }
+
 }
 
 </script>
@@ -37,6 +50,7 @@ export default {
     min-height: 100vh;
 
     h1 {
+      text-align: center;
       color: #f5f5f5;
       font-size: 4em;
       font-weight: 900;
