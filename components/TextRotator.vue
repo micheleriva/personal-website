@@ -1,7 +1,7 @@
 <template lang="pug">
   .text-rotator(
-    :style="{color: colors[currentColor]}"
-    v-html="words[currentWord]"
+    :style="{color: words[current].color || '#f5f5f5'}"
+    v-html="words[current].skill"
     :class="animationClass"
   )
 </template>
@@ -14,11 +14,6 @@ export default {
     words:  {
       type:     Array,
       required: true
-    },
-    colors: {
-      type:     Array,
-      required: false,
-      default:  () => ['#f5f5f5']
     },
     speed: {
       type:     Number,
@@ -34,14 +29,13 @@ export default {
 
   data() {
     return {
-      currentWord:  -1,
-      currentColor: -1,
+      current: 0,
       animationClass: `${this.animations[0]} animated`
     }
   },
 
   watch: {
-    currentWord() {
+    current() {
       this.animationClass = `${this.animations[0]} animated`
       setTimeout(() => this.animationClass = `${this.animations[1]} animated`, 
         this.speed - 1000)
@@ -49,18 +43,15 @@ export default {
   },
 
   mounted() {
-    this.currentWord  = 0
-    this.currentColor = 0
+    this.current = 1
     this.updateCurrent()
   },
 
   methods: {
     updateCurrent() {
       setInterval(() => {
-              const wordsLength  = this.words.length
-              const colorsLength = this.colors.length
-              this.currentWord  <= wordsLength  - 2 ? this.currentWord++  : this.currentWord  = 0
-              this.currentColor <= colorsLength - 2 ? this.currentColor++ : this.currentColor = 0
+        const wordsLength = this.words.length
+        this.current <= wordsLength - 2 ? this.current++ : this.current = 0
       }, this.speed)
     }
   }

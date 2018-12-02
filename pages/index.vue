@@ -2,18 +2,16 @@
   .cont
     h1 Michele Riva
     text-rotator(
-      :words="presentation.words"
-      :colors="presentation.colors"
+      :words="skills"
       :speed="4000"
-      :animations="['fadeIn', 'fadeOut']"
+      :animations="['fadeInUp', 'fadeOutUp']"
     )
 </template>
 
 <script>
 
-import Presentation       from '~/static/json/presentation.json'
-import PresentationColors from '~/static/json/presentation-colors.json'
-import TextRotator        from '~/components/TextRotator.vue'
+import Presentation from '~/static/json/presentation.json'
+import TextRotator  from '~/components/TextRotator.vue'
 
 export default {
   name: "Index",
@@ -22,10 +20,7 @@ export default {
   },
   data() {
     return {
-      presentation: {
-        words:  Presentation,
-        colors: PresentationColors
-      }
+      skills: Presentation
     }
   }
 }

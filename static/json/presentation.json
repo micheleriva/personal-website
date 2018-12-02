@@ -1,6 +1,18 @@
 [
-  "Software Engineer",
-  "Full-stack Developer",
-  "OpenSource Contributor",
-  "Writer"
+  {
+    "skill": "Software Engineer",
+    "color": "#009F86"
+  },
+  {
+    "skill": "Full-stack Developer",
+    "color": "#EAB8D4"
+  },
+  {
+    "skill": "OpenSource Contributor",
+    "color": "#D4A518"
+  },
+  {
+    "skill": "Writer",
+    "color": "#F9F871"
+  }
 ]
