@@ -19,7 +19,9 @@ export default {
 
 
 <style lang="scss">
+
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900');
+@import '~/assets/main.scss';
 
 html {
   font-family: 'Raleway', sans-serif;
@@ -28,10 +30,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #050817;
+  background-color: $black;
+
   ::selection {
-    background-color: #9c27b0;
-    color: #f5f5f5;
+    background-color:$magenta;
+    color: $white;
   }
 }
 

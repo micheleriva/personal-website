@@ -1,5 +1,4 @@
 import Vuex from 'vuex'
-import * as TYPES from './mutation-types'
 
 export default function () {
   return new Vuex.Store({

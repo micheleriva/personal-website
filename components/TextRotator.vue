@@ -62,6 +62,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  @import '~/assets/main.scss';
+
   .text-rotator {
     font-size: 1.5em;
   }
