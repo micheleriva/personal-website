@@ -72,10 +72,10 @@ export default {
     
     @keyframes move#{$i} {
       from {
-        transform:rotate(#{$a}deg) translate( 200px ,0.1px) rotate(-#{$a}deg);
+        transform:rotate(#{$a}deg) translate3d( 200px ,0.1px, 0px) rotate(-#{$a}deg);
       }
       to {
-        transform:rotate(#{$b}deg) translate( 200px ,0.1px) rotate(-#{$b}deg);
+        transform:rotate(#{$b}deg) translate3d( 200px ,0.1px, 0px) rotate(-#{$b}deg);
       }
     }
   }
