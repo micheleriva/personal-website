@@ -1,6 +1,10 @@
-# miiitch
+# [micheleriva.it](https://www.micheleriva.it)
 
 > My personal website
+
+## Preview
+
+![Preview](/docs/screenshot.png)
 
 ## Build Setup
 
