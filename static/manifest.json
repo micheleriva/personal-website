@@ -1,0 +1,18 @@
+{
+  "short_name": "MicheleRiva",
+  "name": "Michele Riva",
+  "icons": [
+    {
+      "src": "/imgs/favicons/ico-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/imgs/favicons/ico-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "theme_color": "#050817"
+}
