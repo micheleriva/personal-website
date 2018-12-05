@@ -1,0 +1,28 @@
+.cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+
+  h1 {
+    text-align: center;
+    color: $white;
+    font-size: 4em;
+    font-weight: 900;
+    z-index: 1;
+    text-shadow: $black 5px 5px;
+
+    @include query(phone) {
+      font-size: 3em;
+    }
+  }
+
+  h2 {
+    color: $white;
+    z-index: 1;
+    text-shadow: $black 2px 2px;
+  }
+}

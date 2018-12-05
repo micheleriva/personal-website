@@ -25,7 +25,7 @@ export default {
     SocialBar,
     BubbleBg
   },
-  
+
   data() {
     return {
       skills: Presentation
@@ -36,30 +36,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
   @import '~/assets/main.scss';
-
-  .cont {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-height: 100vh;
-    z-index: 1;
-
-    h1 {
-      text-align: center;
-      color: #f5f5f5;
-      font-size: 4em;
-      font-weight: 900;
-      z-index: 1;
-      text-shadow: $black 5px 5px;
-
-      @include query(phone) {
-        font-size: 3em;
-      }
-    }
-  }
+  @import '~/assets/landing.scss';
 </style>
