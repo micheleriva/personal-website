@@ -5,9 +5,9 @@
     "icon": "fab fa-github"
   },
   {
-    "name": "HackerRank",
-    "url":  "https://www.hackerrank.com/master11",
-    "icon": "fab fa-hackerrank"
+    "name": "LinkedIn",
+    "url":  "https://www.linkedin.com/in/micheleriva95/",
+    "icon": "fab fa-linkedin"
   },
   {
     "name": "Medium",
@@ -15,14 +15,14 @@
     "icon": "fab fa-medium-m"
   },
   {
-    "name": "LinkedIn",
-    "url":  "https://www.linkedin.com/in/micheleriva95/",
-    "icon": "fab fa-linkedin"
-  },
-  {
     "name": "StackOverflow",
     "url": "https://stackoverflow.com/story/micheleriva",
     "icon": "fab fa-stack-overflow"
+  },
+  {
+    "name": "HackerRank",
+    "url":  "https://www.hackerrank.com/master11",
+    "icon": "fab fa-hackerrank"
   },
   {
     "name": "eMail",

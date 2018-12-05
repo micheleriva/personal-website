@@ -67,5 +67,6 @@ export default {
 
   .text-rotator {
     font-size: 1.5em;
+    text-shadow: $black 1px 1px 1px;
   }
 </style>

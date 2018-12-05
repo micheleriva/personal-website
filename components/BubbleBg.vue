@@ -48,8 +48,8 @@ export default {
     background-size: cover;
     background-position: top;
     background-image: url('/imgs/svgbg.jpg');
-    opacity: 0.1;
-    filter: grayscale(70%);
+    opacity: 0.2;
+    filter: blur(10px);
     z-index: -1;
   }
 
