@@ -14,6 +14,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Michele Riva - Software Engineer, Fullstack Developer, OpenSource Contributor' }
     ],
     link: [
+      { rel: 'manifest',                         href: '/manifest.json' },
       { rel: 'icon',       type: 'image/x-icon', href: '/imgs/favicons/ico-16.png' },
       { rel: 'stylesheet', type: 'text/css',     href: '/css/animate.css' },
       { rel: 'stylesheet', type: 'text/css',     href: '/css/fontAwesome.css'}

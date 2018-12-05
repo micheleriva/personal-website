@@ -13,6 +13,7 @@
       "sizes": "512x512"
     }
   ],
+  "theme_color": "#050817",
   "display": "standalone",
-  "theme_color": "#050817"
+  "orientation": "portrait"
 }
