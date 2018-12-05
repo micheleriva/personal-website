@@ -2,8 +2,6 @@
 
 > My personal website
 
-## Preview
-
 ![Preview](/docs/screenshot.png)
 
 ## Build Setup
