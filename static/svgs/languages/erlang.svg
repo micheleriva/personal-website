@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg3103"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   width="368"
+   height="368"
+   sodipodi:docname="erlang.svg"
+   inkscape:export-filename="/Users/a2l/Projects/erlang_icon/erlang_128x128.png"
+   inkscape:export-xdpi="31.304348"
+   inkscape:export-ydpi="31.304348">
+  <title
+     id="title4013">Erlang Logotype</title>
+  <metadata
+     id="metadata3109">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Erlang Logotype</dc:title>
+        <cc:license
+           rdf:resource="" />
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>erlang icon</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+        <dc:description>Vector version of the Erlang logotype</dc:description>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3107" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1836"
+     inkscape:window-height="1048"
+     id="namedview3105"
+     showgrid="false"
+     inkscape:zoom="1.9572893"
+     inkscape:cx="144.74694"
+     inkscape:cy="198.41069"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3103"
+     inkscape:showpageshadow="false"
+     fit-margin-top="30"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="30" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="bg"
+     style="display:inline"
+     sodipodi:insensitive="true"
+     transform="translate(-7.644394,101.73047)" />
+  <g
+     id="g3125"
+     style="fill:#9a0000;fill-opacity:1;stroke:none"
+     transform="translate(-7.652887,61.17541)">
+    <path
+       sodipodi:nodetypes="ccsc"
+       inkscape:connector-curvature="0"
+       id="path3113"
+       d="m 144.50736,61.05436 94.29105,-0.361268 c 0,0 3.4114,-46.242355 -47.32616,-46.242355 -24.59124,0 -46.96489,23.121177 -46.96489,46.603623 z"
+       style="fill:#9a0000;fill-opacity:1;stroke:none" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path3121"
+       d="m 61.05436,9.7542469 -48.409966,0 0,226.1540231 55.274066,0.36127 c 0,0 -93.207249,-102.60023 -6.8641,-226.5152931 z"
+       style="fill:#9a0000;fill-opacity:1;stroke:none" />
+    <path
+       sodipodi:nodetypes="cccccscccc"
+       inkscape:connector-curvature="0"
+       id="path3123"
+       d="m 370.66138,9.3929785 -0.72254,226.8765615 -44.79728,0 c 0,0 28.17894,-32.51416 31.79162,-45.51982 -34.47397,-17.70599 -53.82899,-26.73386 -53.82899,-26.73386 0,0 -25.33111,56.20958 -84.89807,58.88674 -64.30578,2.89015 -78.75652,-75.5051 -76.95017,-109.82559 76.75572,0 115.94155,1.08381 207.72933,1.08381 1.80634,-2.52888 5.90355,-70.038966 -24.92752,-104.4065731 5.34455,-0.4815024 46.60362,-0.3612684 46.60362,-0.3612684 z"
+       style="fill:#9a0000;fill-opacity:1;stroke:none" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="e_outline"
+     style="display:inline"
+     transform="translate(-7.644394,101.73047)" />
+</svg>

@@ -1,6 +1,6 @@
 <template lang="pug">
   .cont
-    bubble-bg
+    languages-bg
     h1 Michele Riva
     text-rotator(
       :words="skills"
@@ -15,7 +15,7 @@ import { mapGetters } from 'vuex'
 import Presentation   from '~/static/json/presentation.json'
 import TextRotator    from '~/components/TextRotator.vue'
 import SocialBar      from '~/components/SocialBar.vue'
-import BubbleBg       from '~/components/BubbleBg.vue'
+import LanguagesBg    from '~/components/LanguagesBg.vue'
 
 export default {
   name: "Index",
@@ -23,7 +23,7 @@ export default {
   components: {
     TextRotator,
     SocialBar,
-    BubbleBg
+    LanguagesBg
   },
 
   data() {
