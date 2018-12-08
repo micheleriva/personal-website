@@ -5,4 +5,7 @@
   @else if $type == tablet {
     @media only screen and (max-width: 770px) { @content; }
   }
+  @else if $type == small-screen {
+    @media screen and (max-widt: 900px) { @content }
+  }
 }

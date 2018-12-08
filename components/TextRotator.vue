@@ -53,7 +53,6 @@ export default {
       setInterval(() => {
         const wordsLength = this.words.length
         this.current <= wordsLength - 2 ? this.current++ : this.current = 0
-        $store.commit('updateHomeRotator', this.current)
       }, this.speed)
     }
   }

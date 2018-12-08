@@ -52,6 +52,10 @@ module.exports = {
     { 
       src: '~plugins/ga.js', 
       ssr: false 
+    },
+    {
+      src: '~plugins/scrollto.js',
+      ssr: false
     }
   ],
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .languages-bg
+  .home-bg
 </template>
 
 <script>
@@ -7,7 +7,7 @@
 import Rellax from 'rellax'
 
 export default {
-  name: "LanguagesBg",
+  name: "HomeBg",
 
 }
 </script>
@@ -15,7 +15,7 @@ export default {
 <style lang="scss">
   @import '~/assets/main.scss';
 
-  .languages-bg {
+  .home-bg {
     position: absolute;
     top: 0;
     left: 0;

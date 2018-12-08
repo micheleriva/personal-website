@@ -16,7 +16,7 @@
     text-shadow: $black 5px 5px;
 
     @include query(phone) {
-      font-size: 3em;
+      font-size: 13vw;
     }
   }
 
