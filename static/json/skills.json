@@ -1,0 +1,142 @@
+{
+  "frontend": [
+    {
+      "name": "JavaScript",
+      "confidency": 5,
+      "icon": "javascript.svg"
+    },
+    {
+      "name": "Vue.js",
+      "confidency": 5,
+      "icon": "vue.png"
+    },
+    {
+      "name": "React.js",
+      "confidency": 4,
+      "icon": "react.svg"
+    },
+    {
+      "name": "Scss",
+      "confidency": 3,
+      "icon": "scss.png"
+    },
+    {
+      "name": "ReasonML",
+      "confidency": 3,
+      "icon": "reasonml.png"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js",
+      "confidency": 5,
+      "icon": "node.svg"
+    },
+    {
+      "name": "Ruby",
+      "confidency": 4,
+      "icon": "ruby.svg"
+    },
+    {
+      "name": "Php",
+      "confidency": 3,
+      "icon": "php.png"
+    },
+    {
+      "name": "Elixir",
+      "confidency": 3,
+      "icon": "elixir.png"
+    },
+    {
+      "name": "Haskell",
+      "confidency": 3,
+      "icon": "haskell.svg"
+    },
+    {
+      "name": "Python",
+      "confidency": 3,
+      "icon": "python.svg"
+    },
+    {
+      "name": "Crystal",
+      "confidency": 3,
+      "icon": "crystal.svg"
+    },
+    {
+      "name": "Erlang OTP",
+      "confidency": 2,
+      "icon": "erlang.svg"
+    }
+  ],
+  "database": [
+    {
+      "name": "MySql",
+      "confidency": 5,
+      "icon": "mysql.png"
+    },
+    {
+      "name": "Firestore",
+      "confidency": 5,
+      "icon": "firebase.png"
+    },
+    {
+      "name": "Mongo",
+      "confidency": 4,
+      "icon": "mongo.svg"
+    },
+    {
+      "name": "Dynamo",
+      "confidency": 4,
+      "icon": "dynamo.svg"
+    },
+    {
+      "name": "Redis",
+      "confidency": 3,
+      "icon": "redis.svg"
+    },
+    {
+      "name": "Postgres",
+      "confidency": 3,
+      "icon": "postgres.svg"
+    }
+  ],
+  "devops": [
+    {
+      "name": "Git",
+      "confidency": 5,
+      "icon": "git.png"
+    },
+    {
+      "name": "AWS",
+      "confidency": 5,
+      "icon": "aws.png"
+    },
+    {
+      "name": "Google Cloud",
+      "confidency": 5,
+      "icon": "googlecloud.png"
+    },
+    {
+      "name": "Docker",
+      "confidency": 3,
+      "icon": "docker.png"
+    }
+  ],
+  "misc": [
+    {
+      "name": "Babel",
+      "confidency": 5,
+      "icon": "babel.svg"
+    },
+    {
+      "name": "Webpack",
+      "confidency": 5,
+      "icon": "webpack.svg"
+    },
+    {
+      "name": "Rollup",
+      "confidency": 5,
+      "icon": "rollup.svg"
+    }
+  ]
+}

@@ -1,7 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Svg Vector Icons : http://www.onlinewebfonts.com/icon -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
-<metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-<g><g id="_x35_151e0c8492e5103c096af88a51fe750"><path d="M413.5,154.1l461.2,691.8H701.8L557.7,629.7L413.5,845.9H240.6L471.2,500L240.6,154.1H413.5z M182.9,154.1H10L240.6,500L10,845.9h172.9L413.5,500L182.9,154.1z M605.7,355.9l76.9,115.3H990V355.9L605.7,355.9z M797.8,644.1H990V528.8l-269,0L797.8,644.1z"/></g></g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="481.8897pt" height="340.1574pt" viewBox="0 0 481.8897 340.1574" version="1.1">
+<defs>
+<clipPath id="clip1">
+  <path d="M 0 340.15625 L 481.890625 340.15625 L 481.890625 0 L 0 0 L 0 340.15625 Z M 0 340.15625 "/>
+</clipPath>
+</defs>
+<g id="surface0">
+<g clip-path="url(#clip1)" clip-rule="nonzero">
+<path style=" stroke:none;fill-rule: nonzero; fill: rgb(69,59,97); fill-opacity: 1;" d="M 0 340.15625 L 113.386719 170.078125 L 0 0 L 85.039062 0 L 198.425781 170.078125 L 85.039062 340.15625 L 0 340.15625 Z M 0 340.15625 "/>
+<path style=" stroke:none;fill-rule: nonzero; fill: rgb(95,82,134); fill-opacity: 1;" d="M 113.386719 340.15625 L 226.773438 170.078125 L 113.386719 0 L 198.425781 0 L 425.195312 340.15625 L 340.15625 340.15625 L 269.292969 233.859375 L 198.425781 340.15625 L 113.386719 340.15625 Z M 113.386719 340.15625 "/>
+<path style=" stroke:none;fill-rule: nonzero; fill: rgb(142,80,138); fill-opacity: 1;" d="M 387.402344 240.945312 L 349.609375 184.253906 L 481.890625 184.25 L 481.890625 240.945312 L 387.402344 240.945312 Z M 387.402344 240.945312 "/>
+<path style=" stroke:none;fill-rule: nonzero; fill: rgb(142,80,138); fill-opacity: 1;" d="M 330.710938 155.90625 L 292.914062 99.214844 L 481.890625 99.210938 L 481.890625 155.90625 L 330.710938 155.90625 Z M 330.710938 155.90625 "/>
+</g>
+</g>
 </svg>
