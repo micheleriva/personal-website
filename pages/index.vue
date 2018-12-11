@@ -13,6 +13,7 @@
           v-for="section in sections"
           :class="section.class"
           :to="section.url"
+          :key="section.class"
         ) {{ section.name }}
 
 </template>
