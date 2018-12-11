@@ -14,7 +14,9 @@
           :class="section.class"
           :to="section.url"
           :key="section.class"
-        ) {{ section.name }}
+        )
+          img(:src="`/imgs/svgs/icons/${section.icon}`")
+          // span {{ section.name }}
 
 </template>
 
@@ -39,30 +41,28 @@ export default {
         {
           url: '/software-engineer',
           name: 'Software Engineer',
+          icon: 'software-engineering.svg',
           class: 'se'
         },
         {
           url: '/fullstack-developer',
           name: 'Fullstack Developer',
+          icon: 'fullstack-development.svg',
           class: 'fd'
         },
         {
           url: '/opensource-contributor',
           name: 'OpenSource Contributor',
+          icon: 'open-source.svg',
           class: 'oc'
         },
         {
           url: '/writer',
           name: 'Writer',
+          icon: 'writer.svg',
           class: 'wr'
         }
       ]
-    }
-  },
-
-  methods: {
-    scrollDown() {
-      alert('hey')
     }
   }
 
@@ -81,16 +81,19 @@ export default {
   }
 
   .section {
-    padding: 2em;
-    min-width: 250px;
+    padding: 1em;
     text-align: center;
-    margin-left: 5px;
-    margin-right: 5px;
-    border-radius: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 100%;
     text-decoration: none;
     color: $white;
     font-weight: 700;
     transition: ease 0.5s;
+
+    img {
+      max-width: 25px;
+    }
 
     &:hover {
       transform: translateY(-1em);
