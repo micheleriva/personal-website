@@ -1,13 +1,8 @@
 <template lang="pug">
   div
+    social-bar
     .cont
       h1.fadeInDown.animated Michele Riva
-      text-rotator(
-        :words="skills"
-        :speed="4000"
-        :animations="['fadeInUp', 'fadeOutUp']"
-      )
-
       .sections.fadeInUp.animated
         nuxt-link.section(
           v-for="section in sections"
@@ -23,14 +18,12 @@
 <script>
 
 import Presentation from '~/static/json/presentation.json'
-import TextRotator  from '~/components/TextRotator.vue'
 import SocialBar    from '~/components/SocialBar.vue'
 
 export default {
   name: "Index",
   
   components: {
-    TextRotator,
     SocialBar
   },
 
@@ -77,7 +70,7 @@ export default {
   $section-colors: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%),
                    linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%),
                    linear-gradient( 135deg, #70F570 10%, #49C628 100%),
-                   linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
+                   linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
 
   $section-names: 'se', 'fd', 'oc', 'wr';
 
@@ -86,7 +79,7 @@ export default {
   .sections {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 4em;
+    margin-top: 2em;
   }
 
   .section {
@@ -109,7 +102,7 @@ export default {
 
     &:hover {
       .title {
-        top: $section-circles-dimension + 20px;
+        transform: translateY($section-circles-dimension + 20px);
         opacity: 1;
       }
     }
@@ -117,42 +110,41 @@ export default {
     .title {
       position: absolute;
       top: 0;
-      left: -100px;
-      width: $section-circles-dimension + 200px;
+      left: -30px;
+      width: $section-circles-dimension + 60px;
       font-weight: 300;
       text-align: center;
       opacity: 0;
       transition: ease 0.5s;
     }
 
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: $section-circles-dimension;
+      height: $section-circles-dimension;
+      border-radius: 100%;
+      background-image: inherit;
+      transform: scale(1.2);
+      filter: blur(5px);
+      opacity: 0;
+      z-index: -1;
+      transition: ease 0.5s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
     @for $i from 1 through length($section-names) {
       &.#{nth($section-names, $i)} {
         background-image: nth($section-colors, $i);
-
-        &:hover {
-          transform: translateY(-5px);
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: $section-circles-dimension;
-          height: $section-circles-dimension;
-          border-radius: 100%;
-          background-image: inherit;
-          transform: scale(1.2);
-          filter: blur(5px);
-          opacity: 0;
-          z-index: -1;
-          transition: ease 0.5s;
-        }
-
-        &:hover::after {
-          opacity: 1;
-        }
-
       }
     }
 

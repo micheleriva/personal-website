@@ -12,7 +12,6 @@
     color: $white;
     font-size: 4em;
     font-weight: 900;
-    z-index: 1;
     text-shadow: $black 5px 5px;
 
     @include query(phone) {

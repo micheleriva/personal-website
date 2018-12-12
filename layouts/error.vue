@@ -1,19 +1,13 @@
 <template lang="pug">
   .cont
-    bubble-bg
     h1 {{ error.statusCode }}
     h2 {{ error.message }}
 </template>
 
 <script>
-import BubbleBg from '~/components/BubbleBg.vue'
 
 export default {
   name: "Error",
-
-  components: {
-    BubbleBg
-  },
 
   props: {
     error: {

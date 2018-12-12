@@ -2,8 +2,10 @@
   section#fullstack-developer
     h1 Fullstack Developer
 
-    .skills
+    .desc
+      | A selection of languages, frameworks and tools I'd like to work with
 
+    .skills
       .group
         h1 Frontend
         .list
@@ -74,8 +76,10 @@ export default {
   #fullstack-developer {
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient( 135deg, #52E5E7 10%, #130CB7 100%);
+    background-image: linear-gradient(to left bottom, #9708cc, #5a28a5, #2a2778, #0f1c47, #050817);
     padding: 4em;
+    display: flex;
+    flex-direction: column;
 
     @include query(phone) {
       padding: 2em;
@@ -83,8 +87,8 @@ export default {
 
     h1 {
       color: $white;
-      font-size: 5em;
-      margin-bottom: 1em;
+      font-size: 4em;
+      margin-bottom: 15px;
       text-align: center;
 
       @include query(phone) {
@@ -92,6 +96,16 @@ export default {
         line-height: 0.9em;
         margin-bottom: 1em;
       }
+    }
+
+    .desc {
+      position: relative;
+      display: inline-block;
+      width: auto;
+      margin: auto;
+      margin-bottom: 4em;
+      text-align: center;
+      color: $white;
     }
 
     .skills {
