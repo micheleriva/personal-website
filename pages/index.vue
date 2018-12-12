@@ -16,7 +16,7 @@
           :key="section.class"
         )
           img(:src="`/imgs/svgs/icons/${section.icon}`")
-          // span {{ section.name }}
+          .title {{ section.name }}
 
 </template>
 
@@ -74,6 +74,15 @@ export default {
   @import '~/assets/main.scss';
   @import '~/assets/landing.scss';
 
+  $section-colors: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%),
+                   linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%),
+                   linear-gradient( 135deg, #70F570 10%, #49C628 100%),
+                   linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
+
+  $section-names: 'se', 'fd', 'oc', 'wr';
+
+  $section-circles-dimension: 60px;
+
   .sections {
     display: flex;
     flex-wrap: wrap;
@@ -81,10 +90,13 @@ export default {
   }
 
   .section {
+    position: relative;
     padding: 1em;
     text-align: center;
     margin-left: 15px;
     margin-right: 15px;
+    width: $section-circles-dimension;
+    height: $section-circles-dimension;
     border-radius: 100%;
     text-decoration: none;
     color: $white;
@@ -96,24 +108,54 @@ export default {
     }
 
     &:hover {
-      transform: translateY(-1em);
+      .title {
+        top: $section-circles-dimension + 20px;
+        opacity: 1;
+      }
     }
 
-    &.se {
-      background-image: linear-gradient( 135deg, #EECE13 10%, #B210FF 100%);
+    .title {
+      position: absolute;
+      top: 0;
+      left: -100px;
+      width: $section-circles-dimension + 200px;
+      font-weight: 300;
+      text-align: center;
+      opacity: 0;
+      transition: ease 0.5s;
     }
 
-    &.fd {
-      background-image: linear-gradient( 135deg, #43CBFF 10%, #9708CC 100%);
+    @for $i from 1 through length($section-names) {
+      &.#{nth($section-names, $i)} {
+        background-image: nth($section-colors, $i);
+
+        &:hover {
+          transform: translateY(-5px);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: $section-circles-dimension;
+          height: $section-circles-dimension;
+          border-radius: 100%;
+          background-image: inherit;
+          transform: scale(1.2);
+          filter: blur(5px);
+          opacity: 0;
+          z-index: -1;
+          transition: ease 0.5s;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+
+      }
     }
 
-    &.oc {
-      background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
-    }
-
-    &.wr {
-      background-image: linear-gradient( 135deg, #F97794 10%, #623AA2 100%);
-    }
   }
 
 </style>
