@@ -38,11 +38,6 @@
       "icon": "ruby.svg"
     },
     {
-      "name": "Php",
-      "confidency": 3,
-      "icon": "php.png"
-    },
-    {
       "name": "Elixir",
       "confidency": 3,
       "icon": "elixir.png"
@@ -61,6 +56,11 @@
       "name": "Crystal",
       "confidency": 3,
       "icon": "crystal.svg"
+    },
+    {
+      "name": "Php",
+      "confidency": 3,
+      "icon": "php.png"
     },
     {
       "name": "Erlang OTP",
@@ -102,6 +102,11 @@
   ],
   "devops": [
     {
+      "name": "Linux",
+      "confidency": 5,
+      "icon": "linux.svg"
+    },
+    {
       "name": "Git",
       "confidency": 5,
       "icon": "git.png"
@@ -120,6 +125,11 @@
       "name": "Docker",
       "confidency": 3,
       "icon": "docker.png"
+    },
+    {
+      "name": "Nginx",
+      "confidency": 3,
+      "icon": "nginx.png"
     }
   ],
   "misc": [
@@ -137,6 +147,11 @@
       "name": "Rollup",
       "confidency": 5,
       "icon": "rollup.svg"
+    },
+    {
+      "name": "Electron",
+      "confidency": 4,
+      "icon": "electron.svg"
     }
   ]
 }

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Duckling",
+    "owner": "Facebook Inc",
+    "language": "Haskell",
+    "url": "https://github.com/facebook/duckling",
+    "description": "Language, engine, and tooling for expressing, testing, and evaluating composable language rules on input strings.",
+    "tags": ["NLP", "DNN", "AI"]
+  },
+  {
+    "name": "CouchDB Fauxton",
+    "owner": "Apache Software Foundation",
+    "language": "JavaScript",
+    "url": "https://github.com/apache/couchdb-fauxton",
+    "description": "Web UI for the Apache CouchDB NoSQL Database.",
+    "tags": ["UI", "UX"]
+  },
+  {
+    "name": "DNN Pose Estimator",
+    "owner": "Michele Riva",
+    "language": "Go",
+    "url": "https://github.com/micheleriva/DNN-Pose-Estimator",
+    "description": "Human pose estimator based on OpenComputerVision and Deep Neural Networks.",
+    "tags": ["DNN", "OpenCV"]
+  },
+  {
+    "name": "Winnie",
+    "owner": "Michele Riva",
+    "language": "C++",
+    "url": "https://github.com/micheleriva/winnie",
+    "description": "Human detection program which can detect one or more people in realtime. Based on OpenComputerVision 3.",
+    "tags": ["AI", "OpenCV"]
+  },
+  {
+    "name": "Keras Neural Style",
+    "owner": "Michele Riva",
+    "language": "Python",
+    "url": "https://github.com/micheleriva/Keras-Neural-Style",
+    "description": "Neural Style algorithm implemented in Python and Keras. Everything is art.",
+    "tags": ["AI", "Art"]
+  },
+  {
+    "name": "Vue Product Spinner",
+    "owner": "Michele Riva",
+    "language": "Vue.js",
+    "url": "https://github.com/micheleriva/vue-product-spinner",
+    "description": "The product spinner library that Vue.js was missing.",
+    "tags": ["Vue", "UX"]
+  }
+]

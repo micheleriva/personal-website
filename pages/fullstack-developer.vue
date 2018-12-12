@@ -1,20 +1,19 @@
 <template lang="pug">
   section#fullstack-developer
-    h1 Fullstack Developer
-
+    h1.page-title Fullstack Developer
     .desc
       | A selection of languages, frameworks and tools I'd like to work with
 
     .skills
       .group
-        h1 Frontend
+        h2 Frontend
         .list
           .skill(v-for="skill in skills.frontend")
             img(:src="`/imgs/svgs/languages/${skill.icon}`")
             .name {{ skill.name }}
             .confidency {{ confidencyStars(skill.confidency) }}
       .group
-        h1 Backend
+        h2 Backend
         .list
           .skill(v-for="skill in skills.backend")
             img(:src="`/imgs/svgs/languages/${skill.icon}`")
@@ -22,7 +21,7 @@
             .confidency {{ confidencyStars(skill.confidency) }}
 
       .group
-        h1 Database
+        h2 Database
         .list
           .skill(v-for="skill in skills.database")
             img(:src="`/imgs/svgs/languages/${skill.icon}`")
@@ -30,7 +29,7 @@
             .confidency {{ confidencyStars(skill.confidency) }}
 
       .group
-        h1 DevOps
+        h2 DevOps
         .list
           .skill(v-for="skill in skills.devops")
             img(:src="`/imgs/svgs/languages/${skill.icon}`")
@@ -38,7 +37,7 @@
             .confidency {{ confidencyStars(skill.confidency) }}
 
       .group
-        h1 Misc
+        h2 Misc
         .list
           .skill(v-for="skill in skills.misc")
             img(:src="`/imgs/svgs/languages/${skill.icon}`")
@@ -74,38 +73,21 @@ export default {
   @import '~/assets/main.scss';
 
   #fullstack-developer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     min-height: 100vh;
     background-image: linear-gradient(to left bottom, #9708cc, #5a28a5, #2a2778, #0f1c47, #050817);
+    background-attachment: fixed;
     padding: 4em;
-    display: flex;
-    flex-direction: column;
 
     @include query(phone) {
       padding: 2em;
     }
 
-    h1 {
+    h2 {
       color: $white;
-      font-size: 4em;
       margin-bottom: 15px;
-      text-align: center;
-
-      @include query(phone) {
-        font-size: 15vw;
-        line-height: 0.9em;
-        margin-bottom: 1em;
-      }
-    }
-
-    .desc {
-      position: relative;
-      display: inline-block;
-      width: auto;
-      margin: auto;
-      margin-bottom: 4em;
-      text-align: center;
-      color: $white;
     }
 
     .skills {
@@ -137,6 +119,7 @@ export default {
         min-height: 140px;
         margin-left: 5px;
         margin-right: 5px;
+        margin-bottom: 10px;
         text-align: center;
         border-radius: 10px;
         box-shadow: #00000030 0px 2px 12px;
