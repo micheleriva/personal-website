@@ -1,0 +1,34 @@
+[
+  {
+    "title": "How to scale your Node.js server using clustering",
+    "image": "https://cdn-images-1.medium.com/max/500/1*2sGG4VhopW3NxKzJ2NsJLw.png",
+    "url": "https://medium.freecodecamp.org/how-to-scale-your-node-js-server-using-clustering-c8d43c656e8f",
+    "description": "Scalability is a hot topic in tech, and every programming language or framework provides its own way of handling high loads of traffic.",
+    "tags": ["Node.js", "Engineering", "Scalability", "Clustering"],
+    "publication": "FreeCodeCamp"
+  },
+  {
+    "title": "The rise of ReasonML",
+    "image": "https://cdn-images-1.medium.com/max/500/1*fkrDwG7tPmkuO756jq6Qnw.png",
+    "url": "https://medium.com/openmindonline/better-javascript-with-reasonml-6d5ba70f70e8",
+    "description": "A new exciting syntax for OCaml developed by Facebook's engineers.",
+    "tags": ["ReasonML", "OCaml", "Programming Languages", "JavaScript"],
+    "publication": "Openmindonline"
+  },
+  {
+    "title": "Functional Programming is easier than you think",
+    "image": "https://cdn-images-1.medium.com/max/500/1*Rl9Nop7TE4iTanrS-4oTUQ.jpeg",
+    "url": "https://medium.com/openmindonline/functional-programming-is-easier-than-you-think-47563746afb3",
+    "description": "The best way to write rock solid and battle-tested code.",
+    "tags": ["Functional Programming", "Programming Paradigms", "Haskell", "Elixir", "Scala"],
+    "publication": "Openmindonline"
+  },
+  {
+    "title": "Emotion detection with JavaScript neural networks",
+    "image": "https://cdn-images-1.medium.com/max/500/1*Eg8K4jpwV92tIn3-zUQxWw.jpeg",
+    "url": "https://medium.com/openmindonline/emotion-detection-with-javascript-neural-networks-5a408f84eb75",
+    "description": "Machine learning is like highschool sex. Everyone says they do it, nobody really does, and no one knows what it actually is.",
+    "tags": ["Machine Learning", "Neural Networks", "JavaScript"],
+    "publication": "Openmindonline"
+  }
+]
