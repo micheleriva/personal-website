@@ -10,7 +10,7 @@ module.exports = {
     title: 'Michele Riva | Software Engineer',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport',                         content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport',                         content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' },
       { hid:  'description', name: 'description', content: 'Michele Riva | Software Engineer, Fullstack Developer, OpenSource Contributor' },
       { name: 'keywords',                         content: 'software engineer, node, nodejs, go, golang, javascript, es6, haskell, reasonml, development' },
       { name: 'theme-color',                      content: '#050817' },
@@ -52,10 +52,6 @@ module.exports = {
     { 
       src: '~plugins/ga.js', 
       ssr: false 
-    },
-    {
-      src: '~plugins/scrollto.js',
-      ssr: false
     }
   ],
 
