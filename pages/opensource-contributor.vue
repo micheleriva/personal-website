@@ -1,5 +1,6 @@
 <template lang="pug">
   section#opensource-contributor
+    back-btn
     h1.page-title OpenSource Contributor
     .desc
       | Some projects I'd love to share with you
@@ -19,10 +20,14 @@
 
 <script>
 
+  import BackBtn       from '~/components/BackBtn.vue'
   import Contributions from '~/static/json/contributions.json'
 
   export default {
     name: "OpenSourceContributor",
+    components: {
+      BackBtn
+    },
     data() {
       return {
         contributions: Contributions
