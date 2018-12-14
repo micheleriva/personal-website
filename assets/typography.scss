@@ -6,7 +6,7 @@
   text-align: center;
 
   @include query(phone) {
-    font-size: 15vw;
+    font-size: 9vw;
     line-height: 0.9em;
     margin-bottom: 1em;
   }

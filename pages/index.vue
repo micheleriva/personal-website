@@ -80,6 +80,12 @@ export default {
     display: flex;
     flex-wrap: wrap;
     margin-top: 2em;
+
+    @include query(smallphone) {
+      margin: 1em;
+      justify-content: center;
+    }
+
   }
 
   .section {
@@ -95,6 +101,10 @@ export default {
     color: $white;
     font-weight: 700;
     transition: ease 0.5s;
+
+    @include query(smallphone) {
+      margin: 1em;
+    }
 
     img {
       max-width: 25px;

@@ -82,7 +82,8 @@ export default {
     padding: 4em;
 
     @include query(phone) {
-      padding: 2em;
+      padding: 1em;
+      padding-top: 2em;
     }
 
     h2 {

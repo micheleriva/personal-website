@@ -25,3 +25,17 @@
     text-shadow: $black 2px 2px;
   }
 }
+
+.wip {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+
+  h1 {
+    color: $white;
+  }
+}

@@ -5,7 +5,7 @@
 
 <script>
 export default {
-  name: "SoftwareEngineer"
+  name: "Writer"
 }
 </script>
 

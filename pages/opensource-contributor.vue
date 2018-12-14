@@ -56,6 +56,11 @@
     padding: 4em;
     background-image: linear-gradient(to right top, #050817, #002e4b, #005567, #007c56, #219e00);
 
+    @include query(phone) {
+      padding: 1em;
+      padding-top: 2em;
+    }
+
     .projects {
       display: flex;
       flex-direction: row;
