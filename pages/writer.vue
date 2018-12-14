@@ -1,5 +1,6 @@
 <template lang="pug">
   section#writer
+    back-btn
     h1.page-title Writer
     .desc
       | Sharing is caring. Every article is public domain attributed.
@@ -17,10 +18,14 @@
 
 <script>
 
+import BackBtn  from '~/components/BackBtn.vue'
 import Articles from '~/static/json/articles.json'
 
 export default {
   name: "Writer",
+  components: {
+    BackBtn
+  },
   data() {
     return {
       articles: Articles

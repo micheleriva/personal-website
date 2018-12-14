@@ -1,6 +1,6 @@
 @mixin query($type) {
   @if $type == phone {
-    @media only screen and (max-width: 390px) { @content; }
+    @media only screen and (max-width: 420px) { @content; }
   }
   @if $type == smallphone {
     @media only screen and (max-width: 325px) { @content; }

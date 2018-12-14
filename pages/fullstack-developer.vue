@@ -1,5 +1,6 @@
 <template lang="pug">
   section#fullstack-developer
+    back-btn
     h1.page-title Fullstack Developer
     .desc
       | A selection of languages, frameworks and tools I'd like to work with
@@ -48,11 +49,14 @@
 
 <script>
 
-import Skills from '~/static/json/skills.json'
+import BackBtn from '~/components/BackBtn.vue'
+import Skills  from '~/static/json/skills.json'
 
 export default {
   name: "FullStackDeveloper",
-
+  components: {
+    BackBtn
+  },
   data() {
     return {
       skills: Skills
@@ -83,7 +87,7 @@ export default {
 
     @include query(phone) {
       padding: 1em;
-      padding-top: 2em;
+      padding-top: 4em;
     }
 
     h2 {
