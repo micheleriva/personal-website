@@ -5,7 +5,7 @@
       | Sharing is caring. Every article is public domain attributed.
 
     .articles
-      .article(v-for="article in articles")
+      a(v-for="article in articles", :href="article.url", target="_blank").article
         .header(:style="{backgroundImage: `url(${article.image})`}")
             h2 {{ article.title }}
         .pubblication Published on 
@@ -69,6 +69,13 @@ export default {
         cursor: pointer;
         transition: ease 0.5s;
 
+        @include query(phone) {
+          min-height: 500px;
+          width: 300px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+
         &:hover {
           transform: translateY(-1em);
         }
@@ -80,7 +87,11 @@ export default {
           margin-left: -1em;
           background-size: cover;
           background-position: center;
-          width: calc(400px);
+          width: 400px;
+
+          @include query(phone) {
+            width: 300px;
+          }
 
           &::after {
             content: "";
