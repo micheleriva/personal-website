@@ -106,6 +106,7 @@ export default {
         margin-bottom: 2em;
 
         .list {
+
           @include query(phone) {
             display: flex;
             flex-wrap: wrap;

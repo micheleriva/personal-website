@@ -3,7 +3,7 @@
     back-btn
     h1.page-title Writer
     .desc
-      | Sharing is caring. Every article is public domain attributed.
+      | Sharing is caring. Every article is public domain licensed.
 
     .articles
       a(v-for="article in articles", :href="article.url", target="_blank").article
