@@ -23,7 +23,8 @@ export default {
     transition: ease 0.5s;
 
     @include query(phone) {
-      display: none;
+      top: 1em;
+      left: 1em;
     }
 
     span {

@@ -47,7 +47,7 @@ export default {
 
     @include query(phone) {
       padding: 1em;
-      padding-top: 2em;
+      padding-top: 4em;
     }
 
     .articles {
