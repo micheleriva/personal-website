@@ -16,6 +16,14 @@
     "tags": ["UI", "UX"]
   },
   {
+    "name": "MJN",
+    "owner": "Michele Riva",
+    "language": "TypeScript",
+    "url": "https://github.com/micheleriva/mjn",
+    "description": "Simple pseudo-monoid to check if a key or a value exist in an object.",
+    "tags": ["Error Handling", "Monoid", "Monad"]
+  },
+  {
     "name": "DNN Pose Estimator",
     "owner": "Michele Riva",
     "language": "Go",

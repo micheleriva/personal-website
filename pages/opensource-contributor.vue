@@ -43,6 +43,7 @@
           case 'Go':         return {background: '#1cb0f6'}
           case 'C++':        return {background: '#646464'}
           case 'Vue.js':     return {background: '#42b883'}
+          case 'TypeScript': return {background: '#e66262'}
         }
       }
     }
