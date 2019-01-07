@@ -24,6 +24,14 @@
     "tags": ["Error Handling", "Monoid", "Monad"]
   },
   {
+    "name": "Flux",
+    "owner": "Facebok Inc",
+    "language": "JavaScript",
+    "url": "https://github.com/facebook/flux",
+    "description": "An application architecture for React utilizing a unidirectional data flow.",
+    "tags": ["State Machine", "Reactive Programming", "Flux"]
+  },
+  {
     "name": "DNN Pose Estimator",
     "owner": "Michele Riva",
     "language": "Go",
