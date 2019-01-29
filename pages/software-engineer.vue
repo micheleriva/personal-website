@@ -6,7 +6,7 @@
     .dynamic-shadow-img
     .img-desc 
       i Well, that's me working with an Emotiv Insight 1 for neuroprogramming
-    .bio I'm a 23 years old Software Engineer based in Monza, Italy.
+    .bio I'm a 24 years old Software Engineer based in Monza, Italy.
       br
       |I love computer programming in all of its forms, from 
       span.fe front-end &nbsp;
