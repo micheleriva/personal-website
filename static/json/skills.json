@@ -46,7 +46,7 @@
       "name": "Ruby",
       "confidency": 3,
       "icon": "ruby.svg"
-    }
+    },
     {
       "name": "Haskell",
       "confidency": 3,
