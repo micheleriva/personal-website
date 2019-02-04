@@ -33,15 +33,20 @@
       "icon": "node.svg"
     },
     {
-      "name": "Ruby",
-      "confidency": 4,
-      "icon": "ruby.svg"
-    },
-    {
       "name": "Elixir",
-      "confidency": 3,
+      "confidency": 4,
       "icon": "elixir.png"
     },
+    {
+      "name": "Erlang OTP",
+      "confidency": 4,
+      "icon": "erlang.svg"
+    },
+    {
+      "name": "Ruby",
+      "confidency": 3,
+      "icon": "ruby.svg"
+    }
     {
       "name": "Haskell",
       "confidency": 3,
@@ -61,11 +66,6 @@
       "name": "Php",
       "confidency": 3,
       "icon": "php.png"
-    },
-    {
-      "name": "Erlang OTP",
-      "confidency": 2,
-      "icon": "erlang.svg"
     }
   ],
   "database": [
@@ -91,12 +91,12 @@
     },
     {
       "name": "Redis",
-      "confidency": 3,
+      "confidency": 4,
       "icon": "redis.svg"
     },
     {
       "name": "Postgres",
-      "confidency": 3,
+      "confidency": 4,
       "icon": "postgres.svg"
     }
   ],
