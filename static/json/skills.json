@@ -33,6 +33,11 @@
       "icon": "node.svg"
     },
     {
+      "name": "Haskell",
+      "confidency": 4,
+      "icon": "haskell.svg"
+    },
+    {
       "name": "Elixir",
       "confidency": 4,
       "icon": "elixir.png"
@@ -46,11 +51,6 @@
       "name": "Ruby",
       "confidency": 3,
       "icon": "ruby.svg"
-    },
-    {
-      "name": "Haskell",
-      "confidency": 3,
-      "icon": "haskell.svg"
     },
     {
       "name": "Python",
