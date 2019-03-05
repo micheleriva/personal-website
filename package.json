@@ -13,6 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@nuxtjs/pwa": "^3.0.0-beta.12",
     "cross-env": "^5.2.0",
     "nuxt": "^2.0.0",
     "rellax": "^1.7.1",

@@ -59,7 +59,20 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/pwa'
   ],
+
+  /*
+  ** PWA Manifest
+  */
+  manifest: {
+    name: 'MicheleRiva',
+    short_name: 'MicheleRiva',
+    description: 'Software Engineer, Fullstack Developer and OpenSource Contributor',
+    start_url: '.',
+    background_color: '#050817',
+    lang: 'en'
+  },
 
   /*
   ** Build configuration

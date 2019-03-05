@@ -75,6 +75,11 @@
       "icon": "mysql.png"
     },
     {
+      "name": "Couchbase",
+      "confidency": 5,
+      "icon": "couchbase.svg"
+    },
+    {
       "name": "Firestore",
       "confidency": 5,
       "icon": "firebase.png"

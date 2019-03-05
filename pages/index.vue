@@ -10,7 +10,7 @@
           :to="section.url"
           :key="section.class"
         )
-          img(:src="`/imgs/svgs/icons/${section.icon}`")
+          img(:src="`/imgs/svgs/icons/${section.icon}`" :alt="section.name")
           .title {{ section.name }}
 
 </template>

@@ -33,18 +33,12 @@
 </template>
 
 <script>
-import Resume from "~/static/json/resume.json";
 import BackBtn from "~/components/BackBtn.vue";
 
 export default {
   name: "SoftwareEngineer",
   components: {
     BackBtn
-  },
-  data() {
-    return {
-      resume: Resume
-    };
   }
 };
 </script>
