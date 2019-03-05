@@ -29,6 +29,7 @@ module.exports = {
     link: [
       { rel: 'manifest',                         href: '/manifest.json' },
       { rel: 'icon',       type: 'image/x-icon', href: '/imgs/favicons/ico-16.png' },
+      { rel: 'stylesheet', type: 'text/css',     href: 'https://fonts.googleapis.com/css?family=Raleway:300,500,600,700,900' },
       { rel: 'stylesheet', type: 'text/css',     href: '/css/animate.css' },
       { rel: 'stylesheet', type: 'text/css',     href: '/css/fontAwesome.css'}
     ]
