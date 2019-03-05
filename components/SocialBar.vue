@@ -2,7 +2,7 @@
   .social-bar
     .center-cont
       .icon( v-for="icon in social" )
-        a(:href="icon.url", target="_blank")
+        a(:href="icon.url", target="_blank", rel="noopener")
           i(:class="icon.icon")
 </template>
 
