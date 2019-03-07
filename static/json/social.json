@@ -2,31 +2,26 @@
   {
     "name": "GitHub",
     "url":  "https://github.com/micheleriva",
-    "icon": "fab fa-github"
+    "icon": "/imgs/svgs/social/github.svg"
   },
   {
     "name": "LinkedIn",
     "url":  "https://www.linkedin.com/in/micheleriva95/",
-    "icon": "fab fa-linkedin"
+    "icon": "/imgs/svgs/social/linkedin.svg"
   },
   {
     "name": "Medium",
     "url":  "https://medium.com/@micheleriva",
-    "icon": "fab fa-medium-m"
+    "icon": "/imgs/svgs/social/medium.svg"
   },
   {
     "name": "StackOverflow",
     "url": "https://stackoverflow.com/story/micheleriva",
-    "icon": "fab fa-stack-overflow"
-  },
-  {
-    "name": "HackerRank",
-    "url":  "https://www.hackerrank.com/master11",
-    "icon": "fab fa-hackerrank"
+    "icon": "/imgs/svgs/social/stack-overflow.svg"
   },
   {
     "name": "eMail",
     "url":  "mailto:ciao@micheleriva.it",
-    "icon": "fas fa-at"
+    "icon": "/imgs/svgs/social/email.svg"
   }
 ]

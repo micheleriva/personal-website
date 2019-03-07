@@ -1,14 +1,17 @@
 <template lang="pug">
   .social-bar
     .center-cont
-      .icon( v-for="icon in social" )
+      .icon( v-for="social in social" )
         a(
-          :href="icon.url", 
-          :aria-label="icon.name"
+          :href="social.url", 
+          :aria-label="social.name"
           target="_blank", 
           rel="noopener"
           )
-          i(:class="icon.icon")
+          img(
+            :src="social.icon"
+            :alt="social.name"
+          )
 </template>
 
 <script>
@@ -42,15 +45,17 @@ export default {
         margin-left: 5px;
         margin-right: 5px;
 
-        a, i {
-          color: #f5f5f5;
-          font-size: 1em;
-          transition: ease 0.5s;
+        a {
 
-          &:hover {
-            margin-left: 7px;
-            margin-right: 7px;
-            transform: scale(1.5)
+          img {
+          transition: ease 0.5s;
+          width: 15px;
+
+            &:hover {
+              margin-left: 7px;
+              margin-right: 7px;
+              transform: scale(1.5)
+            }
           }
         }
       }
