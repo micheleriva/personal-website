@@ -4,6 +4,9 @@
 
 ![Preview](/docs/screenshot.png)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/737f6871-4f80-4bcc-9506-40d4dc7aa408/deploy-status)](https://app.netlify.com/sites/romantic-wing-e31e13/deploys)
+
+
 ## Build Setup
 
 ``` bash
