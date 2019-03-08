@@ -30,10 +30,13 @@ module.exports = {
       { property: 'twitter:description', content: OGDescription }
     ],
     link: [
-      { rel: 'manifest',                         href: '/manifest.json' },
-      { rel: 'icon',       type: 'image/x-icon', href: '/imgs/favicons/ico-16.png' },
-      { rel: 'stylesheet', type: 'text/css',     href: 'https://fonts.googleapis.com/css?family=Raleway:300,500,600,700,900' },
-      { rel: 'stylesheet', type: 'text/css',     href: '/css/animate.css' }
+      { rel: 'manifest',                                        href: '/manifest.json' },
+      { rel: 'icon',       type: 'image/png', sizes: '16x15',   href: '/imgs/favicons/ico-16.png' },
+      { rel: 'icon',       type: 'image/png', sizes: '32x32',   href: '/imgs/favicons/ico-32.png' },
+      { rel: 'apple-touch-icon',              sizes: '180x180', href: '/imgs/favicons/ico-180.png'},
+      { rel: 'mask-icon',                                       href: '/imgs/favicons/ico.svg'},
+      { rel: 'stylesheet', type: 'text/css',                    href: 'https://fonts.googleapis.com/css?family=Raleway:300,500,600,700,900' },
+      { rel: 'stylesheet', type: 'text/css',                    href: '/css/animate.css' }
     ]
   },
 
