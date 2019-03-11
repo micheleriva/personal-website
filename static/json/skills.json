@@ -38,6 +38,11 @@
       "icon": "haskell.svg"
     },
     {
+      "name": "Go",
+      "confidency": 4,
+      "icon": "go.svg"
+    },
+    {
       "name": "Elixir",
       "confidency": 4,
       "icon": "elixir.png"
@@ -56,11 +61,6 @@
       "name": "Python",
       "confidency": 3,
       "icon": "python.svg"
-    },
-    {
-      "name": "Crystal",
-      "confidency": 3,
-      "icon": "crystal.svg"
     },
     {
       "name": "Php",

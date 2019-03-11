@@ -10,14 +10,14 @@
         h2 Frontend
         .list
           .skill(v-for="skill in skills.frontend")
-            img(:src="`/imgs/svgs/languages/${skill.icon}`")
+            img(:src="`/imgs/svgs/languages/${skill.icon}`" :alt="skill.name")
             .name {{ skill.name }}
             .confidency {{ confidencyStars(skill.confidency) }}
       .group
         h2 Backend
         .list
           .skill(v-for="skill in skills.backend")
-            img(:src="`/imgs/svgs/languages/${skill.icon}`")
+            img(:src="`/imgs/svgs/languages/${skill.icon}`" :alt="skill.name")
             .name {{ skill.name }}
             .confidency {{ confidencyStars(skill.confidency) }}
 
@@ -25,7 +25,7 @@
         h2 Database
         .list
           .skill(v-for="skill in skills.database")
-            img(:src="`/imgs/svgs/languages/${skill.icon}`")
+            img(:src="`/imgs/svgs/languages/${skill.icon}`" :alt="skill.name")
             .name {{ skill.name }}
             .confidency {{ confidencyStars(skill.confidency) }}
 
@@ -33,7 +33,7 @@
         h2 DevOps
         .list
           .skill(v-for="skill in skills.devops")
-            img(:src="`/imgs/svgs/languages/${skill.icon}`")
+            img(:src="`/imgs/svgs/languages/${skill.icon}`" :alt="skill.name")
             .name {{ skill.name }}
             .confidency {{ confidencyStars(skill.confidency) }}
 
@@ -41,7 +41,7 @@
         h2 Misc
         .list
           .skill(v-for="skill in skills.misc")
-            img(:src="`/imgs/svgs/languages/${skill.icon}`")
+            img(:src="`/imgs/svgs/languages/${skill.icon}`" :alt="skill.name")
             .name {{ skill.name }}
             .confidency {{ confidencyStars(skill.confidency) }}
 

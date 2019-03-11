@@ -8,6 +8,14 @@
     "tags": ["NLP", "DNN", "AI"]
   },
   {
+    "name": "Node",
+    "owner": "Node.js Foundation",
+    "language": "JavaScript",
+    "url": "https://github.com/nodejs/node",
+    "description": "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.",
+    "tags": ["Node.js", "Runtime", "V8"]
+  },
+  {
     "name": "CouchDB Fauxton",
     "owner": "Apache Software Foundation",
     "language": "JavaScript",

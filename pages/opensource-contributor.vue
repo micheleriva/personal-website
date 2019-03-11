@@ -4,7 +4,6 @@
     h1.page-title OpenSource Contributor
     .desc
       | Some projects I'd love to share with you
-
     .projects
       a(v-for="project in contributions", :href="project.url", target="_blank").project
         h2 {{ project.name }}
