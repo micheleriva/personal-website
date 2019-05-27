@@ -24,6 +24,14 @@
     "tags": ["UI", "UX"]
   },
   {
+    "name": "Aika",
+    "owner": "Michele Riva",
+    "language": "Haskell",
+    "url": "https://github.com/micheleriva/aika",
+    "description": "In-memory key-value multithreaded database",
+    "tags": ["database", "in-memory", "multithread"]
+  },
+  {
     "name": "MJN",
     "owner": "Michele Riva",
     "language": "TypeScript",
@@ -54,6 +62,14 @@
     "url": "https://github.com/micheleriva/winnie",
     "description": "Human detection program which can detect one or more people in realtime. Based on OpenComputerVision 3.",
     "tags": ["AI", "OpenCV"]
+  },
+  {
+    "name": "Prime Tweet Bot",
+    "owner": "Michele Riva",
+    "language": "Elixir",
+    "url": "https://github.com/micheleriva/PrimeBot",
+    "description": "A Twitter Bot which tweets a prime number per day",
+    "tags": ["bot", "algorithms"]
   },
   {
     "name": "Keras Neural Style",

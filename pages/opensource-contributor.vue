@@ -43,6 +43,7 @@
           case 'C++':        return {background: '#646464'}
           case 'Vue.js':     return {background: '#42b883'}
           case 'TypeScript': return {background: '#e66262'}
+          case 'Elixir':     return {background: '#8f51ff'}
         }
       }
     }
