@@ -1,5 +1,21 @@
 [
   {
+    "title": "Frontend Development is dead. Long live to Frontend Engineering!",
+    "image": "https://cdn-images-1.medium.com/max/2400/1*f3NVQ_NGyyqN0aTMeSKAQg.png",
+    "url": "https://medium.com/@micheleriva/frontend-development-is-dead-long-live-to-frontend-engineering-67760168cc0d",
+    "description": "Do you remember the good old times where all you needed to do was to write some good CSS and HTML? It’s all dead. And that’s awesome!",
+    "tags": ["JavaScript", "React.js", "Vue.js", "Engineering"],
+    "publication": "Michele Riva"
+  },
+  {
+    "title": "About coding the“FizzBuzz” interview question",
+    "image": "https://cdn-images-1.medium.com/max/2400/1*K6egeIRaQ4SG_vJtO8dZQA.png",
+    "url": "https://blog.usejournal.com/about-coding-the-fizzbuzz-interview-question-9bcd08d9dfe5",
+    "description": "The \"Fizz-Buzz test\" is an interview question designed to help filter out the 99.5% of programming job candidates.",
+    "tags": ["Interview", "Challenge", "JavaScript", "Engineering"],
+    "publication": "UseJournal"
+  },
+  {
     "title": "How to scale your Node.js server using clustering",
     "image": "https://cdn-images-1.medium.com/max/500/1*2sGG4VhopW3NxKzJ2NsJLw.png",
     "url": "https://medium.freecodecamp.org/how-to-scale-your-node-js-server-using-clustering-c8d43c656e8f",
