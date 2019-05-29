@@ -38,11 +38,6 @@
       "icon": "haskell.svg"
     },
     {
-      "name": "Go",
-      "confidency": 4,
-      "icon": "go.svg"
-    },
-    {
       "name": "Elixir",
       "confidency": 4,
       "icon": "elixir.png"
@@ -53,19 +48,24 @@
       "icon": "erlang.svg"
     },
     {
+      "name": "Go",
+      "confidency": 4,
+      "icon": "go.svg"
+    },
+    {
+      "name": "Php",
+      "confidency": 2,
+      "icon": "php.png"
+    },
+    {
       "name": "Ruby",
-      "confidency": 3,
+      "confidency": 1,
       "icon": "ruby.svg"
     },
     {
       "name": "Python",
-      "confidency": 3,
+      "confidency": 1,
       "icon": "python.svg"
-    },
-    {
-      "name": "Php",
-      "confidency": 3,
-      "icon": "php.png"
     }
   ],
   "database": [
