@@ -11,7 +11,15 @@
     "title": "Lambda Calculus in JavaScript?",
     "image": "https://cdn-images-1.medium.com/max/2400/1*ikQbPKgYGLcx_H1Zxv3Osw.png",
     "url": "https://medium.com/openmindonline/lambda-calculus-in-javascript-1ee947cadb21",
-    "description": "The most beautiful piece of code in computer science implemented in six programming languages.",
+    "description": "The foundation of Functional Programming expressed in JavaScript… is that even possible?",
+    "tags": ["Mathematics", "Computer Science", "Programming", "Engineering"],
+    "publication": "Openmindonline"
+  },
+  {
+    "title": "Understanding Functors",
+    "image": "https://cdn-images-1.medium.com/max/2400/1*AW-Dpk9vUjkMhd_dlOli2g.png",
+    "url": "https://medium.com/openmindonline/js-monday-09-understanding-functors-43a426d34e26",
+    "description": "Simple solutions for complex problems using Functors in JavaScript.",
     "tags": ["Mathematics", "Computer Science", "Programming", "Engineering"],
     "publication": "Openmindonline"
   },
