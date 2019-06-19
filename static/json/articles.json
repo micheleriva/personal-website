@@ -1,11 +1,19 @@
 [
   {
     "title": "Implementing Recursion with the Y Combinator in any Language",
-    "image": "https://cdn-images-1.medium.com/max/2400/1*f3NVQ_NGyyqN0aTMeSKAQg.png",
+    "image": "https://cdn-images-1.medium.com/max/2400/1*mL6-YwTZjy1GTOUMuSm18A.png",
     "url": "https://medium.com/@micheleriva/implementing-recursion-with-the-y-combinator-in-any-language-9e83fa369ca",
     "description": "The most beautiful piece of code in computer science implemented in six programming languages.",
     "tags": ["Mathematics", "Computer Science", "Programming", "Engineering"],
     "publication": "Michele Riva"
+  },
+  {
+    "title": "Lambda Calculus in JavaScript?",
+    "image": "https://cdn-images-1.medium.com/max/2400/1*ikQbPKgYGLcx_H1Zxv3Osw.png",
+    "url": "https://medium.com/openmindonline/lambda-calculus-in-javascript-1ee947cadb21",
+    "description": "The most beautiful piece of code in computer science implemented in six programming languages.",
+    "tags": ["Mathematics", "Computer Science", "Programming", "Engineering"],
+    "publication": "Openmindonline"
   },
   {
     "title": "Frontend Development is dead. Long live to Frontend Engineering!",
