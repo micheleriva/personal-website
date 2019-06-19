@@ -1,11 +1,19 @@
 [
   {
+    "title": "Implementing Recursion with the Y Combinator in any Language",
+    "image": "https://cdn-images-1.medium.com/max/2400/1*f3NVQ_NGyyqN0aTMeSKAQg.png",
+    "url": "https://medium.com/@micheleriva/implementing-recursion-with-the-y-combinator-in-any-language-9e83fa369ca",
+    "description": "The most beautiful piece of code in computer science implemented in six programming languages.",
+    "tags": ["Mathematics", "Computer Science", "Programming", "Engineering"],
+    "publication": "Michele Riva"
+  },
+  {
     "title": "Frontend Development is dead. Long live to Frontend Engineering!",
     "image": "https://cdn-images-1.medium.com/max/2400/1*f3NVQ_NGyyqN0aTMeSKAQg.png",
     "url": "https://medium.com/@micheleriva/frontend-development-is-dead-long-live-to-frontend-engineering-67760168cc0d",
     "description": "Do you remember the good old times where all you needed to do was to write some good CSS and HTML? It’s all dead. And that’s awesome!",
     "tags": ["JavaScript", "React.js", "Vue.js", "Engineering"],
-    "publication": "Michele Riva"
+    "publication": "Level Up Your Code"
   },
   {
     "title": "About coding the“FizzBuzz” interview question",
