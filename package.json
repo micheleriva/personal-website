@@ -1,33 +1,47 @@
 {
-  "name": "miiitch",
-  "version": "1.0.0",
+  "name": "micheleriva.it",
+  "private": false,
   "description": "My personal website",
-  "author": "Michele Riva",
-  "private": true,
-  "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
-  },
+  "version": "0.1.0",
+  "author": "Michele Riva <ciao@micheleriva.it>",
   "dependencies": {
-    "@nuxtjs/pwa": "^3.0.0-beta.12",
-    "cross-env": "^5.2.0",
-    "nuxt": "^2.0.0",
-    "rellax": "^1.7.1",
-    "vue-scrollto": "^2.13.0"
+    "@xstyled/styled-components": "1.15.0",
+    "gatsby": "^2.18.12",
+    "gatsby-image": "^2.2.34",
+    "gatsby-plugin-google-fonts": "1.0.1",
+    "gatsby-plugin-manifest": "^2.2.31",
+    "gatsby-plugin-offline": "^3.0.27",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-sharp": "^2.3.5",
+    "gatsby-source-filesystem": "^2.1.40",
+    "gatsby-transformer-sharp": "^2.3.7",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "styled-components": "4.4.1"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^5.0.1",
-    "eslint-loader": "^2.0.0",
-    "eslint-plugin-vue": "^4.0.0",
-    "node-sass": "^4.10.0",
-    "nodemon": "^1.11.0",
-    "pug": "2.0.3",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.1.0"
+    "prettier": "^1.19.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
