@@ -1,0 +1,47 @@
+[
+  {
+    "from": "November 2018",
+    "to": "Today",
+    "company": "Hackdoor.io",
+    "role": "Founder",
+    "tasks": [
+      "Backend development with Node.js, Go, Elixir on AWS",
+      "Frontend development with Nuxt.js (Vue SSR)",
+      "Database management on Postgres and Hasura GraphQL",
+      "Devops with Heroku and AWS",
+      "Technical Writer with dozens of public domain articles",
+      "Supervision of other writers",
+      "Public Speaking"
+    ]
+  },
+  {
+    "from": "January 2018",
+    "to": "Today",
+    "company": "openmind",
+    "role": "Sr. Software Engineer",
+    "tasks": [
+      "Fullstack web development using Node.js and Vue.js on AWS",
+      "Technology Evangelist",
+      "Code Review",
+      "Coaching",
+      "Public Speaking"
+    ]
+  },
+  {
+    "from": "December 2014",
+    "to": "December 2017",
+    "company": "GMDE s.r.l.",
+    "role": "Software Engineer",
+    "tasks": [
+      "Fullstack web development using Node.js, PHP, Ruby and React.js",
+      "Customizations on proprietary Java CMS"
+    ]
+  },
+  {
+    "from": "December 2013",
+    "to": "December 2014",
+    "company": "Evolution Graphic",
+    "role": "Fullstack Developer",
+    "tasks": ["Fullstack web development using Ruby, PHP and Node.js"]
+  }
+]

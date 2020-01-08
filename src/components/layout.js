@@ -1,24 +1,22 @@
-import React                       from "react"
-import PropTypes                   from "prop-types"
+import React from "react"
+import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import styled                      from "styled-components";
+import styled from "styled-components"
 
-import "./layout.css";
+import "./layout.css"
 
 const Container = styled.div`
-  width:      100%;
+  width: 100%;
   min-height: 100vh;
-  background: #000;
-`;
+  background: #121212;
+`
 
 const Layout = ({ children }) => {
-  return (
-    <Container>{children}</Container>
-  )
-};
+  return <Container>{children}</Container>
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-};
+}
 
 export default Layout

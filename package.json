@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Michele Riva <ciao@micheleriva.it>",
   "dependencies": {
+    "@material-ui/core": "^4.8.3",
+    "@material-ui/icons": "^4.5.1",
     "@xstyled/styled-components": "1.15.0",
     "gatsby": "^2.18.12",
     "gatsby-image": "^2.2.34",
