@@ -17,7 +17,6 @@ deploy:
 	git checkout gh-pages
 	git pull -X theirs
 	git merge master -X ours
-	cp -a _site/. .
 	git commit -am "publish"
 	git push origin gh-pages
 	git checkout master
