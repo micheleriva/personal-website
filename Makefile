@@ -15,8 +15,9 @@ deploy:
 	make clean
 	make build
 	git checkout gh-pages
-	git merge master
+	git pull -X theirs
+	git merge master -X ours
 	cp -a _site/. .
 	git commit -am "publish"
-	git push gh-pages
+	git push origin gh-pages
 	g checkout master
