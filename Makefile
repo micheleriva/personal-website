@@ -20,4 +20,4 @@ deploy:
 	cp -a _site/. .
 	git commit -am "publish"
 	git push origin gh-pages
-	g checkout master
+	git checkout master
