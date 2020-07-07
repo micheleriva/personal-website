@@ -18,5 +18,5 @@ deploy:
 	git merge master
 	cp -a _site/. .
 	git commit -am "publish"
-	git push gh-pages
+	git push origin gh-pages
 	g checkout master
