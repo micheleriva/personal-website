@@ -14,9 +14,5 @@ deploy:
 	stack build
 	make clean
 	make build
-	git checkout gh-pages
-	git pull -X theirs
-	git merge master -X ours
-	git commit -am "publish"
-	git push origin gh-pages
-	git checkout master
+	git commit -am "cd: publish"
+	git push origin master
