@@ -16,27 +16,3 @@ In the past years I’ve also had the opportunity to code in **PHP**, **Ruby**, 
 I also like to write frontend applications using **React**, **Vue**, **Svelte** or just **vanilla JS** and **CSS**.
 
 I’m currently working as a **Senior Software Engineer** at [ViacomCBS](https://www.viacomcbs.com), where I’m building a multi-tenant **Node.js** **SSR/React** application at the heart of our streaming websites and networks.
-
-## I would like to work with / learn more about
-
-#### Languages
-
-- Haskell
-- Elixir
-- Erlang
-- Rust
-- OCaml
-- ReasonML
-- Go
-
-#### Tools
-
-- RabbitMQ
-- Kafka
-- Ejabberd
-- Mongoose IM
-
-#### Topics
-
-- Distributed systems
-- Real-time systems
