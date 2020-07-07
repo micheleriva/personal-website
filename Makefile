@@ -9,3 +9,13 @@ build:
 
 clean:
 	stack exec site clean
+
+deploy:
+	stack build
+	make clean
+	make build
+	git checkout gh-pages
+	cp -a _site/. .
+	git commit -am "publish"
+	git push gh-pages
+	g checkout master
