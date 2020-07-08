@@ -70,7 +70,6 @@ But it doesn't mean that we can't do it.
 
 ## Some companies just want a degree
 I won't spend much time on that. \
-Computer science degrees are pretty useless. Period. \
 During my professional career I've leaded a team of CS degreed developer and they didn't even know that I don't have any degree. \
 
 Guys, now you know.
