@@ -6,7 +6,7 @@ title: Resume
 <h3 class="resume_h3"> Senior Software Engineer </h3>
 <h4 class="resume_h4"> April 2020 - Present </h4>
 
-- Chair in the architecture team of ViacomCBS
+- Working in the architecture team of ViacomCBS
 - Architecture and Agile development of a multi-tenant Node.js/SSR React system
 - Code review
 - Coaching
@@ -19,6 +19,7 @@ title: Resume
 - Frontend development using React, TypeScript, Next.js, Styled-Components
 - Software and systems architecture
 - Devops using Docker via Dokku on DigitalOcean and AWS (EC2, Lambda, S3)
+- Supervision and management of technical writers
 
 <h2 class="resume_h2"> Openmind </h2>
 <h3 class="resume_h3"> Senior Software Engineer </h3>
