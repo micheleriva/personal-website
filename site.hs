@@ -3,6 +3,8 @@
 import           Data.Monoid (mappend)
 import           Hakyll
 
+root :: String
+root = "https://www.micheleriva.it"
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -58,9 +60,27 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
+    match ("images/*"
+            .||. "robots.txt"
+            .||. "favicon.ico") $ do
+        route   idRoute
+        compile copyFileCompiler
+
+    create ["sitemap.xml"] $ do
+        route idRoute
+        compile $ do
+            posts <- recentFirst =<< loadAll "posts/*"
+            singlePages <- loadAll (fromList ["about.md", "contact.md", "resume.md", "talks.md"])
+            let pages = posts <> singlePages
+                sitemapCtx =
+                    constField "root" root <>
+                    listField "pages" postCtx (return pages)
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/sitemap.xml" sitemapCtx
 
 --------------------------------------------------------------------------------
 postCtx :: Context String
 postCtx =
+    constField "root" root       `mappend`
     dateField "date" "%B %e, %Y" `mappend`
     defaultContext
