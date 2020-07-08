@@ -9,7 +9,7 @@ During my last high school year, I did an internship in a creative/web agency, a
 
 During the last seven years, I had the opportunity to grow a lot, trying different programming paradigms (imperative/OOP/FP) and languages (JavaScript, TypeScript, PHP, Ruby, Python, Elixir, Go, Haskell, ReasonML).
 
-I also wrote code for some of the biggest companies in the world (Facebook, Linux Foundation, Apache Foundation, Maserati, ViacomCBS).
+I also wrote code for some big companies and foundations (Facebook, Linux Foundation, Apache Foundation, Maserati, ViacomCBS).
 
 I can create a complex realtime and distributed system on my own. \
 I can design its architecture and write its backend code using a microservices architecture. \
@@ -20,7 +20,7 @@ I'm not saying that I am the best developer at writing architecture or backend c
 I'm not the best developer for writing frontend code. \
 I'm not the best devops engineer.
 
-I just can do it, because I love doing that.
+I just can do it, because I love to do that, just like any other developer.
 
 ## Biggest tech companies will never want to hire me
 That's a fact. \
@@ -38,14 +38,16 @@ During the interview process, I may be asked to solve some [Leetcode](https://le
 
 But guess what? I have a very little knowledge about that.
 
-That's because 99% of the time, in 2020 you're developing REST/GraphQL APIs and some other similar stuff, that doesn't really require a computer science degree. \
+That's because 99% of the time, in 2020 you're developing REST/GraphQL APIs and some other similar stuff, that doesn't really require a computer science degree (in web development, of course). \
 At time of writing, I have 7+ years of experience in professional software development, and guess how many times I had to choose between two different sorting algorithms? What about choosing between two different data structures? \
 
-I'm not saying that learning **DSA** (data structures and algorithms) is completely useless. I'm just saying that **there are a lot of great developers that can do their jobs without knowing DSA**. \
+I'm not saying that learning **DSA** (data structures and algorithms) is completely useless. I'm just saying that **there are a lot of great developers that can do their jobs searching on Google for DSA**. \
 And nice fact: after years of professional software development, it will be incredibly easy for developers to learn those algorithms/data structures. \
 
-Avoiding to hire devs just because of lack of knowledge of **DSA** is just stupid. \
+Avoiding to hire devs just because of lack of knowledge about **DSA** is just stupid. \
 Developers should be hired for their attitude, curiosity, commitment and passion.
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Google: 90% of our engineers use the software you wrote (Homebrew), but you can’t invert a binary tree on a whiteboard so fuck off.</p>&mdash; Max Howell (@mxcl) <a href="https://twitter.com/mxcl/status/608682016205344768?ref_src=twsrc%5Etfw">June 10, 2015</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 **FANG**-like companies doesn't really care if you are a fullstack developer. They just want you to be an expert in that given language and nothing more. You must be an expert in **DSA** because they just want to say that "they hire the best developers".
 
@@ -65,7 +67,7 @@ An year ago I was writing a small Redis implementation in Node.js, and I needed 
 
 Same when I wanted to build my whole blockchain just for fun. I've never studied linked lists or Merkle trees, but after some research, I finally found out the answers to all of my questions.
 
-Yes, it might be harder for us self taught developers to get access to some informations. \
+Yes, it might be harder for us self taught developers to get access to some information. \
 But it doesn't mean that we can't do it.
 
 ## Some companies just want a degree
@@ -73,6 +75,11 @@ I won't spend much time on that. \
 During my professional career I've leaded a team of CS degreed developer and they didn't even know that I don't have any degree. \
 
 Guys, now you know.
+
+Some consultancy companies just want developers with a CS degree just to tell their customers: "Hey, I'm putting a team of 10 Software Engineers with a CS degree for your project". That happens a lot, but again, especially in web development that doesn't really make a difference.
+
+CS degree should be something useful for you as a person/professional, not for the company. \
+As a developer, you can always achieve the same results of a graduate engineer. Maybe it will be harder (and yes, for me it is way harder some times), but you can do it.
 
 ## Impostor syndrome and burnout
 
