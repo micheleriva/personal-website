@@ -28,6 +28,12 @@ If I struggle a lot with a very specific problem, I can just distract myself pla
 During my last few months I've encountered many problems to solve, and I've never felt so relaxed when working on them. \
 That is not because I'm working in a new company with different problems. It's just because of the environment.
 
+And what about monthly expenses? \
+I used to spend between €50 and €150 per month just for going to the office (by train or car). \
+I also used to spend around €100 per month for lunch (yes, I have meal voucher, but lunch is often more expensive).
+
+Last but not least, I just want to spend more time with my family than working somewhere. **Private life quality is more important**.
+
 ## Enhanced communications between colleagues
 When working in an office (it doesn't really matter which company you work for), there are much more distractions. \
 A customer calls, your boss comes to your desktop and you have to quit what you were doing just to take care of that new problem that changes your plans.
@@ -40,6 +46,10 @@ Thanks to the great organization of my current company, I know that I have a spe
 Let's say that I cannot merge my feature branch into `develop` after completing my task. \
 Normally, I could go to the devops guy and stress him until he fixes the issue with the Jenkins pipeline. \
 But working remotely, I know that I have to wait until (let's say) 4pm for asking him. Most of the times I'm not the only one experiencing this particular problem, and the devops guy fixes that issue because of Jenkins/other-CI-tool alerts way before 4pm.
+
+That's just a silly example, but there are a huge number of cases where problem solves just by waiting. \
+Are you struggling with a bug? Try to do something else. Most of the time you don't need external help for that, you just need to take a break or focus a bit more on it. \
+But if you really need help, you perfectly that (again, let's say) at 4pm there will be people that can help you.
 
 Meetings are scheduled following everybody's calendar, that needs to be compiled in order to avoid overlapping events. \
 You perfectly know when you have time to code, to make some code review or to schedule another meeting.
