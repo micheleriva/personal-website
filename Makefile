@@ -14,5 +14,6 @@ deploy:
 	stack build
 	make clean
 	make build
+	git add .
 	git commit -am "cd: publish"
 	git push origin master
