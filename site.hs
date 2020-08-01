@@ -60,7 +60,7 @@ main = hakyll $ do
 
     match "templates/*" $ compile templateBodyCompiler
 
-    match ("images/*"
+    match ("images/**/*"
             .||. "robots.txt"
             .||. "favicon.ico") $ do
         route   idRoute

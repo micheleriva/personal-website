@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Michele Riva - Reviewing the worst piece of code ever</title>
+        
+        <link rel="stylesheet" href="../css/default.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">Michele Riva</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../resume.html">Resume</a>
+                <a href="../talks.html">Talks</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <h1>Reviewing the worst piece of code ever</h1>
+            <article>
+    <section class="header">
+        Posted on July 31, 2020
+        
+    </section>
+    <section>
+        <p>There’s an italian Facebook page called “<strong>Il Programmatore di Merda</strong>” (which can be translated to “<strong>The Shitty Programmer</strong>”). I love that page.</p>
+<p>They often share shitty pieces of code and memes about programming, but today I’ve seen something quite incredible:</p>
+<figure>
+<img src="../images/2020-07-31/shittycode.jpg" alt /><figcaption>Il merdone della settimana (<em>weekly very big shit</em>)</figcaption>
+</figure>
+<p>There are so many wrong things in here that I don’t know where to start.<br />
+If you’re a junior developer, this post will help you to understand some very bad errors written in the code above.</p>
+<h1 id="lines-of-errors-code">28 Lines of <del>Errors</del> Code</h1>
+<p>Let’s write down the above code, so that we can discuss about it:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;script&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw">function</span> <span class="at">authenticateUser</span>(username<span class="op">,</span> password) <span class="op">{</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="kw">var</span> accounts <span class="op">=</span> <span class="va">apiService</span>.<span class="at">sql</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="st">&quot;SELECT * FROM users&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  )<span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="va">accounts</span>.<span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="kw">var</span> account <span class="op">=</span> accounts [i]<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="cf">if</span> (<span class="va">account</span>.<span class="at">username</span> <span class="op">===</span> username <span class="op">&amp;&amp;</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>        <span class="va">account</span>.<span class="at">password</span> <span class="op">===</span> password)</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="op">{</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>      <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="op">}</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="op">}</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>  <span class="cf">if</span> (<span class="st">&quot;true&quot;</span> <span class="op">===</span> <span class="st">&quot;true&quot;</span>) <span class="op">{</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>  <span class="op">}</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="op">}</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="at">$</span>(<span class="st">'#login'</span>).<span class="at">click</span>(<span class="kw">function</span>() <span class="op">{</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>  <span class="kw">var</span> username <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;#username&quot;</span>).<span class="at">val</span>()<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="kw">var</span> password <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;#password&quot;</span>).<span class="at">val</span>()<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a>  <span class="kw">var</span> authenticated <span class="op">=</span> <span class="at">authenticateUser</span>(username<span class="op">,</span> password)<span class="op">;</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a>  <span class="cf">if</span> (authenticated <span class="op">===</span> <span class="kw">true</span>) <span class="op">{</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>    <span class="va">$</span>.<span class="at">cookie</span>(<span class="st">'loggedin'</span><span class="op">,</span> <span class="st">'yes'</span><span class="op">,</span> <span class="op">{</span> <span class="dt">expires</span><span class="op">:</span> <span class="dv">1</span> <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> (authenticated <span class="op">===</span> <span class="kw">false</span>) <span class="op">{</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a>    <span class="at">$</span>(<span class="st">&quot;error_message&quot;</span>).<span class="at">show</span>(LogInFailed)<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a>  <span class="op">}</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="kw">&lt;/script&gt;</span></span></code></pre></div>
+<p>Ok, I don’t really know where to start.<br />
+Let’s divide the errors above in 3 categories:</p>
+<ul>
+<li><a href="#security-issues">Security issues</a></li>
+<li><a href="#basic-programming-knowledge">Basic programming knowledge</a></li>
+<li><a href="#code-formatting">Code formatting</a></li>
+</ul>
+<h2 id="security-issues">
+Security issues
+</h2>
+<p>We are pretty sure that the following code is running on the client side, ’cause it’s wrapped between two <code>&lt;script&gt;</code> tags (also, is using jQuery).<br />
+Don’t get me wrong, it would have been terrible even on the server side, but running that code on the client exposes your database to… everyone.</p>
+<p>Let’s take a look at the <code>authenticateUser</code> function:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">function</span> <span class="at">authenticateUser</span>(username<span class="op">,</span> password) <span class="op">{</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="kw">var</span> accounts <span class="op">=</span> <span class="va">apiService</span>.<span class="at">sql</span>(</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="st">&quot;SELECT * FROM users&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  )<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="va">accounts</span>.<span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>    <span class="kw">var</span> account <span class="op">=</span> accounts [i]<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>    <span class="cf">if</span> (<span class="va">account</span>.<span class="at">username</span> <span class="op">===</span> username <span class="op">&amp;&amp;</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>        <span class="va">account</span>.<span class="at">password</span> <span class="op">===</span> password)</span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="op">{</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>      <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>    <span class="op">}</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>  <span class="op">}</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>  <span class="cf">if</span> (<span class="st">&quot;true&quot;</span> <span class="op">===</span> <span class="st">&quot;true&quot;</span>) <span class="op">{</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>  <span class="op">}</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="op">}</span></span></code></pre></div>
+<p>We have a function somewhere called <code>apiServices</code> which exposes a <code>.sql</code> method, where you can run SQL queries against the database.<br />
+That means that if you open the console on the web page that is hosting the above code, you’ll be able to spawn every kind of query.<br />
+</p>
+<p>You could do something like that:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1"></a><span class="va">apiService</span>.<span class="at">sql</span>(<span class="st">&quot;show tables;&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p>and it will return the complete list of their database tables by using their own APIs.<br />
+But hey, ok, let’s pretend that this is not a real problem. But take a look at that:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1"></a><span class="cf">if</span> (<span class="va">account</span>.<span class="at">username</span> <span class="op">===</span> username <span class="op">&amp;&amp;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="va">account</span>.<span class="at">password</span> <span class="op">===</span> password)</span></code></pre></div>
+<p>so you’re telling me that you’re saving all the passwords without hashing them?<br />
+Great move! Now I can attach a debugger to the Chrome console and see every user’s password.<br />
+I’m also pretty sure that an high percentage of users uses the same username/password tuple for social networks, email services, bank accounts and so on.</p>
+<div style="width:100%;height:0;padding-bottom:56%;position:relative;">
+<iframe src="https://giphy.com/embed/RyXVu4ZW454IM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen>
+</iframe>
+</div>
+<p>There’s also a problem on how they’re trying to setup the <code>loggedin</code> cookie:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1"></a><span class="va">$</span>.<span class="at">cookie</span>(<span class="st">'loggedin'</span><span class="op">,</span> <span class="st">'yes'</span><span class="op">,</span> <span class="op">{</span> <span class="dt">expires</span><span class="op">:</span> <span class="dv">1</span> <span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
+<p>So they’re basically using jQuery for setting a cookie which tells to the web application if a user is authenticated or not.<br />
+</p>
+<p>Well, <strong>NEVER SET THIS KIND OF COOKIES USING JAVASCRIPT</strong>.</p>
+<p>If you need to store that kind of information, cookies are the most common choice, and that’s ok! But setting them using JavaScript means that you cannot set the <code>httpOnly</code> attribute, so every single malevolent script will gain access to your cookies.</p>
+<p>Yes, I know, they’re just storing a key value like <code>'loggedin': 'yes'</code>, so that’s not the case, but that’s a very bad practice.</p>
+<p>Also, opening my Chrome console I could always type <code>$.cookie('loggedin', 'yes', { expires: 1000000000000 });</code> and I will stay loggedin forever without even have an account.</p>
+<h2 id="basic-programming-knowledge">
+Basic programming knowledge
+</h2>
+<p>There are so many things to say and so little time.<br />
+Obviously the <code>authenticateUser</code> function is pure garbage, and it shows some lacks of basic programming knowledge. </p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">function</span> <span class="at">authenticateUser</span>(username<span class="op">,</span> password) <span class="op">{</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="kw">var</span> accounts <span class="op">=</span> <span class="va">apiService</span>.<span class="at">sql</span>(</span>
+<span id="cb6-3"><a href="#cb6-3"></a>    <span class="st">&quot;SELECT * FROM users&quot;</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>  )<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a>  <span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="va">accounts</span>.<span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="op">{</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>    <span class="kw">var</span> account <span class="op">=</span> accounts [i]<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>    <span class="cf">if</span> (<span class="va">account</span>.<span class="at">username</span> <span class="op">===</span> username <span class="op">&amp;&amp;</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>        <span class="va">account</span>.<span class="at">password</span> <span class="op">===</span> password)</span>
+<span id="cb6-10"><a href="#cb6-10"></a>    <span class="op">{</span></span>
+<span id="cb6-11"><a href="#cb6-11"></a>      <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12"></a>    <span class="op">}</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>  <span class="op">}</span></span>
+<span id="cb6-14"><a href="#cb6-14"></a>  <span class="cf">if</span> (<span class="st">&quot;true&quot;</span> <span class="op">===</span> <span class="st">&quot;true&quot;</span>) <span class="op">{</span></span>
+<span id="cb6-15"><a href="#cb6-15"></a>    <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a>  <span class="op">}</span></span>
+<span id="cb6-17"><a href="#cb6-17"></a><span class="op">}</span></span></code></pre></div>
+<p>Instead of selecting every single user inside of the database, why doesn’t he/she select just the user with a given username and a given password?<br />
+What if he/she had millions of users in that database?<br />
+</p>
+<p>I’ve said before and I’ll say it again, <strong>why they’re not hashing passwords inside of their database?</strong></p>
+<p>Let’s move on to the returning value of <code>authenticateUser</code>.<br />
+For what I see, it takes two arguments of type <code>string</code> and returns a single <code>boolean</code> value.<br />
+</p>
+<p>So, the following piece of code, even being awful, makes a bit of sense:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1"></a><span class="cf">for</span> (<span class="kw">var</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="va">accounts</span>.<span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) <span class="op">{</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="kw">var</span> account <span class="op">=</span> accounts [i]<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>  <span class="cf">if</span> (<span class="va">account</span>.<span class="at">username</span> <span class="op">===</span> username <span class="op">&amp;&amp;</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>      <span class="va">account</span>.<span class="at">password</span> <span class="op">===</span> password)</span>
+<span id="cb7-5"><a href="#cb7-5"></a>  <span class="op">{</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a>    <span class="cf">return</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a>  <span class="op">}</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="op">}</span></span></code></pre></div>
+<p>“does an user with <em><strong>X</strong></em> username and <em><strong>Y</strong></em> password exists? Yes, so I’ll return <code>true</code>”.<br />
+But this:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1"></a><span class="cf">if</span> (<span class="st">&quot;true&quot;</span> <span class="op">===</span> <span class="st">&quot;true&quot;</span>) <span class="op">{</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="cf">return</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="op">}</span></span></code></pre></div>
+<p>This doesn’t make sense at all.<br />
+Why doesn’t this function return <code>false</code> without this always-true conditional?</p>
+<p>Now let’s analyze the following code:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1"></a><span class="at">$</span>(<span class="st">'#login'</span>).<span class="at">click</span>(<span class="kw">function</span>() <span class="op">{</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="kw">var</span> username <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;#username&quot;</span>).<span class="at">val</span>()<span class="op">;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="kw">var</span> password <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;#password&quot;</span>).<span class="at">val</span>()<span class="op">;</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="kw">var</span> authenticated <span class="op">=</span> <span class="at">authenticateUser</span>(username<span class="op">,</span> password)<span class="op">;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a></span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="cf">if</span> (authenticated <span class="op">===</span> <span class="kw">true</span>) <span class="op">{</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="va">$</span>.<span class="at">cookie</span>(<span class="st">'loggedin'</span><span class="op">,</span> <span class="st">'yes'</span><span class="op">,</span> <span class="op">{</span> <span class="dt">expires</span><span class="op">:</span> <span class="dv">1</span> <span class="op">}</span>)<span class="op">;</span></span>
+<span id="cb9-9"><a href="#cb9-9"></a>  <span class="op">}</span> <span class="cf">else</span> <span class="cf">if</span> (authenticated <span class="op">===</span> <span class="kw">false</span>) <span class="op">{</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>    <span class="at">$</span>(<span class="st">&quot;error_message&quot;</span>).<span class="at">show</span>(LogInFailed)<span class="op">;</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>  <span class="op">}</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
+<p>The part where it’s taking the values using jQuery is ok.<br />
+The problem is how it’s handling the <code>loggedin</code> cookie.<br />
+</p>
+<p>We’ve previously talked about the fact that I could just open my Chrome console and type <code>$.cookie('loggedin', 'yes', { expires: 1 });</code> in order to stay authenticated for one day without even the need for an account.<br />
+</p>
+<p>So, how the heck does this web page know who I am?<br />
+Maybe it’s just showing some private content under username/password authentication, so it’s not showing any personal data. No one will ever know.</p>
+<h2 id="code-formatting">
+Code Formatting
+</h2>
+<p>Probably the less critical part of the whole code, but we can clearly see that this developer have copied/pasted some code taken from some website.</p>
+<p>Here we can see the use of the double quotes for writing strings:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">var</span> username <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;#username&quot;</span>).<span class="at">val</span>()<span class="op">;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="kw">var</span> password <span class="op">=</span> <span class="at">$</span>(<span class="st">&quot;#password&quot;</span>).<span class="at">val</span>()<span class="op">;</span></span></code></pre></div>
+<p>Here we can see single quotes:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1"></a><span class="va">$</span>.<span class="at">cookie</span>(<span class="st">'loggedin'</span><span class="op">,</span> <span class="st">'yes'</span><span class="op">,</span> <span class="op">{</span> <span class="dt">expires</span><span class="op">:</span> <span class="dv">1</span> <span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
+<p>This may not look important, but it’s actually telling us that the developer has probably copied some code from StackOverflow without even rewriting it following a common style guide for the whole codebase.<br />
+Of course this is a minor issue, but it show that the developer doesn’t really care about understanding how the code is working, it just want it to work in some way.</p>
+<p>Don’t get me wrong, I do search things on Google daily, but it is more important to understand (for instance) how to set a cookie, than copy and paste something just to make it work.<br />
+What if for some reason the whole process breaks? How do you know which part of your script is not working?</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>I’m absolutely sure that the code above is fake.<br />
+That’s the first time that I see a synchronous SQL query:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">var</span> accounts <span class="op">=</span> <span class="va">apiService</span>.<span class="at">sql</span>(</span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="st">&quot;SELECT * FROM users&quot;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>)<span class="op">;</span></span></code></pre></div>
+<p>Normally, I’d expect something like that:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">var</span> accounts <span class="op">=</span> <span class="va">apiService</span>.<span class="at">sql</span>(<span class="st">&quot;SELECT * FROM users&quot;</span><span class="op">,</span> (err<span class="op">,</span> res) <span class="kw">=&gt;</span> <span class="op">{</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="va">console</span>.<span class="at">log</span>(err)<span class="op">;</span> <span class="co">// some error</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="va">console</span>.<span class="at">log</span>(res)<span class="op">;</span> <span class="co">// query result</span></span>
+<span id="cb13-4"><a href="#cb13-4"></a><span class="op">}</span>)<span class="op">;</span></span></code></pre></div>
+<p>or like that:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">var</span> accounts <span class="op">=</span> <span class="cf">await</span> <span class="va">apiService</span>.<span class="at">sql</span>(</span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="st">&quot;SELECT * FROM users&quot;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>)<span class="op">;</span></span></code></pre></div>
+<p>Even if <code>apiService.sql</code> returns a value synchronously (which I doubt), internally it have to open a connection to a database, make a query and send back the response, which (as you may have guessed) can’t be synchronous.<br />
+</p>
+<p>But even if the code above was not a fake, I’m sure that it has been written by a junior dev.<br />
+During my first weeks as a developer, I’m pretty sure I wrote such bad code for my old company (sorry :D).<br />
+</p>
+<p><strong>It’s not a junior developer fault</strong>.<br />
+Let’s pretend that the above code is real. The junior developer here is making its best for making it work.<br />
+He/she have yet to learn how to properly handle SQL queries, cookies and other stuff, and that’s totally fine!<br />
+</p>
+<p>Senior developers should provide some form of mentorship in order to make sure that junior devs can understand their errors, and such bad code won’t go in production.<br />
+</p>
+<p>I know for sure that there are certain companies that doesn’t really care about the code that they’re shipping.<br />
+Does it solve a problem? Deploy it.<br />
+Is it written by a junior, without even an approval from a senior dev? Deploy it.<br />
+</p>
+<p>Shit happens.</p>
+    </section>
+</article>
+
+        </main>
+
+        <footer>
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll" target="_blank">Hakyll</a> - Source code <a href="https://github.com/micheleriva/personal-website" target="_blank">here</a>
+        </footer>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76573733-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-76573733-1');
+        </script>
+    </body>
+</html>
