@@ -269,3 +269,11 @@ Does it solve a problem? Deploy it.\
 Is it written by a junior, without even an approval from a senior dev? Deploy it.\
 
 Shit happens.
+
+## UPDATE 2020/08/03
+
+After discussing this article on [Reddit](https://www.reddit.com/r/programming/comments/i1ph52/reviewing_the_worst_piece_of_code_ever), a very nice guy reached out sharing the following Reddit thread: [https://www.reddit.com/r/programminghorror/comments/66klvc/this_javascript_code_powers_a_1500_user_intranet](https://www.reddit.com/r/programminghorror/comments/66klvc/this_javascript_code_powers_a_1500_user_intranet)
+
+"_This JavaScript code powers a 1,500 user intranet application_"
+
+so apparently I was wrong. This piece of code is not fake!
