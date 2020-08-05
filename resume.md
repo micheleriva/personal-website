@@ -46,8 +46,6 @@ title: Resume
 
 ---
 
-# I have some experience with
-
 ### Backend Languages
 - Node.js
 - TypeScript
