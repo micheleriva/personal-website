@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Michele Riva - My Dream Programming Language</title>
+        
+        <link rel="stylesheet" href="../css/default.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <a href="../">Michele Riva</a>
+            </div>
+            <nav>
+                <a href="../">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../resume.html">Resume</a>
+                <a href="../talks.html">Talks</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../archive.html">Archive</a>
+            </nav>
+        </header>
+
+        <main role="main">
+            <h1>My Dream Programming Language</h1>
+            <article>
+    <section class="header">
+        Posted on August 21, 2020
+        
+    </section>
+    <section>
+        <p>I’ve always been fascinated by programming languages.<br />
+Every programming language brings its own syntax, semantic and paradigm.<br />
+</p>
+<p>If you have to choice how to implement your own programming language, how would you do it?<br />
+Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</strong>unctional <strong>L</strong>ight <strong>I</strong>mperative <strong>P</strong>rogramming) programming language.</p>
+<h1 id="index">Index</h1>
+<ul>
+<li><a href="#types-and-syntax">Types and Syntax</a></li>
+<li><a href="#built-in-data-structures">Built-in data structures</a></li>
+<li><a href="#functions-functions-functions">Functions! Functions! Functions!</a></li>
+<li><a href="#impure-functions">Impure functions</a></li>
+<li><a href="#failure-handling">Failure handling</a></li>
+<li><a href="#example-program">Example program</a></li>
+<li><a href="#project-status">Project Status</a></li>
+</ul>
+<h1 id="types-and-syntax">Types and Syntax</h1>
+<p>Infer is a statically typed programming language. It uses the <strong>Hindley Milner</strong> type system for type signatures. Let’s define a simple <code>add</code> function, which adds two numbers:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">@</span>spec add <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>add (x y) <span class="ot">-&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  x <span class="op">+</span> y</span></code></pre></div>
+<p>Parentheses are completely optional, so developers coming from <strong>C-Like</strong> languages will find it easier to get started with this language:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">@</span>spec add <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>add (x y) <span class="ot">-&gt;</span> {</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  x <span class="op">+</span> y</span>
+<span id="cb2-4"><a href="#cb2-4"></a>}</span></code></pre></div>
+<p>Also, type annotations are completely optional, and can be inferred at compile time (REPL example):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;</span> <span class="bu">let</span> add x y -<span class="op">&gt;</span> x + y</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;</span> <span class="st">&quot;add : Int -&gt; Int -&gt; Int&quot;</span></span></code></pre></div>
+<p><strong>Infer</strong> gives you access to type classes, so that you could refactor the <code>add</code> type signature as follows (just like in Haskell):</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">@</span>spec add <span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a</span>
+<span id="cb4-2"><a href="#cb4-2"></a>add (x y) <span class="ot">-&gt;</span> {</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  x <span class="op">+</span> y</span>
+<span id="cb4-4"><a href="#cb4-4"></a>}</span></code></pre></div>
+<p>Functions will always be automatically curried, so that (for instance) the <code>add</code> function can take advantage of partial application:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">@</span>spec add <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>add (x y) <span class="ot">-&gt;</span> {</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  x <span class="op">+</span> y</span>
+<span id="cb5-4"><a href="#cb5-4"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5"></a></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="op">@</span>spec add5 <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>add5 <span class="ot">-&gt;</span> add <span class="dv">5</span></span>
+<span id="cb5-8"><a href="#cb5-8"></a></span>
+<span id="cb5-9"><a href="#cb5-9"></a>main <span class="ot">-&gt;</span> {</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">print</span> add5(<span class="dv">10</span>)  <span class="co">-- 15</span></span>
+<span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">print</span> add(<span class="dv">10</span> <span class="dv">5</span>) <span class="co">-- 15</span></span>
+<span id="cb5-12"><a href="#cb5-12"></a>}</span></code></pre></div>
+<p>Every <strong>Infer</strong> program needs a <code>main</code> function, which will be the entry point of the program itself:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1"></a>main <span class="ot">-&gt;</span> println <span class="st">&quot;Hello, World!&quot;</span></span></code></pre></div>
+<h1 id="built-in-data-structures">Built-in data structures</h1>
+<p><strong>Inferi</strong> comes with a useful collection of built-in data structures such as:</p>
+<p><strong>Maps</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">data</span> <span class="dt">MapExample</span> <span class="ot">=</span> {</span>
+<span id="cb7-2"><a href="#cb7-2"></a>  firstName <span class="op">:</span> <span class="dt">String</span>,</span>
+<span id="cb7-3"><a href="#cb7-3"></a>  lastName  <span class="op">:</span> <span class="dt">String</span>,</span>
+<span id="cb7-4"><a href="#cb7-4"></a>  nickname  <span class="op">:</span> <span class="dt">String</span></span>
+<span id="cb7-5"><a href="#cb7-5"></a>}</span>
+<span id="cb7-6"><a href="#cb7-6"></a></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="op">@</span>spec mapExample <span class="ot">-&gt;</span> <span class="dt">Map</span>(<span class="dt">MapExample</span>)</span>
+<span id="cb7-8"><a href="#cb7-8"></a>mapExample <span class="ot">-&gt;</span> {</span>
+<span id="cb7-9"><a href="#cb7-9"></a>  <span class="op">%</span>{</span>
+<span id="cb7-10"><a href="#cb7-10"></a>    firstName<span class="op">:</span> <span class="st">&quot;Michele&quot;</span>,</span>
+<span id="cb7-11"><a href="#cb7-11"></a>    lastName<span class="op">:</span>  <span class="st">&quot;Riva&quot;</span>,</span>
+<span id="cb7-12"><a href="#cb7-12"></a>    nickname<span class="op">:</span>  <span class="st">&quot;Mitch&quot;</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a>  }</span>
+<span id="cb7-14"><a href="#cb7-14"></a>}</span></code></pre></div>
+<p><strong>Lists</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb8-1"><a href="#cb8-1"></a><span class="op">@</span>spec listExample <span class="ot">-&gt;</span> [<span class="dt">Int</span>]</span>
+<span id="cb8-2"><a href="#cb8-2"></a>listExample <span class="ot">-&gt;</span> [<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">20</span>, <span class="dv">1010</span>, <span class="dv">20391</span>, <span class="dv">2039484</span>]</span></code></pre></div>
+<p><strong>Tuples</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">@</span>spec tupleExample <span class="ot">-&gt;</span> {<span class="dt">String</span>, <span class="dt">Float</span>, <span class="dt">Bool</span>}</span>
+<span id="cb9-2"><a href="#cb9-2"></a>tupleExample <span class="ot">-&gt;</span> {<span class="st">&quot;I am a string&quot;</span>, <span class="op">-</span><span class="fl">30.02</span>, true}</span></code></pre></div>
+<h1 id="functions-functions-functions">Functions! Functions! Functions!</h1>
+<p><strong>Infer</strong> takes a lot from both <strong>Haskell</strong> and <strong>Elixir</strong>.</p>
+<p>You can pattern match against multiple values by creating different functions, just like in Haskell (incredibly stupid example):</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">@</span>spec greet <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>greet (<span class="st">&quot;Mitch&quot;</span>) <span class="ot">-&gt;</span> <span class="st">&quot;Hello, Mitch!&quot;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>greet (<span class="st">&quot;Jona&quot;</span>)  <span class="ot">-&gt;</span> <span class="st">&quot;Hello, Jona!&quot;</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>greet (_)       <span class="ot">-&gt;</span> <span class="st">&quot;Hello, stranger!&quot;</span></span></code></pre></div>
+<p>of course you can bind the passed argument to a variable:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">@</span>spec greet <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>greet (<span class="st">&quot;Mitch&quot;</span>) <span class="ot">-&gt;</span> <span class="st">&quot;Hello, Mitch!&quot;</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>greet (<span class="st">&quot;Jona&quot;</span>)  <span class="ot">-&gt;</span> <span class="st">&quot;Hello, Jona!&quot;</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>greet (name)    <span class="ot">-&gt;</span> <span class="st">&quot;Hello, ${name}!&quot;</span></span></code></pre></div>
+<p>You can compose functions by using the <strong>pipeline</strong> operator:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">@</span>spec scream <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>scream (str) <span class="ot">-&gt;</span> {</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  str</span>
+<span id="cb12-4"><a href="#cb12-4"></a>    <span class="op">|&gt;</span> upcase</span>
+<span id="cb12-5"><a href="#cb12-5"></a>    <span class="op">|&gt;</span> (\x <span class="ot">-&gt;</span> <span class="st">&quot;${x}!!!&quot;</span>) <span class="co">-- Lambda function, just like in Haskell</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a>}</span></code></pre></div>
+<p>or currying just Like in Haskell:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb13-1"><a href="#cb13-1"></a><span class="op">@</span>spec scream <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>scream (str) <span class="ot">-&gt;</span> str · upcase · (\x <span class="ot">-&gt;</span> <span class="st">&quot;${x}!!!&quot;</span>)</span></code></pre></div>
+<p>Also, lambda functions supports the Elixir <strong>capture operator</strong> for lambda functions:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb14-1"><a href="#cb14-1"></a><span class="op">@</span>spec scream <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>scream (str) <span class="ot">-&gt;</span> str · upcase · (<span class="op">&amp;</span> <span class="st">&quot;${&amp;1}!!!&quot;</span>)</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="co">--                              ^     ^ Here we say that we want to use the first argument of our lambda function</span></span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="co">--                              ^ Here we say that this is a lambda functions                  </span></span></code></pre></div>
+<h1 id="impure-functions">Impure functions</h1>
+<p>Unlike Haskell, <strong>Infer</strong> is not a purely functional programming language, and it allows us to write some functions that supports impure computations.</p>
+<p><strong>Impure function</strong>:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">import</span> http (call) <span class="co">-- import the &quot;call&quot; function from the &quot;http&quot; library</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="kw">import</span> list (push)</span>
+<span id="cb15-3"><a href="#cb15-3"></a></span>
+<span id="cb15-4"><a href="#cb15-4"></a><span class="kw">data</span> <span class="dt">RESTPeople</span> <span class="ot">=</span> {</span>
+<span id="cb15-5"><a href="#cb15-5"></a>  name <span class="op">:</span> <span class="dt">String</span> <span class="ot">`json:&quot;name&quot;`</span> <span class="co">-- a little bit of Golang</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>  age  <span class="op">:</span> <span class="dt">Int</span>    <span class="ot">`json:&quot;age&quot;`</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>}</span>
+<span id="cb15-8"><a href="#cb15-8"></a></span>
+<span id="cb15-9"><a href="#cb15-9"></a><span class="op">@</span>spec callRestAPI <span class="op">:</span> <span class="dt">Either</span>(<span class="dt">Error</span> [<span class="dt">String</span>])</span>
+<span id="cb15-10"><a href="#cb15-10"></a>callRestAPI<span class="op">?</span> <span class="ot">-&gt;</span> {</span>
+<span id="cb15-11"><a href="#cb15-11"></a>  <span class="kw">let</span> mut people <span class="op">:</span> [<span class="dt">String</span>]</span>
+<span id="cb15-12"><a href="#cb15-12"></a>  <span class="kw">let</span> mut callResult <span class="op">:</span> [<span class="dt">RESTPeople</span>]</span>
+<span id="cb15-13"><a href="#cb15-13"></a></span>
+<span id="cb15-14"><a href="#cb15-14"></a>  <span class="op">&amp;</span>callResult <span class="ot">&lt;-</span> await call(<span class="st">&quot;https://my-rest-api.com/get-people&quot;</span>)</span>
+<span id="cb15-15"><a href="#cb15-15"></a></span>
+<span id="cb15-16"><a href="#cb15-16"></a>  for person <span class="kw">in</span> callResult <span class="ot">-&gt;</span> {</span>
+<span id="cb15-17"><a href="#cb15-17"></a>    { name, age } <span class="ot">=</span> person</span>
+<span id="cb15-18"><a href="#cb15-18"></a>    <span class="kw">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span> {</span>
+<span id="cb15-19"><a href="#cb15-19"></a>      push(people, name)</span>
+<span id="cb15-20"><a href="#cb15-20"></a>    }</span>
+<span id="cb15-21"><a href="#cb15-21"></a>  }</span>
+<span id="cb15-22"><a href="#cb15-22"></a></span>
+<span id="cb15-23"><a href="#cb15-23"></a>  <span class="fu">return</span> people</span>
+<span id="cb15-24"><a href="#cb15-24"></a>}</span></code></pre></div>
+<p>We import the <code>call</code> function from the <code>http</code> library and <code>push</code> from the <code>list</code> library<br />
+We define a <code>type</code> (in that case, really similar to <strong>Golang structs</strong>) declaring which value needs to be decoded from the JSON response of our REST API.</p>
+<p>After that, we define a function called <code>callRestAPI</code> which returns an Either monad (functions with <code>mut</code> keywords or other impure computations <strong>must</strong> return a monad, see <strong>Failure handling</strong> paragraph).</p>
+<p>We declare a <strong>mutable</strong> <code>people</code> variable, which is a list of strings.<br />
+We declare our <strong>mutable</strong> <code>callResult</code> variable, which will contain the REST response.<br />
+</p>
+<p>We can finally call our REST API, and we put the result of that call inside the <code>callResult</code> variable.<br />
+After that, we loop over the result (which is a list of <code>RESTPeople</code>) and we update the previously created list <code>people</code> by using the <code>push</code> function.</p>
+<p>As last statement of our function, we need to use the <code>return</code> keywords, which wraps the result into the Either monad.<br />
+If any error occurs, it will wrap the error inside the <code>Left</code> result, otherwise it will fill the <code>Right</code> result of the monad.</p>
+<p><strong>Pure counterpart</strong>:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">import</span> http (call?)</span>
+<span id="cb16-2"><a href="#cb16-2"></a></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="kw">data</span> <span class="dt">RESTPeople</span> <span class="ot">=</span> {</span>
+<span id="cb16-4"><a href="#cb16-4"></a>  name <span class="op">:</span> <span class="dt">String</span> <span class="ot">`json:&quot;name&quot;`</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>  age  <span class="op">:</span> <span class="dt">Int</span>    <span class="ot">`json:&quot;age&quot;`</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>}</span>
+<span id="cb16-7"><a href="#cb16-7"></a></span>
+<span id="cb16-8"><a href="#cb16-8"></a><span class="op">@</span>spec callRestAPI <span class="op">:</span> <span class="dt">Either</span>(<span class="dt">Error</span> [<span class="dt">String</span>])</span>
+<span id="cb16-9"><a href="#cb16-9"></a>callRestAPI<span class="op">?</span> <span class="ot">-&gt;</span> {</span>
+<span id="cb16-10"><a href="#cb16-10"></a>  <span class="fu">return</span> <span class="op">$</span></span>
+<span id="cb16-11"><a href="#cb16-11"></a>    (await call<span class="op">?</span>(<span class="st">&quot;https://my-rest-api.com/get-people&quot;</span>) <span class="op">:</span> [<span class="dt">RESTPeople</span>])</span>
+<span id="cb16-12"><a href="#cb16-12"></a>      <span class="op">|&gt;</span> <span class="fu">filter</span>(<span class="op">&amp;</span> <span class="op">&amp;</span><span class="dv">1</span><span class="op">.</span>age <span class="op">&gt;=</span> <span class="dv">18</span> )</span>
+<span id="cb16-13"><a href="#cb16-13"></a>      <span class="op">|&gt;</span> <span class="fu">map</span>(<span class="op">&amp;</span> <span class="fu">drop</span>(<span class="op">&amp;</span><span class="dv">1</span>, <span class="st">&quot;age&quot;</span>))</span>
+<span id="cb16-14"><a href="#cb16-14"></a>}</span></code></pre></div>
+<p>You can also write the exact same function in a more pure manner by using the pipeline operator.<br />
+The <code>$</code> operator is used after <code>return</code> for replacing round brackets, just like in Haskell.</p>
+<h1 id="failure-handling">Failure handling</h1>
+<p>Functions could always fail. That’s why <strong>Infer</strong> wants to provide three different ways for handling and avoiding runtime errors as follows:</p>
+<p><strong>1) Pattern matching</strong>:<br />
+You can just pattern match over one or more arguments of your functions and avoid or throw errors as you prefer:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">@</span>spec divide <span class="op">:</span> <span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a</span>
+<span id="cb17-2"><a href="#cb17-2"></a>divide (x y) <span class="ot">-&gt;</span> x <span class="op">/</span> y</span>
+<span id="cb17-3"><a href="#cb17-3"></a>divide (x <span class="dv">0</span>) <span class="ot">-&gt;</span> <span class="fu">error</span> <span class="st">&quot;You can't divide by 0&quot;</span></span>
+<span id="cb17-4"><a href="#cb17-4"></a></span>
+<span id="cb17-5"><a href="#cb17-5"></a>main <span class="ot">-&gt;</span> {</span>
+<span id="cb17-6"><a href="#cb17-6"></a>  divide (<span class="dv">10</span> <span class="dv">5</span>) <span class="co">-- 2</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>  divide (<span class="dv">10</span> <span class="dv">0</span>) <span class="co">-- Runtime error: You can't divide by 0</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a>}</span></code></pre></div>
+<p><strong>2) Monadic failure handling</strong>:<br />
+You can add <code>?</code> after the function name so that it will encapsulate the function output into an <code>Either</code> monad:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb18-1"><a href="#cb18-1"></a><span class="op">@</span>spec divide <span class="op">:</span> <span class="dt">Either</span> (<span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a)</span>
+<span id="cb18-2"><a href="#cb18-2"></a>divide<span class="op">?</span> (x y) <span class="ot">-&gt;</span> x <span class="op">/</span> y</span>
+<span id="cb18-3"><a href="#cb18-3"></a></span>
+<span id="cb18-4"><a href="#cb18-4"></a>main <span class="ot">-&gt;</span> {</span>
+<span id="cb18-5"><a href="#cb18-5"></a>  divide<span class="op">?</span>(<span class="dv">10</span> <span class="dv">5</span>) <span class="co">-- Right (10)</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a>  divide<span class="op">?</span>(<span class="dv">10</span> <span class="dv">0</span>) <span class="co">-- Left (Error{reason: &quot;Division by 0&quot;, args: {10, 5}})</span></span>
+<span id="cb18-7"><a href="#cb18-7"></a>}</span></code></pre></div>
+<p>If a runtime error occurs, <strong>Infer</strong> will let you know by returning a struct containing the reason of the error and the passed arguments (incredibly useful for debug).</p>
+<p>You can also implement the <strong>monadic failure handling</strong> yourself:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">@</span>spec divide <span class="op">:</span> <span class="dt">Either</span> (<span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a)</span>
+<span id="cb19-2"><a href="#cb19-2"></a>divide<span class="op">?</span> (x y) <span class="ot">-&gt;</span> {</span>
+<span id="cb19-3"><a href="#cb19-3"></a>  try {</span>
+<span id="cb19-4"><a href="#cb19-4"></a>    result <span class="ot">=</span> x <span class="op">/</span> y</span>
+<span id="cb19-5"><a href="#cb19-5"></a>    <span class="dt">Right</span>(result)</span>
+<span id="cb19-6"><a href="#cb19-6"></a>  } <span class="fu">catch</span> <span class="fu">error</span> <span class="ot">-&gt;</span> {</span>
+<span id="cb19-7"><a href="#cb19-7"></a>    println (<span class="fu">error</span>) <span class="co">-- you can debug the error, send it to Sentry,</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a>                    <span class="co">-- do whatever you want</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a>    <span class="dt">Left</span>(<span class="dt">Error</span>{reason<span class="op">:</span> <span class="st">&quot;You can't divide by 0!&quot;</span>}) <span class="co">-- The arguments will </span></span>
+<span id="cb19-10"><a href="#cb19-10"></a>                                                  <span class="co">-- automatically be attached runtime</span></span>
+<span id="cb19-11"><a href="#cb19-11"></a>  }</span>
+<span id="cb19-12"><a href="#cb19-12"></a>}</span></code></pre></div>
+<p><strong>3) Using Status Tuples:</strong><br />
+Just like in Elixir/Erlang, you can just return some tuples representing your computation result. This won’t prevent runtime errors, but it’s a best practice for defining different kind of functions:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">@</span>spec divide<span class="op">!</span> <span class="op">:</span> <span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> <span class="dt">Status</span>(a)</span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="co">--          ^ it is best practice to set `!` after the function name for telling</span></span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="co">--            that you're returning a Status tuple</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a></span>
+<span id="cb20-5"><a href="#cb20-5"></a>divide<span class="op">!</span> (x y) (when y <span class="op">==</span> <span class="dv">0</span>) <span class="ot">-&gt;</span> {<span class="op">:</span><span class="fu">error</span>, <span class="dv">0</span>, <span class="st">&quot;Division by 0&quot;</span>}</span>
+<span id="cb20-6"><a href="#cb20-6"></a><span class="co">--           ^ Please note this Erlang-style guards</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a></span>
+<span id="cb20-8"><a href="#cb20-8"></a>divide<span class="op">!</span> (x y) <span class="ot">-&gt;</span> {</span>
+<span id="cb20-9"><a href="#cb20-9"></a>  result <span class="ot">=</span> x <span class="op">/</span> y</span>
+<span id="cb20-10"><a href="#cb20-10"></a>  {<span class="op">:</span>ok, result, <span class="st">&quot;&quot;</span>}</span>
+<span id="cb20-11"><a href="#cb20-11"></a>}</span>
+<span id="cb20-12"><a href="#cb20-12"></a></span>
+<span id="cb20-13"><a href="#cb20-13"></a>main <span class="ot">-&gt;</span> {</span>
+<span id="cb20-14"><a href="#cb20-14"></a>  <span class="fu">print</span> divide(<span class="dv">10</span> <span class="dv">5</span>) <span class="co">-- {:ok, 2, &quot;&quot;}</span></span>
+<span id="cb20-15"><a href="#cb20-15"></a>  <span class="fu">print</span> divide(<span class="dv">10</span> <span class="dv">0</span>) <span class="co">-- {:error, 0, &quot;Division by 0&quot;}</span></span>
+<span id="cb20-16"><a href="#cb20-16"></a>}</span></code></pre></div>
+<p>Status is a <strong>private</strong> type that represents either <code>:ok</code> or <code>:error</code> atoms (taken from Elixir/Erlang atoms):</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">type</span> <span class="dt">Status</span> a   <span class="ot">-&gt;</span> {<span class="dt">Atom</span>, a, <span class="dt">String</span>}</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="kw">type</span> <span class="dt">Status</span> a b <span class="ot">-&gt;</span> {<span class="dt">Atom</span>, a, b}</span></code></pre></div>
+<p>as you can see in the above definition, we can pass arguments to our types.<br />
+That means that we can define different <code>Status</code> types depending on the function we’re writing.</p>
+<p>As an example, this will fail:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb22-1"><a href="#cb22-1"></a><span class="op">@</span>spec divideFloat<span class="op">!</span> <span class="op">:</span> <span class="dt">Float</span> <span class="ot">-&gt;</span> <span class="dt">Float</span> <span class="ot">-&gt;</span> <span class="dt">Status</span>(<span class="dt">Float</span>)</span>
+<span id="cb22-2"><a href="#cb22-2"></a>divideFloat<span class="op">!</span> (x y) (when y <span class="op">==</span> <span class="fl">0.0</span>) <span class="ot">-&gt;</span> {<span class="op">:</span><span class="fu">error</span>, <span class="dv">0</span>, <span class="st">&quot;Division by 0&quot;</span>}</span>
+<span id="cb22-3"><a href="#cb22-3"></a></span>
+<span id="cb22-4"><a href="#cb22-4"></a><span class="co">-- The 0 passed to the Status tuple is of Int type, but the Status Tuple</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a><span class="co">-- wants a Float (so, 0.0)!</span></span></code></pre></div>
+<p>But this will work:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb23-1"><a href="#cb23-1"></a><span class="op">@</span>spec divideFloat<span class="op">!</span> <span class="op">:</span> <span class="dt">Float</span> <span class="ot">-&gt;</span> <span class="dt">Float</span> <span class="ot">-&gt;</span> <span class="dt">Status</span>(<span class="dt">Float</span>)</span>
+<span id="cb23-2"><a href="#cb23-2"></a>divideFloat<span class="op">!</span> (x y) (when y <span class="op">==</span> <span class="fl">0.0</span>) <span class="ot">-&gt;</span> {<span class="op">:</span><span class="fu">error</span>, <span class="fl">0.0</span>, <span class="st">&quot;Division by 0&quot;</span>}</span></code></pre></div>
+<p>As you can see in the <code>Status</code> definition, we can also customize the third tuple element by explicitly passing its type:</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb24-1"><a href="#cb24-1"></a><span class="op">@</span>spec doSomethingCool <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">Status</span>(<span class="dt">String</span> <span class="dt">Maybe</span>(<span class="dt">Error</span>))</span>
+<span id="cb24-2"><a href="#cb24-2"></a>doSomethingCool (str1 str2) <span class="ot">-&gt;</span> {</span>
+<span id="cb24-3"><a href="#cb24-3"></a>  returningString       <span class="ot">=</span> <span class="st">&quot;${str1} ${str2}&quot;</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>  {<span class="op">:</span>ok, returningString, <span class="dt">Nothing</span>}</span>
+<span id="cb24-5"><a href="#cb24-5"></a>}</span>
+<span id="cb24-6"><a href="#cb24-6"></a></span>
+<span id="cb24-7"><a href="#cb24-7"></a>main <span class="ot">-&gt;</span> {</span>
+<span id="cb24-8"><a href="#cb24-8"></a>  <span class="fu">print</span> doSomethingCool (<span class="st">&quot;Michele&quot;</span> <span class="st">&quot;Riva&quot;</span>) <span class="co">-- {:ok, &quot;Michele Riva&quot;, Nothing}</span></span>
+<span id="cb24-9"><a href="#cb24-9"></a>}</span></code></pre></div>
+<h1 id="example-program">Example program</h1>
+<p>Let’s write a very simple webserver using just the <strong>Inferi</strong> standard library:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">import</span> webserver</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="kw">import</span> system (env)</span>
+<span id="cb25-3"><a href="#cb25-3"></a></span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="co">{--</span></span>
+<span id="cb25-5"><a href="#cb25-5"></a><span class="co">  Here we get the port number that we want to expose</span></span>
+<span id="cb25-6"><a href="#cb25-6"></a><span class="co">  from our webserver.</span></span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="co">--}</span></span>
+<span id="cb25-8"><a href="#cb25-8"></a></span>
+<span id="cb25-9"><a href="#cb25-9"></a><span class="op">@</span>spec port <span class="op">:</span> <span class="dt">Int</span></span>
+<span id="cb25-10"><a href="#cb25-10"></a>port <span class="ot">-&gt;</span> {</span>
+<span id="cb25-11"><a href="#cb25-11"></a>  <span class="kw">case</span> env(<span class="st">&quot;PORT&quot;</span>) <span class="ot">-&gt;</span> {</span>
+<span id="cb25-12"><a href="#cb25-12"></a>    <span class="op">|</span> <span class="dt">Just</span>(env_port) <span class="ot">-&gt;</span> <span class="fu">read</span> env_port <span class="co">-- automatic unwrap, is this OCaml?</span></span>
+<span id="cb25-13"><a href="#cb25-13"></a>    <span class="op">|</span> <span class="dt">Nothing</span>        <span class="ot">-&gt;</span> <span class="dv">8000</span> </span>
+<span id="cb25-14"><a href="#cb25-14"></a>  }</span>
+<span id="cb25-15"><a href="#cb25-15"></a>}</span>
+<span id="cb25-16"><a href="#cb25-16"></a></span>
+<span id="cb25-17"><a href="#cb25-17"></a><span class="co">{--</span></span>
+<span id="cb25-18"><a href="#cb25-18"></a><span class="co">  We then specify a list of tuples which represents</span></span>
+<span id="cb25-19"><a href="#cb25-19"></a><span class="co">  our webserver routes.</span></span>
+<span id="cb25-20"><a href="#cb25-20"></a><span class="co">--}</span></span>
+<span id="cb25-21"><a href="#cb25-21"></a></span>
+<span id="cb25-22"><a href="#cb25-22"></a><span class="op">@</span>spec routes <span class="op">:</span> [webserver<span class="op">.</span><span class="dt">Route</span>]</span>
+<span id="cb25-23"><a href="#cb25-23"></a>routes <span class="ot">-&gt;</span> {</span>
+<span id="cb25-24"><a href="#cb25-24"></a>  [</span>
+<span id="cb25-25"><a href="#cb25-25"></a>    {<span class="st">&quot;/&quot;</span>,            indexController}</span>
+<span id="cb25-26"><a href="#cb25-26"></a>  , {<span class="st">&quot;/about&quot;</span>,       aboutController}</span>
+<span id="cb25-27"><a href="#cb25-27"></a>  , {<span class="st">&quot;/greet/:name&quot;</span>, greetController}</span>
+<span id="cb25-28"><a href="#cb25-28"></a>  ]</span>
+<span id="cb25-29"><a href="#cb25-29"></a>}</span>
+<span id="cb25-30"><a href="#cb25-30"></a></span>
+<span id="cb25-31"><a href="#cb25-31"></a><span class="co">{-- Here we write down some controllers --}</span></span>
+<span id="cb25-32"><a href="#cb25-32"></a></span>
+<span id="cb25-33"><a href="#cb25-33"></a><span class="op">@</span>spec indexController <span class="op">:</span> [webserver<span class="op">.</span><span class="dt">Req</span>] <span class="ot">-&gt;</span> [webserver<span class="op">.</span><span class="dt">Res</span>]</span>
+<span id="cb25-34"><a href="#cb25-34"></a>indexController (_ res) <span class="ot">-&gt;</span> {</span>
+<span id="cb25-35"><a href="#cb25-35"></a>  res<span class="op">.</span>json(<span class="op">%</span>{        <span class="co">-- hey! Is this Express.js?</span></span>
+<span id="cb25-36"><a href="#cb25-36"></a>    success<span class="op">:</span> true</span>
+<span id="cb25-37"><a href="#cb25-37"></a>  })</span>
+<span id="cb25-38"><a href="#cb25-38"></a>}</span>
+<span id="cb25-39"><a href="#cb25-39"></a></span>
+<span id="cb25-40"><a href="#cb25-40"></a><span class="op">@</span>spec aboutController <span class="op">:</span> [webserver<span class="op">.</span><span class="dt">Req</span>] <span class="ot">-&gt;</span> [webserver<span class="op">.</span><span class="dt">Res</span>]</span>
+<span id="cb25-41"><a href="#cb25-41"></a>aboutController (_ res) <span class="ot">-&gt;</span> {</span>
+<span id="cb25-42"><a href="#cb25-42"></a>  res<span class="op">.</span>render(<span class="st">&quot;about.html&quot;</span>) <span class="co">-- oh Express.js, here we meet again</span></span>
+<span id="cb25-43"><a href="#cb25-43"></a>}</span>
+<span id="cb25-44"><a href="#cb25-44"></a></span>
+<span id="cb25-45"><a href="#cb25-45"></a><span class="op">@</span>spec greetController <span class="op">:</span> [webserver<span class="op">.</span><span class="dt">Req</span>] <span class="ot">-&gt;</span> [webserver<span class="op">.</span><span class="dt">Res</span>]</span>
+<span id="cb25-46"><a href="#cb25-46"></a>greetController (req res) <span class="ot">-&gt;</span> {</span>
+<span id="cb25-47"><a href="#cb25-47"></a>  <span class="op">%</span>{ name } <span class="ot">=</span> Req.path <span class="co">-- destructure the request path and get the &quot;name&quot; variable</span></span>
+<span id="cb25-48"><a href="#cb25-48"></a></span>
+<span id="cb25-49"><a href="#cb25-49"></a>  <span class="kw">case</span> name <span class="ot">-&gt;</span> {</span>
+<span id="cb25-50"><a href="#cb25-50"></a>    <span class="op">|</span> <span class="st">&quot;&quot;</span>   <span class="ot">-&gt;</span> res<span class="op">.</span>json(<span class="op">%</span>{success<span class="op">:</span> false, message<span class="op">:</span> <span class="st">&quot;Who should I greet?&quot;</span>})</span>
+<span id="cb25-51"><a href="#cb25-51"></a>    <span class="op">|</span> name <span class="ot">-&gt;</span> res<span class="op">.</span>json(<span class="op">%</span>{success<span class="op">:</span> true, message<span class="op">:</span> <span class="st">&quot;Hello, ${name}!&quot;</span>})</span>
+<span id="cb25-52"><a href="#cb25-52"></a>  }</span>
+<span id="cb25-53"><a href="#cb25-53"></a>}</span>
+<span id="cb25-54"><a href="#cb25-54"></a></span>
+<span id="cb25-55"><a href="#cb25-55"></a><span class="co">{-- our main function --}</span></span>
+<span id="cb25-56"><a href="#cb25-56"></a></span>
+<span id="cb25-57"><a href="#cb25-57"></a>main <span class="ot">-&gt;</span> {</span>
+<span id="cb25-58"><a href="#cb25-58"></a>  webserver<span class="op">.</span>start(<span class="op">%</span>{</span>
+<span id="cb25-59"><a href="#cb25-59"></a>    routes <span class="co">-- Hey is this JavaScript? </span></span>
+<span id="cb25-60"><a href="#cb25-60"></a>  , port</span>
+<span id="cb25-61"><a href="#cb25-61"></a>  })</span>
+<span id="cb25-62"><a href="#cb25-62"></a>}</span></code></pre></div>
+<h1 id="project-status">Project Status</h1>
+<p>The whole <strong>Inferi</strong> project is just an idea.<br />
+No compilers, no specifications, just this article.</p>
+<p>Now you may be wondering: “<strong>Inferi</strong> is really similar to Haskell, Rust, Elixir, OCaml, why are you writing this?”.</p>
+<p>Well, I believe that the future of software development is <strong>functional</strong>.<br />
+But even then, purely functional programming will be pretty hard for many people, and we need a language that can be both imperative and functional, taking the best from both worlds.<br />
+For that reason, I think that future programming languages will be <strong>FLIP</strong> (<strong>F</strong>unctional <strong>L</strong>ight <strong>I</strong>mperative <strong>P</strong>rogramming), and <strong>Inferi</strong> could be my future effort for building such language.</p>
+    </section>
+    <hr />
+    <section>
+        <b> Get in touch! </b> <br />
+        <a href="https://github.com/micheleriva" target="_blank">GitHub</a> ·
+        <a href="https://twitter.com/MicheleRivaCode" target="_blank">Twitter</a> ·
+        <a href="https://www.linkedin.com/in/micheleriva95" target="_blank">LinkedIn</a>
+    </section>
+    <hr />
+</article>
+
+<div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = btoa('My Dream Programming Language');
+    };
+
+    (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://micheleriva-it.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+<script id="dsq-count-scr" src="//micheleriva-it.disqus.com/count.js" async></script>
+
+        </main>
+
+        <footer>
+            Site proudly generated by
+            <a href="http://jaspervdj.be/hakyll" target="_blank">Hakyll</a> - Source code <a href="https://github.com/micheleriva/personal-website" target="_blank">here</a>
+        </footer>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-76573733-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-76573733-1');
+        </script>
+    </body>
+</html>
