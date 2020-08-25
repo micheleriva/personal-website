@@ -5,8 +5,8 @@ title: My Dream Programming Language
 I've always been fascinated by programming languages. \
 Every programming language brings its own syntax, semantic and paradigm. \
 
-If you have to choice how to implement your own programming language, how would you do it? \
-Here's my idea of **Infer**, a **FLIP** (**F**unctional **L**ight **I**mperative **P**rogramming) programming language.
+If you have to choose how to implement your own programming language, how would you do it? \
+Here's my idea of **Inferi**, a **FLIP** (**F**unctional **L**ight **I**mperative **P**rogramming) programming language.
 
 # Index
 - [Types and Syntax](#types-and-syntax)
@@ -19,7 +19,7 @@ Here's my idea of **Infer**, a **FLIP** (**F**unctional **L**ight **I**mperative
 
 # Types and Syntax
 
-Infer is a statically typed programming language. It uses the **Hindley Milner** type system for type signatures.
+**Inferi** is a statically typed programming language. It uses the **Hindley Milner** type system for type signatures.
 Let's define a simple `add` function, which adds two numbers:
 
 ```haskell
@@ -44,7 +44,7 @@ Also, type annotations are completely optional, and can be inferred at compile t
 > "add : Int -> Int -> Int"
 ```
 
-**Infer** gives you access to type classes, so that you could refactor the `add` type signature as follows (just like in Haskell):
+**Inferi** gives you access to type classes, so that you could refactor the `add` type signature as follows (just like in Haskell):
 
 ```haskell
 @spec add Num a => a -> a -> a
@@ -70,7 +70,7 @@ main -> {
 }
 ```
 
-Every **Infer** program needs a `main` function, which will be the entry point of the program itself:
+Every **Inferi** program needs a `main` function, which will be the entry point of the program itself:
 
 ```haskell
 main -> println "Hello, World!"
@@ -111,7 +111,7 @@ tupleExample -> {"I am a string", -30.02, true}
 
 # Functions! Functions! Functions!
 
-**Infer** takes a lot from both **Haskell** and **Elixir**.
+**Inferi** takes a lot from both **Haskell** and **Elixir**.
 
 You can pattern match against multiple values by creating different functions, just like in Haskell (incredibly stupid example):
 
@@ -159,7 +159,7 @@ scream (str) -> str · upcase · (& "${&1}!!!")
 ```
 
 # Impure functions
-Unlike Haskell, **Infer** is not a purely functional programming language, and it allows us to write some functions that supports impure computations.
+Unlike Haskell, **Inferi** is not a purely functional programming language, and it allows us to write some functions that supports impure computations.
 
 **Impure function**:
 
@@ -228,7 +228,7 @@ The `$` operator is used after `return` for replacing round brackets, just like 
 
 # Failure handling
 
-Functions could always fail. That's why **Infer** wants to provide three different ways for handling and avoiding runtime errors as follows:
+Functions could always fail. That's why **Inferi** wants to provide three different ways for handling and avoiding runtime errors as follows:
 
 **1) Pattern matching**: \
 You can just pattern match over one or more arguments of your functions and avoid or throw errors as you prefer:
@@ -257,7 +257,7 @@ main -> {
 }
 ```
 
-If a runtime error occurs, **Infer** will let you know by returning a struct containing the reason of the error and the passed arguments (incredibly useful for debug).
+If a runtime error occurs, **Inferi** will let you know by returning a struct containing the reason of the error and the passed arguments (incredibly useful for debug).
 
 You can also implement the **monadic failure handling** yourself:
 

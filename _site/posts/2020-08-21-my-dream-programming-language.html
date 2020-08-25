@@ -34,8 +34,8 @@
         <p>I’ve always been fascinated by programming languages.<br />
 Every programming language brings its own syntax, semantic and paradigm.<br />
 </p>
-<p>If you have to choice how to implement your own programming language, how would you do it?<br />
-Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</strong>unctional <strong>L</strong>ight <strong>I</strong>mperative <strong>P</strong>rogramming) programming language.</p>
+<p>If you have to choose how to implement your own programming language, how would you do it?<br />
+Here’s my idea of <strong>Inferi</strong>, a <strong>FLIP</strong> (<strong>F</strong>unctional <strong>L</strong>ight <strong>I</strong>mperative <strong>P</strong>rogramming) programming language.</p>
 <h1 id="index">Index</h1>
 <ul>
 <li><a href="#types-and-syntax">Types and Syntax</a></li>
@@ -47,7 +47,7 @@ Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</
 <li><a href="#project-status">Project Status</a></li>
 </ul>
 <h1 id="types-and-syntax">Types and Syntax</h1>
-<p>Infer is a statically typed programming language. It uses the <strong>Hindley Milner</strong> type system for type signatures. Let’s define a simple <code>add</code> function, which adds two numbers:</p>
+<p><strong>Inferi</strong> is a statically typed programming language. It uses the <strong>Hindley Milner</strong> type system for type signatures. Let’s define a simple <code>add</code> function, which adds two numbers:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">@</span>spec add <span class="op">:</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span> <span class="ot">-&gt;</span> <span class="dt">Int</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a>add (x y) <span class="ot">-&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3"></a>  x <span class="op">+</span> y</span></code></pre></div>
@@ -59,7 +59,7 @@ Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</
 <p>Also, type annotations are completely optional, and can be inferred at compile time (REPL example):</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;</span> <span class="bu">let</span> add x y -<span class="op">&gt;</span> x + y</span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;</span> <span class="st">&quot;add : Int -&gt; Int -&gt; Int&quot;</span></span></code></pre></div>
-<p><strong>Infer</strong> gives you access to type classes, so that you could refactor the <code>add</code> type signature as follows (just like in Haskell):</p>
+<p><strong>Inferi</strong> gives you access to type classes, so that you could refactor the <code>add</code> type signature as follows (just like in Haskell):</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">@</span>spec add <span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a</span>
 <span id="cb4-2"><a href="#cb4-2"></a>add (x y) <span class="ot">-&gt;</span> {</span>
 <span id="cb4-3"><a href="#cb4-3"></a>  x <span class="op">+</span> y</span>
@@ -77,7 +77,7 @@ Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</
 <span id="cb5-10"><a href="#cb5-10"></a>  <span class="fu">print</span> add5(<span class="dv">10</span>)  <span class="co">-- 15</span></span>
 <span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">print</span> add(<span class="dv">10</span> <span class="dv">5</span>) <span class="co">-- 15</span></span>
 <span id="cb5-12"><a href="#cb5-12"></a>}</span></code></pre></div>
-<p>Every <strong>Infer</strong> program needs a <code>main</code> function, which will be the entry point of the program itself:</p>
+<p>Every <strong>Inferi</strong> program needs a <code>main</code> function, which will be the entry point of the program itself:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb6-1"><a href="#cb6-1"></a>main <span class="ot">-&gt;</span> println <span class="st">&quot;Hello, World!&quot;</span></span></code></pre></div>
 <h1 id="built-in-data-structures">Built-in data structures</h1>
 <p><strong>Inferi</strong> comes with a useful collection of built-in data structures such as:</p>
@@ -103,7 +103,7 @@ Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</
 <div class="sourceCode" id="cb9"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">@</span>spec tupleExample <span class="ot">-&gt;</span> {<span class="dt">String</span>, <span class="dt">Float</span>, <span class="dt">Bool</span>}</span>
 <span id="cb9-2"><a href="#cb9-2"></a>tupleExample <span class="ot">-&gt;</span> {<span class="st">&quot;I am a string&quot;</span>, <span class="op">-</span><span class="fl">30.02</span>, true}</span></code></pre></div>
 <h1 id="functions-functions-functions">Functions! Functions! Functions!</h1>
-<p><strong>Infer</strong> takes a lot from both <strong>Haskell</strong> and <strong>Elixir</strong>.</p>
+<p><strong>Inferi</strong> takes a lot from both <strong>Haskell</strong> and <strong>Elixir</strong>.</p>
 <p>You can pattern match against multiple values by creating different functions, just like in Haskell (incredibly stupid example):</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">@</span>spec greet <span class="op">:</span> <span class="dt">String</span> <span class="ot">-&gt;</span> <span class="dt">String</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a>greet (<span class="st">&quot;Mitch&quot;</span>) <span class="ot">-&gt;</span> <span class="st">&quot;Hello, Mitch!&quot;</span></span>
@@ -130,7 +130,7 @@ Here’s my idea of <strong>Infer</strong>, a <strong>FLIP</strong> (<strong>F</
 <span id="cb14-3"><a href="#cb14-3"></a><span class="co">--                              ^     ^ Here we say that we want to use the first argument of our lambda function</span></span>
 <span id="cb14-4"><a href="#cb14-4"></a><span class="co">--                              ^ Here we say that this is a lambda functions                  </span></span></code></pre></div>
 <h1 id="impure-functions">Impure functions</h1>
-<p>Unlike Haskell, <strong>Infer</strong> is not a purely functional programming language, and it allows us to write some functions that supports impure computations.</p>
+<p>Unlike Haskell, <strong>Inferi</strong> is not a purely functional programming language, and it allows us to write some functions that supports impure computations.</p>
 <p><strong>Impure function</strong>:</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">import</span> http (call) <span class="co">-- import the &quot;call&quot; function from the &quot;http&quot; library</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a><span class="kw">import</span> list (push)</span>
@@ -184,7 +184,7 @@ If any error occurs, it will wrap the error inside the <code>Left</code> result,
 <p>You can also write the exact same function in a more pure manner by using the pipeline operator.<br />
 The <code>$</code> operator is used after <code>return</code> for replacing round brackets, just like in Haskell.</p>
 <h1 id="failure-handling">Failure handling</h1>
-<p>Functions could always fail. That’s why <strong>Infer</strong> wants to provide three different ways for handling and avoiding runtime errors as follows:</p>
+<p>Functions could always fail. That’s why <strong>Inferi</strong> wants to provide three different ways for handling and avoiding runtime errors as follows:</p>
 <p><strong>1) Pattern matching</strong>:<br />
 You can just pattern match over one or more arguments of your functions and avoid or throw errors as you prefer:</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">@</span>spec divide <span class="op">:</span> <span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a</span>
@@ -204,7 +204,7 @@ You can add <code>?</code> after the function name so that it will encapsulate t
 <span id="cb18-5"><a href="#cb18-5"></a>  divide<span class="op">?</span>(<span class="dv">10</span> <span class="dv">5</span>) <span class="co">-- Right (10)</span></span>
 <span id="cb18-6"><a href="#cb18-6"></a>  divide<span class="op">?</span>(<span class="dv">10</span> <span class="dv">0</span>) <span class="co">-- Left (Error{reason: &quot;Division by 0&quot;, args: {10, 5}})</span></span>
 <span id="cb18-7"><a href="#cb18-7"></a>}</span></code></pre></div>
-<p>If a runtime error occurs, <strong>Infer</strong> will let you know by returning a struct containing the reason of the error and the passed arguments (incredibly useful for debug).</p>
+<p>If a runtime error occurs, <strong>Inferi</strong> will let you know by returning a struct containing the reason of the error and the passed arguments (incredibly useful for debug).</p>
 <p>You can also implement the <strong>monadic failure handling</strong> yourself:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode haskell"><code class="sourceCode haskell"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">@</span>spec divide <span class="op">:</span> <span class="dt">Either</span> (<span class="dt">Num</span> a <span class="ot">=&gt;</span> a <span class="ot">-&gt;</span> a <span class="ot">-&gt;</span> a)</span>
 <span id="cb19-2"><a href="#cb19-2"></a>divide<span class="op">?</span> (x y) <span class="ot">-&gt;</span> {</span>
