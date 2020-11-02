@@ -5,8 +5,8 @@ title: About
 I’m a passionate and experienced software engineer from Milan, Italy.
 I’ve been working as a software engineer for 7+ years in both product and consultancy companies, taking the best from both worlds.
 
-During the last years, I have contributed to a lot of open source projects from companies and foundations such as **Facebook**, **Uber**, **Apache Foundation**, **Linux Foundation** and so on.
-I’ve also written dozens of public domains articles about computer science, performance enhancements, scalability, clean code and many other topics. You can find them here: [www.hackdoor.io/authors/3nxYO2ek/michele-riva](https://www.hackdoor.io/users/micheleriva)
+During the last years, I have contributed to a lot of open source projects from companies and foundations such as **Facebook**, **Uber**, **Maserati**, **Apache Foundation**, **Linux Foundation** and so on.
+I’ve also written dozens of public domains articles about computer science, performance enhancements, scalability, clean code and many other topics. You can find them here: [www.hackdoor.io/users/micheleriva](https://www.hackdoor.io/users/micheleriva)
 
 I’m a fast learner. I love to learn new programming languages and paradigms in order to build high quality software with them.
 
