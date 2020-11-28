@@ -32,6 +32,7 @@
     "styled-jsx": "^3.3.1"
   },
   "devDependencies": {
+    "commitizen": "^4.2.2",
     "eslint": "^7.13.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
@@ -42,8 +43,7 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^6.0.1",
-    "prettier": "^2.2.0",
     "lint-staged": "^10.5.1",
-    "commitizen": "^4.2.2"
+    "prettier": "^2.2.0"
   }
 }
