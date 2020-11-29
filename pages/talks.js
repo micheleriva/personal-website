@@ -30,7 +30,7 @@ function Talks() {
 
       <Divider mb='2rem' />
 
-      <Grid templateColumns='repeat(2, 1fr)' gap={8}>
+      <Grid templateColumns={['1fr', '1fr', 'repeat(2, 1fr)']} gap={8}>
         {
           talksData.recordings.map((talk) => (
             <GridItem key={talk.name}>
