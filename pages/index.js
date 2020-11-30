@@ -13,7 +13,7 @@ function Home() {
   return (
     <>
       <Heading size="xl" mb="1rem">
-        <span role='img'>👋</span> Hey there! I'm Michele.
+        <span role="img">👋</span> Hey there! I'm Michele.
       </Heading>
       <Bio />
       <Divider mt="2rem" mb="2rem" />

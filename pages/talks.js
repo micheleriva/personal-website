@@ -12,8 +12,8 @@ function Talks() {
   return (
     <Box>
       <Box mb="2rem">
-        <Heading size="md" mb="1rem">
-          <span role='image'>🎉</span> I'm always up for talks!
+        <Heading mb="1rem">
+          <span role="image">🎉</span> I'm always up for talks!
         </Heading>
         <Text mb="1rem">
           I'm always ready for joining conferences as a speaker! <br />I already have some talks

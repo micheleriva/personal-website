@@ -20,7 +20,10 @@ function Contacts() {
   return (
     <Box>
       <Box>
-        <Heading> <span role='img'>🚀</span> Let's talk! </Heading>
+        <Heading>
+          {' '}
+          <span role="img">🚀</span> Let's talk!{' '}
+        </Heading>
         <Text mt="1rem" maxWidth="500px">
           Here's a list of things that I like to talk about:
         </Text>

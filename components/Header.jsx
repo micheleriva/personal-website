@@ -23,7 +23,11 @@ function Header() {
 
   return (
     <>
-      <Flex direction={['column', 'row', 'row']} justifyContent="center" alignItems="center" mb="2rem">
+      <Flex
+        direction={['column', 'row', 'row']}
+        justifyContent="center"
+        alignItems="center"
+        mb="2rem">
         <Link href="/">
           <Box style={{ cursor: 'pointer' }} mb={['2rem', 0, 0]}>
             <Heading as="h1" size="xl" textAlign={['center', 'left', 'left']}>
@@ -39,7 +43,7 @@ function Header() {
           {navbarData.map((link) => (
             <Link key={link.name} href={link.path} passHref>
               <Box as="a">
-                <Button isFullWidth size='sm' {...menuBtnStyle(link.path)}>
+                <Button isFullWidth size="sm" {...menuBtnStyle(link.path)}>
                   {link.name}
                 </Button>
               </Box>
