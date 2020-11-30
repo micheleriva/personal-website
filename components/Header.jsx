@@ -23,7 +23,7 @@ function Header() {
 
   return (
     <>
-      <Flex justifyContent='center' alignItems='center' mb="2rem" >
+      <Flex justifyContent="center" alignItems="center" mb="2rem">
         <Link href="/">
           <Box style={{ cursor: 'pointer' }}>
             <Heading as="h1" size="xl">

@@ -5,16 +5,19 @@ import Featured from '../components/Featured';
 
 export function getStaticProps() {
   return {
-    props: {}
-  }
+    props: {},
+  };
 }
 
 function Home() {
   return (
     <>
-      <Heading size='xl' mb='1rem'> 👋 Hey there! I'm Michele. </Heading>
+      <Heading size="xl" mb="1rem">
+        {' '}
+        👋 Hey there! I'm Michele.{' '}
+      </Heading>
       <Bio />
-      <Divider mt='2rem' mb='2rem' />
+      <Divider mt="2rem" mb="2rem" />
       <Featured />
     </>
   );

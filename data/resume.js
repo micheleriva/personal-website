@@ -6,7 +6,7 @@ export default {
       role: 'Senior Software Engineer',
       description: [
         'Working in the architecture team of ViacomCBS',
-        'Architecture and Agile development of a multi-tenant <b>Node.js/SSR React</b> system',
+        '<b>Architecture</b> and <b>agile</b> development of a multi-tenant <b>Node.js/SSR React</b> system',
         'Code review',
       ],
     },
@@ -14,7 +14,7 @@ export default {
       company: 'Packt',
       date: 'November 2020 - Present',
       role: 'Author',
-      description: ['Author of book <b>Real World Next.js</b>'],
+      description: ['Author of the book <b>Real World Next.js</b>'],
     },
     {
       company: 'Hackdoor',
@@ -60,23 +60,46 @@ export default {
   skills: [
     {
       name: 'Programming Languages/Runtimes',
-      items: ['Node.js', 'TypeScript', 'Go', 'Elixir', 'Erlang OTP']
+      items: ['Node.js', 'TypeScript', 'Go', 'Elixir', 'Erlang OTP'],
     },
     {
       name: 'Frontend Development',
-      items: ['React.js', 'Vue.js', 'Svelte', 'CSSinJS', 'CSS, SASS, LESS']
+      items: ['React.js', 'Vue.js', 'Svelte', 'CSSinJS', 'CSS, SASS, LESS'],
     },
     {
       name: 'Databases',
-      items: ['PostgreSQL', 'MySQL', 'MongoDB', 'CouchDB', 'Cassandra', 'Reds', 'Mnesia', 'ETS/DETS']
+      items: [
+        'PostgreSQL',
+        'MySQL',
+        'MongoDB',
+        'CouchDB',
+        'Cassandra',
+        'Reds',
+        'Mnesia',
+        'ETS/DETS',
+      ],
     },
     {
       name: 'Serverless',
-      items: ['AWS Stack', 'Google Cloud']
+      items: ['AWS Stack', 'Google Cloud'],
     },
     {
       name: `I'd like to work with`,
-      items: ['Elixir', 'Erlang', 'Haskell', 'OCaml', 'Rust', 'ReasonML', 'Go', 'Cassandra', 'CouchDB', 'RabbitMQ', 'Mongoose IM', 'Kafka', 'Ejabberd']
-    }
-  ]
+      items: [
+        'Elixir',
+        'Erlang',
+        'Haskell',
+        'OCaml',
+        'Rust',
+        'ReasonML',
+        'Go',
+        'Cassandra',
+        'CouchDB',
+        'RabbitMQ',
+        'Mongoose IM',
+        'Kafka',
+        'Ejabberd',
+      ],
+    },
+  ],
 };

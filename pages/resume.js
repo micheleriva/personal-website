@@ -3,8 +3,8 @@ import resumeData from '../data/resume';
 
 export function getStaticProps() {
   return {
-    props: {}
-  }
+    props: {},
+  };
 }
 
 function Resume() {
