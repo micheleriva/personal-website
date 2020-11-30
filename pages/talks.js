@@ -13,8 +13,7 @@ function Talks() {
     <Box>
       <Box mb="2rem">
         <Heading size="md" mb="1rem">
-          {' '}
-          🎉 I'm always up for talks!{' '}
+          <span role='image'>🎉</span> I'm always up for talks!
         </Heading>
         <Text mb="1rem">
           I'm always ready for joining conferences as a speaker! <br />I already have some talks
@@ -23,17 +22,15 @@ function Talks() {
 
         <Box mb="1rem">
           {talksData.topics.map((topic) => (
-            <Tag mr="1rem" mb="1rem" colorScheme="purple">
-              {' '}
-              {topic}{' '}
+            <Tag key={topic} mr="1rem" mb="1rem" colorScheme="purple">
+              {topic}
             </Tag>
           ))}
         </Box>
 
         <a href="mailto:ciao@micheleriva.it">
           <Button leftIcon={<ChatIcon />} colorScheme="blue" size="md">
-            {' '}
-            Reach out!{' '}
+            Reach out!
           </Button>
         </a>
       </Box>
@@ -54,8 +51,7 @@ function Talks() {
               <Box mt="1rem">
                 <Heading size="s"> {talk.name}</Heading>
                 <Tag colorScheme="orange" mt="1rem">
-                  {' '}
-                  {talk.lang}{' '}
+                  {talk.lang}
                 </Tag>
               </Box>
             </Box>

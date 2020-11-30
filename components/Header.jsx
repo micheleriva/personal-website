@@ -23,10 +23,10 @@ function Header() {
 
   return (
     <>
-      <Flex justifyContent="center" alignItems="center" mb="2rem">
+      <Flex direction={['column', 'row', 'row']} justifyContent="center" alignItems="center" mb="2rem">
         <Link href="/">
-          <Box style={{ cursor: 'pointer' }}>
-            <Heading as="h1" size="xl">
+          <Box style={{ cursor: 'pointer' }} mb={['2rem', 0, 0]}>
+            <Heading as="h1" size="xl" textAlign={['center', 'left', 'left']}>
               Michele Riva
             </Heading>
             <Heading as="h2" size="l" color="gray.500">
@@ -37,9 +37,9 @@ function Header() {
         <Spacer />
         <Grid gap={2} templateColumns={`repeat(${navbarData.length}, 1fr)`}>
           {navbarData.map((link) => (
-            <Link href={link.path} passHref>
-              <Box key={link.name} as="a">
-                <Button isFullWidth {...menuBtnStyle(link.path)}>
+            <Link key={link.name} href={link.path} passHref>
+              <Box as="a">
+                <Button isFullWidth size='sm' {...menuBtnStyle(link.path)}>
                   {link.name}
                 </Button>
               </Box>
