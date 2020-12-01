@@ -29,6 +29,7 @@
     "next": "10.0.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "spotify-web-api-node": "^5.0.0",
     "styled-jsx": "^3.3.1"
   },
   "devDependencies": {
