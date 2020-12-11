@@ -26,9 +26,9 @@ function Bio() {
           <Container {...containerProps}>
             During the last years, I have contributed to a lot of open source projects from
             companies and foundations such as <b>Facebook</b>, <b>Uber</b>, <b>Maserati</b>,{' '}
-            <b>Apache Foundation</b>, <b>Linux Foundation</b> and so on. <br />
-            I’ve also written dozens of public domains articles about computer science, performance
-            enhancements, scalability, clean code and many other topics. You can find them here:{' '}
+            <b>Apache Foundation</b>, <b>Linux Foundation</b>, and so on. <br />
+            I’ve also written dozens of public domain articles about computer science, performance
+            enhancements, scalability, clean code, and many other topics. You can find them here:{' '}
             <b>
               <ChackraLink
                 href="https://www.hackdoor.io/users/micheleriva"
@@ -41,18 +41,18 @@ function Bio() {
           </Container>
 
           <Container {...containerProps}>
-            I’m a fast learner. I love to learn new programming languages and paradigms in order to
-            build high quality software with them.
+            I’m a fast learner. I love to learn new programming languages and paradigms to build
+            high-quality software with them.
           </Container>
 
           <Container {...containerProps}>
-            I’m currently coding in Node.js, TypeScript, Go and Elixir, but I’d love to learn other
-            programming languages to write programs in. In the past years I’ve also had the
-            opportunity to code in PHP, Ruby, Python and other languages.
+            I’m currently coding in Node.js, TypeScript, Go, and Elixir, but I’d love to learn other
+            programming languages to write programs in. In the past years, I’ve also had the
+            opportunity to code in PHP, Ruby, Python, and other languages.
           </Container>
 
           <Container {...containerProps}>
-            I also like to write frontend applications using React, Vue, Svelte or just vanilla JS
+            I also like to write frontend applications using React, Vue, Svelte, or just vanilla JS
             and CSS.
           </Container>
         </>
