@@ -6,6 +6,11 @@ export default {
       url: 'https://www.youtube.com/embed/ZnELAaSl2Fw',
     },
     {
+      name: 'Being a Senior Developer at 25 years old',
+      lang: 'Italian',
+      url: 'https://www.youtube.com/embed/IE9NH8YNJ2E',
+    },
+    {
       name: 'The Elegance of Open Source Software',
       lang: 'Italian',
       url: 'https://www.youtube.com/embed/S_ses4MqE1I',
