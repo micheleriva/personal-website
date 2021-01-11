@@ -18,15 +18,15 @@ function Bio() {
     <Box>
       <Container {...containerProps}>
         I’m a passionate and experienced software engineer from Milan, Italy. I’ve been working as a
-        software engineer for 7+ years in both product and consultancy companies, taking the best
+        software engineer for 8+ years in both product and consultancy companies, taking the best
         from both worlds.
       </Container>
       {bioLength === 'long' && (
         <>
           <Container {...containerProps}>
-            During the last years, I have contributed to a lot of open source projects from
-            companies and foundations such as <b>Facebook</b>, <b>Uber</b>, <b>Maserati</b>,{' '}
-            <b>Apache Foundation</b>, <b>Linux Foundation</b>, and so on. <br />
+            During the last years, I have contributed to many open source projects from companies
+            and foundations such as <b>Facebook</b>, <b>Uber</b>, <b>Maserati</b>,{' '}
+            <b>Apache Foundation</b>, <b>Linux Foundation</b>, etc. <br />
             I’ve also written dozens of public domain articles about computer science, performance
             enhancements, scalability, clean code, and many other topics. You can find them here:{' '}
             <b>
@@ -66,6 +66,13 @@ function Bio() {
         </b>
         , where I’m building a multi-tenant Node.js SSR/React application at the heart of our
         streaming websites and networks.
+      </Container>
+      <Container {...containerProps}>
+        I'm also writing a book for{' '}
+        <ChackraLink href="https://www.packtpub.com/" color="blue.500" isExternal>
+          <b>Packt</b>
+        </ChackraLink>{' '}
+        about advanced and real-world <b>Next.js</b>, published in late 2021.
       </Container>
       <Button onClick={toggleBioLength}> {bioLength === 'short' ? 'Long' : 'Short'} bio </Button>
     </Box>
