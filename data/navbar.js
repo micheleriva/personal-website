@@ -11,6 +11,10 @@ export default [
     name: 'Talks',
     path: '/talks',
   },
+  // {
+  //   name: 'YouTube',
+  //   path: '/youtube',
+  // },
   {
     name: 'Contacts',
     path: '/contacts',

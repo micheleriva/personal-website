@@ -14,7 +14,7 @@ export default {
       company: 'Packt',
       date: 'November 2020 - Present',
       role: 'Author',
-      description: ['Author of the book <b>Real World Next.js</b>'],
+      description: ['Author of the book <b>Real-World Next.js</b>'],
     },
     {
       company: 'Hackdoor',
