@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'; 
+import { useState, useEffect } from 'react';
 import { Heading } from '@chakra-ui/react';
 
 const getYouTubeData = async (api) => {

@@ -1,4 +1,4 @@
-import { Text, Heading, Grid, GridItem, Tag } from '@chakra-ui/react';
+import { Heading, Grid, GridItem, Tag } from '@chakra-ui/react';
 import featuredData from '../data/featured';
 
 function Featured() {
