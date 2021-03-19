@@ -2,12 +2,6 @@ import { Grid, GridItem, Box, Heading, Text, Tag, Divider, Button } from '@chakr
 import { ChatIcon } from '@chakra-ui/icons';
 import talksData from '../data/talks';
 
-export function getStaticProps() {
-  return {
-    props: {},
-  };
-}
-
 function Talks() {
   return (
     <Box>
