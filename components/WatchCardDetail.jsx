@@ -39,24 +39,29 @@ function WatchCardDetail(props) {
       backgroundColor="gray.900"
       overflow="auto"
       zIndex={9}>
-      <Box position="fixed" top={5} right={5} cursor="pointer" onClick={() => setCurrent(null)}>
+      <Box
+        position="fixed"
+        top={5}
+        right={5}
+        cursor="pointer"
+        zIndex={9}
+        onClick={() => setCurrent(null)}>
         <Flex>
           <CloseIcon color="gray.100" w={4} h={4} />
           <Text color="gray.100" ml={2} mt={-1}>
-            {' '}
-            Close{' '}
+            Close
           </Text>
         </Flex>
       </Box>
       <Grid templateColumns={['1fr', '40% 1fr']}>
-        <Box position="relative" width="100%" minHeight="100vh">
+        <Box position="relative" width="100%" minHeight={['50vh', '100vh']}>
           <Image src={props.images[0].url} alt={props.model} layout="fill" objectFit="contain" />
         </Box>
         <Box p={50}>
-          <Heading color="gray.100" size="2xl">
+          <Heading color="gray.100" size={['2xl']}>
             {props.brand}
           </Heading>
-          <Heading color="gray.500" size="2xl">
+          <Heading color="gray.500" size={['2xl']}>
             {props.model}
           </Heading>
           <Text color="gray.100" mt={2}>
