@@ -32,13 +32,21 @@ function sortCollection(sortBy) {
   }
 }
 
+function filterByBrand(watch, brandFilter) {
+  return brandFilter === '' ? Boolean : watch.brand === brandFilter;
+}
+
 function Watches({ watches }) {
   const [current, setCurrent] = useState(null);
   const [showPrice, setShowPrice] = useState(false);
   const [sorting, setSorting] = useState('rating_desc');
+  const [brandFilter, setBrandFilter] = useState('');
   const currentProps = current ? watches.find((watch) => watch.id === current) : {};
   const totalPrice = watches.map(({ price }) => price).reduce((x, y) => x + y, 0);
-  const collection = [...watches].sort(sortCollection(sorting));
+  const uniqBrands = [...new Set(watches.map(({ brand }) => brand))];
+  const collection = [...watches]
+    .sort(sortCollection(sorting))
+    .filter((watch) => filterByBrand(watch, brandFilter));
 
   return (
     <div>
@@ -66,6 +74,13 @@ function Watches({ watches }) {
               <option value="rating_asc"> Rating ASC </option>
               <option value="price_desc"> Price DESC </option>
               <option value="price_asc"> Price ASC </option>
+            </Select>
+            <Select placeholder="All Brands" onChange={(e) => setBrandFilter(e.target.value)}>
+              {uniqBrands.map((brand) => (
+                <option key={brand} value={brand}>
+                  {brand}
+                </option>
+              ))}
             </Select>
           </Grid>
         </Box>
