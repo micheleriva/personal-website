@@ -37,7 +37,7 @@ function WatchCardDetail(props) {
       width={'100%'}
       minHeight={'100vh'}
       backgroundColor="gray.900"
-      overflow='auto'
+      overflow="auto"
       zIndex={9}>
       <Box position="fixed" top={5} right={5} cursor="pointer" onClick={() => setCurrent(null)}>
         <Flex>
@@ -48,7 +48,7 @@ function WatchCardDetail(props) {
           </Text>
         </Flex>
       </Box>
-      <Grid templateColumns={["1fr", "40% 1fr"]}>
+      <Grid templateColumns={['1fr', '40% 1fr']}>
         <Box position="relative" width="100%" minHeight="100vh">
           <Image src={props.images[0].url} alt={props.model} layout="fill" objectFit="contain" />
         </Box>
