@@ -43,7 +43,7 @@ function Watches({ watches }) {
   const [brandFilter, setBrandFilter] = useState('');
   const currentProps = current ? watches.find((watch) => watch.id === current) : {};
   const totalPrice = watches.map(({ price }) => price).reduce((x, y) => x + y, 0);
-  const uniqBrands = [...new Set(watches.map(({ brand }) => brand))];
+  const uniqBrands = [...new Set(watches.map(({ brand }) => brand))].sort();
   const collection = [...watches]
     .sort(sortCollection(sorting))
     .filter((watch) => filterByBrand(watch, brandFilter));

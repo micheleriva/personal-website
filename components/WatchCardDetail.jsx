@@ -8,7 +8,7 @@ function getStatus(owned, price) {
   if (owned) return '😍 owned!';
 
   switch (true) {
-    case price > 50_000:
+    case price > 25_000:
       return '😔 will never afford';
     case price > 10_000:
       return '😬 need to save some money!';
