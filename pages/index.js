@@ -5,7 +5,7 @@ import GET_PODCAST_INFO from '../lib/graphql/queries/podcast/getPodcastInfo';
 import Bio from '../components/Bio';
 import Featured from '../components/Featured';
 import NowPlaying from '../components/NowPlaying';
-import Podcast from '../components/Podcast';
+import Fiverr from '../components/Fiverr';
 
 export async function getStaticProps() {
   const client = createApolloClient();
@@ -45,9 +45,9 @@ function Home({ podcast }) {
         </GridItem>
       </Grid>
       <Divider mt="2rem" mb="2rem" />
-      <Podcast data={podcast} />
-      <Divider mt="2rem" mb="2rem" />
       <Featured />
+      <Divider mt="2rem" mb="2rem" />
+      <Fiverr />
       <Divider mt="2rem" mb="2rem" />
       <Heading size="xl" mb="1rem">
         I'm currently listening
