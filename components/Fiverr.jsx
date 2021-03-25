@@ -152,7 +152,13 @@ export default function Fiverr() {
           </Testimonial>
         </Grid>
         <Flex mt={10} justifyContent="center" alignItems="center">
-          <Button colorScheme="whatsapp"> Book an appointment </Button>
+          <Button
+            colorScheme="whatsapp"
+            as={Link}
+            href="https://www.fiverr.com/micheleriva_"
+            target="_blank">
+            Book an appointment
+          </Button>
         </Flex>
       </Box>
     </>
