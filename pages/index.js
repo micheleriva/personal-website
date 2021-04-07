@@ -1,25 +1,11 @@
 import { Heading, Divider, Grid, GridItem, Flex, Box, Button } from '@chakra-ui/react';
 import Image from 'next/image';
-import { createApolloClient } from '../lib/graphql';
-import GET_PODCAST_INFO from '../lib/graphql/queries/podcast/getPodcastInfo';
 import Bio from '../components/Bio';
 import Featured from '../components/Featured';
 import NowPlaying from '../components/NowPlaying';
 import Fiverr from '../components/Fiverr';
 
-export async function getStaticProps() {
-  const client = createApolloClient();
-  const { data } = await client.query({ query: GET_PODCAST_INFO });
-
-  return {
-    props: {
-      podcast: data?.podcast,
-    },
-    revalidate: 3600,
-  };
-}
-
-function Home({ podcast }) {
+function Home() {
   return (
     <>
       <Grid templateColumns={['1fr', '1fr 1fr']}>
