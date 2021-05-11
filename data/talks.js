@@ -11,6 +11,11 @@ export default {
       url: 'https://youtube.com/embed/w1fwSmStZi4?start=1981',
     },
     {
+      name: 'Functional-light JavaScript for production',
+      lang: 'Italian',
+      url: 'https://youtube.com/embed/5V4wjzqYjBY?start=606',
+    },
+    {
       name: 'Being a Senior Developer at 25 years old',
       lang: 'Italian',
       url: 'https://www.youtube.com/embed/IE9NH8YNJ2E',
@@ -21,9 +26,14 @@ export default {
       url: 'https://www.youtube.com/embed/S_ses4MqE1I',
     },
     {
-      name: 'Philosophy of Being Happy by Building Your Career ',
+      name: 'Philosophy of Being Happy by Building Your Career',
       lang: 'Italian',
       url: 'https://www.youtube.com/embed/WNJiTrDCj2k',
+    },
+    {
+      name: 'Digital Careers Italia',
+      lang: 'Italian',
+      url: 'https://youtube.com/embed/qmqGAfVRkJI',
     },
   ],
   topics: [
