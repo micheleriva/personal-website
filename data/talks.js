@@ -6,6 +6,11 @@ export default {
       url: 'https://www.youtube.com/embed/ZnELAaSl2Fw',
     },
     {
+      name: 'Multi-tenant Next.js at any scale',
+      lang: 'Italian',
+      url: 'https://youtube.com/embed/w1fwSmStZi4?start=1981',
+    },
+    {
       name: 'Being a Senior Developer at 25 years old',
       lang: 'Italian',
       url: 'https://www.youtube.com/embed/IE9NH8YNJ2E',
