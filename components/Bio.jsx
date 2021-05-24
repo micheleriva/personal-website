@@ -31,10 +31,10 @@ function Bio() {
             enhancements, scalability, clean code, and many other topics. You can find them here:{' '}
             <b>
               <ChackraLink
-                href="https://www.hackdoor.io/users/micheleriva"
+                href="https://micheleriva.medium.com/"
                 color="blue.500"
                 isExternal>
-                www.hackdoor.io/users/micheleriva
+                https://micheleriva.medium.com
               </ChackraLink>
             </b>
             .
