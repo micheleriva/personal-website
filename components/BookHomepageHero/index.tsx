@@ -1,0 +1,99 @@
+import Image from "next/image";
+import {
+  Box,
+  Text,
+  Center,
+  Grid,
+  VStack,
+  Badge,
+  Flex,
+  Button,
+  Spacer,
+} from "@chakra-ui/react";
+import PageContainer from "../PageContainer";
+import BookBgImage from "../../public/imgs/gardens-by-the-bay.jpg";
+import BookCover from "../../public/imgs/B16985_Real-World-Nextjs.png";
+
+export default function BookHomepageHero() {
+  return (
+    <Box width="full" minH="container.sm" pos="relative">
+      <Image
+        src={BookBgImage}
+        alt="Gardens by the bay by Isaac Matthew on Unsplash"
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+      />
+      <Box
+        pos="absolute"
+        w="full"
+        h="full"
+        bgColor="blackAlpha.800"
+        pt="8"
+        pb="8"
+      >
+        <Center>
+          <PageContainer>
+            <Grid gridTemplateColumns={"1fr 1fr"}>
+              <VStack alignItems="flex-start">
+                <Badge colorScheme="whatsapp"> My latest book </Badge>
+                <Text fontFamily="heading" fontSize="5xl" fontWeight="bold">
+                  {" "}
+                  Real-World Next.js{" "}
+                </Text>
+                <Text as="p">
+                  Next.js is a scalable and high-performance React.js framework
+                  for modern web development. It provides a large set of
+                  features out of the box, such as hybrid rendering, route
+                  prefetching, automatic image optimization, and
+                  internationalization. With this book, you’ll learn how to
+                  effectively use this exciting technology for a wide range of
+                  purposes, from creating an e-commerce website or a simple
+                  website to a blog without compromising on performance or user
+                  experience.
+                  <br />
+                  <br />
+                  Starting from the basics of Next.js, you will understand how
+                  the framework can help you reach your development goals.
+                  You’ll also explore Next.js’s versatility by building
+                  real-world applications with the help of step-by-step
+                  explanations, understanding how to write unit tests and
+                  integration tests for an app, integrating different backends
+                  with the app, and more. Later, the book shows you how to
+                  choose the right rendering methodology for your website, how
+                  to secure it, and how to deploy it to different providers.{" "}
+                  <br />
+                  <br />
+                  By the end of this Next.js book, you’ll have the skills you
+                  need to be able to design, build, and deploy modern
+                  architectures using Next.js with any headless CMS or data
+                  source.
+                </Text>
+                <Spacer mt="4" mb="4" />
+                <Button
+                  colorScheme="whatsapp"
+                  as="a"
+                  target="_blank"
+                  href="https://rwnjs.com/order/packt "
+                >
+                  Preorder now!
+                </Button>
+              </VStack>
+              <Flex alignItems="center" justifyContent="flex-end">
+                <Box pos="relative" w="96">
+                  <Image
+                    src={BookCover}
+                    alt="Real-World Next.js by Michele Riva"
+                    layout="responsive"
+                    width={80}
+                    height={100}
+                  />
+                </Box>
+              </Flex>
+            </Grid>
+          </PageContainer>
+        </Center>
+      </Box>
+    </Box>
+  );
+}

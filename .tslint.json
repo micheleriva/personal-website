@@ -1,0 +1,24 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint-config-airbnb-base"],
+  "jsRules": {},
+  "rules": {
+    "indent": [true, "spaces", 2],
+    "no-console": false,
+    "variable-name": false,
+    "prefer-const": [
+      true,
+      {
+        "destructuring": "any"
+      }
+    ],
+    "ter-arrow-parens": false,
+    "no-magic-numbers": false,
+    "forin": false,
+    "trailing-comma": [false],
+    "radix": false,
+    "max-line-length": [true, 120],
+    "no-bitwise": false
+  },
+  "rulesDirectory": []
+}
