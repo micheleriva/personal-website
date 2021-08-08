@@ -16,7 +16,7 @@ import BookCover from "../../public/imgs/B16985_Real-World-Nextjs.png";
 
 export default function BookHomepageHero() {
   return (
-    <Box width="full" minH="container.sm" pos="relative">
+    <Flex width="full" minH="4xl" pos="relative">
       <Image
         src={BookBgImage}
         alt="Gardens by the bay by Isaac Matthew on Unsplash"
@@ -29,8 +29,8 @@ export default function BookHomepageHero() {
         w="full"
         h="full"
         bgColor="blackAlpha.800"
-        pt="8"
-        pb="8"
+        pt="24"
+        pb="24"
       >
         <Center>
           <PageContainer>
@@ -38,10 +38,9 @@ export default function BookHomepageHero() {
               <VStack alignItems="flex-start">
                 <Badge colorScheme="whatsapp"> My latest book </Badge>
                 <Text fontFamily="heading" fontSize="5xl" fontWeight="bold">
-                  {" "}
-                  Real-World Next.js{" "}
+                  Real-World Next.js
                 </Text>
-                <Text as="p">
+                <Text as="p" textColor="whiteAlpha.800">
                   Next.js is a scalable and high-performance React.js framework
                   for modern web development. It provides a large set of
                   features out of the box, such as hybrid rendering, route
@@ -71,7 +70,7 @@ export default function BookHomepageHero() {
                 </Text>
                 <Spacer mt="4" mb="4" />
                 <Button
-                  colorScheme="whatsapp"
+                  colorScheme="messenger"
                   as="a"
                   target="_blank"
                   href="https://rwnjs.com/order/packt "
@@ -94,6 +93,6 @@ export default function BookHomepageHero() {
           </PageContainer>
         </Center>
       </Box>
-    </Box>
+    </Flex>
   );
 }

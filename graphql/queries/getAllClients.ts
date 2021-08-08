@@ -7,6 +7,9 @@ type Client = {
   logo: {
     url: string;
   };
+  backgroundImage: {
+    url: string;
+  };
 };
 
 export type GetAllClientsResponse = {
@@ -20,6 +23,9 @@ export const GET_ALL_CLIENTS = gql`
       url
       name
       logo {
+        url
+      }
+      backgroundImage {
         url
       }
     }

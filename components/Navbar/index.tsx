@@ -9,6 +9,15 @@ const NavbarElements = [
     external: true,
   },
   {
+    label: "Podcast",
+    href: "/podcast",
+  },
+  {
+    label: "Blog",
+    href: "https://micheleriva.medium.com",
+    external: true,
+  },
+  {
     label: "Contacts",
     href: "/contacts",
   },
@@ -16,7 +25,7 @@ const NavbarElements = [
 
 export default function Navbar() {
   return (
-    <Center mb="8" pt="4" pb="4">
+    <Center pos="absolute" top="0" left="0" w="full" pt="4" pb="4" zIndex="1">
       <PageContainer>
         <Flex justifyContent="space-between">
           <Link href="/" passHref>
@@ -36,8 +45,9 @@ export default function Navbar() {
                   as="a"
                   variant="link"
                   target={external ? "_blank" : "_self"}
+                  textColor="white"
                 >
-                  {label}
+                  {label.toUpperCase()}
                 </Button>
               </Link>
             ))}

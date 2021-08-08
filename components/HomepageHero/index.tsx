@@ -1,62 +1,78 @@
 import Image from "next/image";
-import { Box, Grid, Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import personalImage from "../../public/imgs/micheleriva.jpeg";
-
-function HeadingText({ children }) {
-  return (
-    <Text
-      as="h2"
-      fontSize="4xl"
-      fontFamily="heading"
-      bgGradient="linear(to-l, purple.500, red.500)"
-      bgClip="text"
-      lineHeight="10"
-    >
-      {children}
-    </Text>
-  );
-}
+import mainShadeImage from "../../public/imgs/shades/main.jpg";
 
 export default function HomepageHero() {
   return (
-    <Grid
-      m="auto"
-      mt="8"
-      mb="8"
-      w="full"
-      gridTemplateColumns={["1fr", "1fr", "1fr 1fr"]}
-      columnGap="sm"
-    >
-      <Flex alignItems="center">
-        <VStack alignItems="flex-start">
-          <Text
-            as="h1"
-            fontSize="6xl"
-            fontFamily="heading"
-            fontWeight="bold"
-            lineHeight="short"
-          >
-            Michele Riva
-          </Text>
-          <HeadingText>
-            Software architect <br />
-            book author <br />
-            international speaker
-          </HeadingText>
-        </VStack>
-      </Flex>
-
-      <Flex justifyContent="flex-end">
-        <Box w={["full", "full", "xl"]} h="96" pos="relative">
+    <>
+      <Box w="full">
+        <Box h="2xl" pos="relative" w="full">
           <Image
-            src={personalImage}
+            src={mainShadeImage}
             layout="fill"
             objectFit="cover"
             objectPosition="center"
-            alt="Michele Riva live at Codemotion 2019"
           />
+          <Box
+            pos="absolute"
+            w="full"
+            h="full"
+            top="0"
+            left="0"
+            backdropFilter="blur(50px)"
+            bg="linear-gradient(180deg, rgba(9, 5, 22, 0) 50%, rgba(9, 5, 22, 1) 100%), linear-gradient(116.82deg, rgba(9, 5, 22, 0.75) 0%, #090516 100%);"
+          >
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              w="container.xl"
+              h="full"
+              m="auto"
+            >
+              <Text
+                as="h1"
+                fontFamily="heading"
+                fontSize="6xl"
+                textColor="gray.50"
+                fontWeight="bold"
+                lineHeight="1"
+              >
+                Software architect
+                <br />
+                Book author
+                <br />
+                International speaker
+              </Text>
+              <Box pos="relative">
+                <Box
+                  pos="absolute"
+                  w="lg"
+                  h="80"
+                  filter="blur(32px) saturate(6)"
+                >
+                  <Image
+                    alt="Michele Riva @Codemotion 2019"
+                    src={personalImage}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                  />
+                </Box>
+                <Box w="lg" h="80">
+                  <Image
+                    alt="Michele Riva @Codemotion 2019"
+                    src={personalImage}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                  />
+                </Box>
+              </Box>
+            </Flex>
+          </Box>
         </Box>
-      </Flex>
-    </Grid>
+      </Box>
+    </>
   );
 }

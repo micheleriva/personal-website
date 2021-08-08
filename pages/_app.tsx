@@ -1,18 +1,11 @@
-import { ChakraProvider, extendTheme, Box } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme, Box, Spacer } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
-
-const customTheme = extendTheme({
-  initialColorMode: "dark",
-  useSystemColorMode: false,
-  fonts: {
-    heading: "'Lora', serif",
-  },
-});
+import theme from "../lib/chakra/theme";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={customTheme}>
-      <Box w="100%" minH="100vh" bg="gray.900">
+    <ChakraProvider theme={theme}>
+      <Box w="100%" minH="100vh" bg="dark">
         <Navbar />
         <Component {...pageProps} />
       </Box>
