@@ -15,7 +15,6 @@ import BookBgImage from "../../public/imgs/gardens-by-the-bay.jpg";
 import BookCover from "../../public/imgs/B16985_Real-World-Nextjs.png";
 
 export default function BookHomepageHero() {
-  return null;
   return (
     <Flex width="full" minH="4xl" pos="relative">
       <Image

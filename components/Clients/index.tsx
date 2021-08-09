@@ -8,7 +8,7 @@ export default function Clients(props: ClientProps) {
   return (
     <Box w="full">
       <Center>
-        <Text textColor="white" fontFamily="heading" fontSize="2xl" mb="12">
+        <Text textColor="white" fontFamily="heading" fontSize="xl" mb="12">
           I wrote code used by
         </Text>
       </Center>
