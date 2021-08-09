@@ -12,7 +12,10 @@ export default function Clients(props: ClientProps) {
           I wrote code used by
         </Text>
       </Center>
-      <Grid gridTemplateColumns={"repeat(6, 1fr)"} gap="16">
+      <Grid
+        gridTemplateColumns={["1fr 1fr", "1fr 1fr", "repeat(6, 1fr)"]}
+        gap={["4", "6", "16"]}
+      >
         {props.clients.map((client) => (
           <Flex
             key={client.id}
@@ -25,8 +28,8 @@ export default function Clients(props: ClientProps) {
                 pos="absolute"
                 top="2"
                 left="10"
-                w="28"
-                h="28"
+                w={["16", "28"]}
+                h={["16", "28"]}
                 filter="blur(32px) saturate(4)"
               >
                 <Image

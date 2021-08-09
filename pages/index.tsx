@@ -13,7 +13,7 @@ import PageContainer from "../components/PageContainer";
 import HomepageHero from "../components/HomepageHero";
 import Clients from "../components/Clients";
 import About from "../components/About";
-import BookHomepageHero from '../components/BookHomepageHero';
+import BookHomepageHero from "../components/BookHomepageHero";
 
 type PageProps = {
   clients: GetAllClientsResponse;
@@ -44,17 +44,17 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ clients, projects }: PageProps) {
   return (
     <Box textColor="white" pb="12">
-        <HomepageHero />
-        <Center>
-          <PageContainer>
-            <Clients clients={clients} />
-            <Spacer mt="24" mb="48" />
-            <About />
-            <Spacer mt="24" mb="24" />
-          </PageContainer>
-        </Center>
-        <BookHomepageHero />
-        <Spacer mt="24" mb="48" />
+      <HomepageHero />
+      <Center>
+        <PageContainer>
+          <Clients clients={clients} />
+          <Spacer mt="24" mb={["12", "48"]} />
+          <About />
+          <Spacer mt="24" mb="24" />
+        </PageContainer>
+      </Center>
+      <BookHomepageHero />
+      <Spacer mt="24" mb="48" />
     </Box>
   );
 }
