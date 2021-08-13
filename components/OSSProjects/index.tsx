@@ -80,6 +80,7 @@ export default function OSSProjects(props: OSSProjectsProps) {
         Notable open-source <br /> projects and contributions
       </Text>
       <Grid gridTemplateColumns="repeat(3, 1fr)" mt="16" gap="6">
+        {/* @ts-ignore */}
         {props.projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
