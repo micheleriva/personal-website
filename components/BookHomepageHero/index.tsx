@@ -13,8 +13,12 @@ import {
 import PageContainer from "../PageContainer";
 import BookBgImage from "../../public/imgs/gardens-by-the-bay.jpg";
 import BookCover from "../../public/imgs/B16985_Real-World-Nextjs.png";
+import MediaQuery, { useMediaQuery } from "react-responsive";
+import { breakpoints } from "../../lib/responsive";
 
 export default function BookHomepageHero() {
+  const isTabletOrDesktop = useMediaQuery({ minWidth: breakpoints.mobile });
+
   return (
     <Flex width="full" minH="4xl" pos="relative">
       <Image
@@ -29,12 +33,12 @@ export default function BookHomepageHero() {
         w="full"
         h="full"
         bgColor="blackAlpha.800"
-        pt="24"
-        pb="24"
+        pt={["4", "24"]}
+        pb={["4", "24"]}
       >
         <Center>
           <PageContainer>
-            <Grid gridTemplateColumns={"1fr 1fr"}>
+            <Grid gridTemplateColumns={["1fr", "1fr 1fr"]}>
               <VStack alignItems="flex-start">
                 <Badge colorScheme="whatsapp"> My latest book </Badge>
                 <Text fontFamily="heading" fontSize="5xl" fontWeight="bold">
@@ -51,17 +55,21 @@ export default function BookHomepageHero() {
                   website to a blog without compromising on performance or user
                   experience.
                   <br />
-                  <br />
-                  Starting from the basics of Next.js, you will understand how
-                  the framework can help you reach your development goals.
-                  You’ll also explore Next.js’s versatility by building
-                  real-world applications with the help of step-by-step
-                  explanations, understanding how to write unit tests and
-                  integration tests for an app, integrating different backends
-                  with the app, and more. Later, the book shows you how to
-                  choose the right rendering methodology for your website, how
-                  to secure it, and how to deploy it to different providers.{" "}
-                  <br />
+                  {isTabletOrDesktop && (
+                    <>
+                      <br />
+                      Starting from the basics of Next.js, you will understand
+                      how the framework can help you reach your development
+                      goals. You’ll also explore Next.js’s versatility by
+                      building real-world applications with the help of
+                      step-by-step explanations, understanding how to write unit
+                      tests and integration tests for an app, integrating
+                      different backends with the app, and more. Later, the book
+                      shows you how to choose the right rendering methodology
+                      for your website, how to secure it, and how to deploy it
+                      to different providers. <br />
+                    </>
+                  )}
                   <br />
                   By the end of this Next.js book, you’ll have the skills you
                   need to be able to design, build, and deploy modern
@@ -78,17 +86,19 @@ export default function BookHomepageHero() {
                   Preorder now!
                 </Button>
               </VStack>
-              <Flex alignItems="center" justifyContent="flex-end">
-                <Box pos="relative" w="96">
-                  <Image
-                    src={BookCover}
-                    alt="Real-World Next.js by Michele Riva"
-                    layout="responsive"
-                    width={80}
-                    height={100}
-                  />
-                </Box>
-              </Flex>
+              {isTabletOrDesktop && (
+                <Flex alignItems="center" justifyContent="flex-end">
+                  <Box pos="relative" w={["64", "96"]}>
+                    <Image
+                      src={BookCover}
+                      alt="Real-World Next.js by Michele Riva"
+                      layout="responsive"
+                      width={80}
+                      height={100}
+                    />
+                  </Box>
+                </Flex>
+              )}
             </Grid>
           </PageContainer>
         </Center>

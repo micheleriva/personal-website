@@ -51,7 +51,7 @@ export default function Clients(props: ClientProps) {
                 pos="relative"
                 w="full"
                 h="full"
-                backdropFilter="blur(20px)"
+                backdropFilter="blur(20px) saturate(1.2)"
                 p="8"
               >
                 <Image
@@ -67,6 +67,15 @@ export default function Clients(props: ClientProps) {
           </Flex>
         ))}
       </Grid>
+      <Text
+        textColor="white"
+        fontFamily="heading"
+        fontSize="xl"
+        mt="12"
+        textAlign="center"
+      >
+        ...and many more.
+      </Text>
     </Box>
   );
 }

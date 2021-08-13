@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 export type Watch = {
   id: string;
   model: string;
+  referenceNumber: string;
   price: number;
   rating: number;
   owned: boolean;
@@ -25,6 +26,7 @@ export const GET_ALL_WATCHES = gql`
     watches(orderBy: rating_DESC) {
       id
       model
+      referenceNumber
       price
       rating
       owned

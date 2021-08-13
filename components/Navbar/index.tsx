@@ -16,20 +16,20 @@ import {
   DrawerBody,
   Divider,
   VStack,
+  Text,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, ExternalLinkIcon } from "@chakra-ui/icons";
 import { breakpoints } from "../../lib/responsive";
 import PageContainer from "../PageContainer";
 
 const NavbarElements = [
   {
-    label: "Resume",
-    href: "https://standardresume.co/r/micheleriva",
-    external: true,
-  },
-  {
     label: "Podcast",
     href: "/podcast",
+  },
+  {
+    label: "Contacts",
+    href: "/contacts",
   },
   {
     label: "Blog",
@@ -37,8 +37,9 @@ const NavbarElements = [
     external: true,
   },
   {
-    label: "Contacts",
-    href: "/contacts",
+    label: "Resume",
+    href: "https://standardresume.co/r/micheleriva",
+    external: true,
   },
 ];
 
@@ -61,7 +62,7 @@ export default function Navbar() {
             <Link href="/" passHref>
               <a>
                 <Image
-                  src="/imgs/signs/dark.jpg"
+                  src="/imgs/signs/light.png"
                   alt="Michele Riva sign"
                   blendMode="lighten"
                   width="32"
@@ -77,7 +78,10 @@ export default function Navbar() {
                     target={external ? "_blank" : "_self"}
                     textColor="white"
                   >
-                    {label.toUpperCase()}
+                    <Text>
+                      {label.toUpperCase()}
+                      {external && <ExternalLinkIcon ml="2" as="span" />}
+                    </Text>
                   </Button>
                 </Link>
               ))}
@@ -90,7 +94,7 @@ export default function Navbar() {
             <Link href="/" passHref>
               <a>
                 <Image
-                  src="/imgs/signs/dark.jpg"
+                  src="/imgs/signs/light.png"
                   alt="Michele Riva sign"
                   blendMode="lighten"
                   width="20"
@@ -121,7 +125,12 @@ export default function Navbar() {
                             colorScheme="white"
                             isFullWidth
                           >
-                            {label.toUpperCase()}
+                            <Text>
+                              {label.toUpperCase()}
+                              {external && (
+                                <ExternalLinkIcon ml="2" as="span" />
+                              )}
+                            </Text>
                           </Button>
                         </Link>
                       ))}

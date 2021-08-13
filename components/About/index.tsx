@@ -79,12 +79,22 @@ export default function About() {
           </>
         )}
         <Text as="p">
-          I’m currently working as a <b>Senior Software Engineer</b> at
-          ViacomCBS, where I’m building a multi-tenant Node.js SSR/React
-          application at the heart of our streaming websites and networks.
+          I’m currently working as a <b>Senior Software Engineer</b> at{" "}
+          <Link href="https://viacbs.com" textColor="blue.300" target="_blank">
+            ViacomCBS
+          </Link>
+          , where I’m building a multi-tenant Node.js SSR/React application at
+          the heart of our streaming websites and networks.
           <br />
-          I'm also writing a book for <b>Packt</b> about advanced and real-world
-          Next.js, published in late 2021.
+          I'm also writing a book for{" "}
+          <Link
+            href="https://www.packtpub.com"
+            textColor="blue.300"
+            target="_blank"
+          >
+            Packt
+          </Link>{" "}
+          about advanced and real-world Next.js, published in late 2021.
         </Text>
       </Box>
     </Flex>

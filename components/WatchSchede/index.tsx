@@ -3,7 +3,12 @@ import { Box, Flex, Text, Badge } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import type { Watch } from "../../graphql/queries/getAllWatches";
 
-export default function WatchSchede({ watch }: { watch: Watch }) {
+export type WatchSchedeProps = {
+  watch: Watch;
+  onClick: (watch: Watch) => void;
+};
+
+export default function WatchSchede({ watch, onClick }: WatchSchedeProps) {
   return (
     <Box pos="relative" overflow="hidden" cursor="pointer">
       <Box
@@ -23,7 +28,13 @@ export default function WatchSchede({ watch }: { watch: Watch }) {
         </Box>
       </Box>
 
-      <Box w="100%" h="60" bgColor="gray.800" rounded="lg">
+      <Box
+        w="100%"
+        h="60"
+        bgColor="gray.800"
+        rounded="lg"
+        onClick={() => onClick(watch)}
+      >
         <Flex pos="relative" w="100%" h="60">
           <Image
             src={watch.image.url}
