@@ -44,7 +44,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Home({ clients, projects }: PageProps) {
   return (
     <>
-      <Box textColor="white" pb="12">
+      <Box textColor="white">
         <HomepageHero />
         <Center>
           <PageContainer>
@@ -56,7 +56,6 @@ export default function Home({ clients, projects }: PageProps) {
           </PageContainer>
         </Center>
         <BookHomepageHero />
-        <Spacer mt="24" mb="48" />
       </Box>
     </>
   );

@@ -20,7 +20,7 @@ export default function BookHomepageHero() {
   const isTabletOrDesktop = useMediaQuery({ minWidth: breakpoints.mobile });
 
   return (
-    <Flex width="full" minH="4xl" pos="relative">
+    <Flex width="full" minH="100vh" pos="relative">
       <Image
         src={BookBgImage}
         alt="Gardens by the bay by Isaac Matthew on Unsplash"
@@ -36,7 +36,7 @@ export default function BookHomepageHero() {
         pt={["4", "24"]}
         pb={["4", "24"]}
       >
-        <Center>
+        <Center h="full">
           <PageContainer>
             <Grid gridTemplateColumns={["1fr", "1fr 1fr"]}>
               <VStack alignItems="flex-start">
@@ -81,7 +81,7 @@ export default function BookHomepageHero() {
                   colorScheme="messenger"
                   as="a"
                   target="_blank"
-                  href="https://rwnjs.com/order/packt "
+                  href="https://rwnjs.com/order/packt"
                 >
                   Preorder now!
                 </Button>

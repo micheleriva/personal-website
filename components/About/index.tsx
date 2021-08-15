@@ -9,7 +9,7 @@ export default function About() {
   const showLongBio = isTabletOrDesktop ? true : longBio;
 
   return (
-    <Flex flexDir={["column", "column", "row"]}>
+    <Flex flexDir={["column", "column", "row"]} id="about">
       <Text
         as="h2"
         fontSize={["5xl", "6xl"]}

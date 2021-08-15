@@ -13,9 +13,9 @@ import {
   ModalCloseButton,
   Collapse,
   useDisclosure,
-  Tag,
-  AspectRatio,
 } from "@chakra-ui/react";
+import { useMediaQuery } from "react-responsive";
+import { breakpoints } from "../lib/responsive";
 import client from "../graphql";
 import {
   GET_PODCAST_SEASON,
@@ -45,10 +45,11 @@ export default function Podcast({ episodes }: PodcastProps) {
   const [hoverEpisode, setHoverEpisode] = useState<string | null>(null);
   const [selectedEpisode, setSelectedEpisode] = useState<Episode | null>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const isTabletOrDesktop = useMediaQuery({ minWidth: breakpoints.mobile });
 
   return (
     <>
-      <Box pos="relative" w="full" h="container.sm">
+      <Box pos="relative" w="full" h={["96", "container.sm", "container.sm"]}>
         <Image
           src={inferenceBgImage}
           layout="fill"
@@ -64,10 +65,16 @@ export default function Podcast({ episodes }: PodcastProps) {
           bgColor="blackAlpha.400"
         >
           <PageContainer>
-            <Text as="h1" fontSize="6xl" fontWeight="bold">
+            <Text
+              as="h1"
+              fontSize={["3xl", "6xl", "6xl"]}
+              mb={["2", "0", "0"]}
+              fontWeight="bold"
+              lineHeight="shorter"
+            >
               Inference Podcast
             </Text>
-            <Text fontStyle="italic">
+            <Text fontStyle="italic" mb={["2", "0", "0"]}>
               Inference: a conclusion reached on the basis of evidence and
               reasoning
             </Text>
@@ -81,14 +88,14 @@ export default function Podcast({ episodes }: PodcastProps) {
       <Center mt="-20" pb="24" textColor="gray.100">
         <PageContainer>
           <Grid
-            gridTemplateColumns={["1fr 1fr", "1fr 1fr", "repeat(4, 1fr)"]}
+            gridTemplateColumns={["1fr", "1fr 1fr", "repeat(4, 1fr)"]}
             gap={["4", "6", "8"]}
           >
             {episodes.map((episode) => (
               <Box
                 key={episode.id}
                 w="full"
-                minH={["xs", "sm", "sm"]}
+                minH={["60", "sm", "sm"]}
                 bg="gray.800"
                 boxShadow="dark-lg"
                 onMouseEnter={() => setHoverEpisode(episode.id)}
@@ -149,9 +156,14 @@ export default function Podcast({ episodes }: PodcastProps) {
         <ModalOverlay />
         <ModalContent bgColor="gray.800">
           <ModalCloseButton textColor="gray.100" />
-          <ModalBody textColor="gray.100" p="12">
+          <ModalBody textColor="gray.100" p={["4", "12", "12"]}>
             <Grid gridTemplateColumns={["1fr", "1fr", "250px 1fr"]} gap="8">
-              <Box pos="relative" w="full" h="xs">
+              <Box
+                pos="relative"
+                mt={["10", "0", "0"]}
+                w={["100%", "full", "full"]}
+                h={["56", "xs", "xs"]}
+              >
                 <Image
                   src={selectedEpisode?.guestImage.url}
                   layout="fill"
@@ -159,14 +171,17 @@ export default function Podcast({ episodes }: PodcastProps) {
                 />
               </Box>
               <Box>
-                <Text fontSize="2xl" lineHeight="shorter">
+                <Text fontSize={["xl", "2xl", "2xl"]} lineHeight="shorter">
                   Season {selectedEpisode?.season},
                   <Text as="span" textColor="gray.500">
-                    {" "}
                     episode {selectedEpisode?.episodeNumber}
                   </Text>
                 </Text>
-                <Text fontWeight="bold" fontSize="4xl" lineHeight="shorter">
+                <Text
+                  fontWeight="bold"
+                  fontSize={["2xl", "4xl", "4xl"]}
+                  lineHeight="shorter"
+                >
                   {selectedEpisode?.title}
                 </Text>
                 <Text mt="2">{selectedEpisode?.episodeDescription}</Text>
@@ -175,7 +190,7 @@ export default function Podcast({ episodes }: PodcastProps) {
                   <iframe
                     src={selectedEpisode?.anchorfmEmbed}
                     height="102px"
-                    width="400px"
+                    width={isTabletOrDesktop ? "400px" : "100%"}
                     frameBorder="0"
                     scrolling="no"
                   />

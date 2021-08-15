@@ -1,6 +1,7 @@
 import { ChakraProvider, Box } from "@chakra-ui/react";
 import { DefaultSeo } from "next-seo";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import theme from "../lib/chakra/theme";
 
 function MyApp({ Component, pageProps }) {
@@ -34,6 +35,7 @@ function MyApp({ Component, pageProps }) {
           <Navbar />
           <Component {...pageProps} />
         </Box>
+        <Footer />
       </ChakraProvider>
     </>
   );

@@ -14,7 +14,10 @@ import {
   Divider,
   Grid,
   Tag,
+  Flex,
 } from "@chakra-ui/react";
+import { useMediaQuery } from "react-responsive";
+import { breakpoints } from "../lib/responsive";
 import client from "../graphql";
 import {
   GET_ALL_WATCHES,
@@ -43,6 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
 export default function Watches({ watches }: WatchesProps) {
   const [selectedWatch, setSelectedWatch] = useState<Watch | null>(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const isTabletOrDesktop = useMediaQuery({ minWidth: breakpoints.mobile });
 
   const handleWatchSelect = (watch: Watch) => {
     setSelectedWatch(watch);
@@ -62,7 +66,7 @@ export default function Watches({ watches }: WatchesProps) {
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose} size="4xl">
+      <Modal isOpen={isOpen} onClose={onClose} size={"4xl"}>
         <ModalOverlay />
         <ModalContent>
           <ModalBody bgColor="gray.600" p="0">
@@ -83,7 +87,11 @@ export default function Watches({ watches }: WatchesProps) {
                     quality={25}
                   />
                 </Box>
-                <Box pos="relative" w="80" h="container.sm">
+                <Box
+                  pos="relative"
+                  w={["full", "80"]}
+                  h={["container.sm", "container.sm"]}
+                >
                   <Image
                     src={selectedWatch?.image.url}
                     layout="fill"
@@ -93,32 +101,29 @@ export default function Watches({ watches }: WatchesProps) {
               </Box>
               <Box
                 pos="absolute"
-                top="8"
-                right="8"
+                top={["0", "8"]}
+                bottom={!isTabletOrDesktop && "0"}
+                right={["0", "8"]}
                 zIndex="1"
-                p="4"
-                w="lg"
+                p={["4", "4"]}
+                w={["full", "lg", "lg"]}
                 textColor="gray.100"
-                bgColor="blackAlpha.500"
+                bgColor={["blackAlpha.700", "blackAlpha.500"]}
               >
                 <ModalCloseButton textColor="white" />
                 <Text lineHeight="42px" fontSize="5xl" fontWeight="bold">
-                  {" "}
-                  {selectedWatch?.watchManufacturer.name}{" "}
+                  {selectedWatch?.watchManufacturer.name}
                 </Text>
                 <Text lineHeight="42px" fontSize="4xl">
-                  {" "}
-                  {selectedWatch?.model}{" "}
+                  {selectedWatch?.model}
                 </Text>
                 <Text lineHeight="tall" fontSize="sm">
-                  {" "}
-                  Reference {selectedWatch?.referenceNumber}{" "}
+                  Reference {selectedWatch?.referenceNumber}
                 </Text>
                 <Box mt="4">
                   {selectedWatch?.owned ? (
                     <Tag size="sm" variant="solid" colorScheme="green">
-                      {" "}
-                      Owned{" "}
+                      Owned
                     </Tag>
                   ) : (
                     getCollectionStatus(selectedWatch?.price)
@@ -157,7 +162,11 @@ export default function Watches({ watches }: WatchesProps) {
               .toLocaleString()}
           </Text>
 
-          <Grid gridTemplateColumns={"repeat(4, 1fr)"} mt="14" gap="12">
+          <Grid
+            gridTemplateColumns={["1fr", "1fr 1fr", "repeat(4, 1fr)"]}
+            mt="14"
+            gap="12"
+          >
             {watches.watches.map((watch) => (
               <WatchSchede
                 key={watch.id}
