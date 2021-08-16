@@ -63,9 +63,13 @@ const otherPages = [
     href: "/#about",
   },
   {
-    name: "Press",
-    href: "/press",
+    name: "Talks",
+    href: "/talks",
   },
+  // {
+  //   name: "Press",
+  //   href: "/press",
+  // },
   {
     name: "My watch collection",
     href: "/watches",

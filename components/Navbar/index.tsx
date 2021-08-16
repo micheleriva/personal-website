@@ -28,6 +28,10 @@ const NavbarElements = [
     href: "/podcast",
   },
   {
+    label: "Talks",
+    href: "/talks",
+  },
+  {
     label: "Contacts",
     href: "/contacts",
   },

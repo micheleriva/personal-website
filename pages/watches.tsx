@@ -137,7 +137,7 @@ export default function Watches({ watches }: WatchesProps) {
           </ModalBody>
         </ModalContent>
       </Modal>
-      <Center textColor="whiteAlpha.800" pt="48" pb="24">
+      <Center textColor="whiteAlpha.800" pt={["24", "48"]} pb="24">
         <PageContainer>
           <Text as="h1" fontSize="4xl" fontWeight="bold">
             My (mostly imaginary) watch collection

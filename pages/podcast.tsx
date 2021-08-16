@@ -172,7 +172,7 @@ export default function Podcast({ episodes }: PodcastProps) {
               </Box>
               <Box>
                 <Text fontSize={["xl", "2xl", "2xl"]} lineHeight="shorter">
-                  Season {selectedEpisode?.season},
+                  Season {selectedEpisode?.season},{" "}
                   <Text as="span" textColor="gray.500">
                     episode {selectedEpisode?.episodeNumber}
                   </Text>
