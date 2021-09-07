@@ -37,8 +37,7 @@ const NavbarElements = [
   },
   {
     label: "Blog",
-    href: "https://micheleriva.medium.com",
-    external: true,
+    href: "/blog",
   },
   {
     label: "Resume",
