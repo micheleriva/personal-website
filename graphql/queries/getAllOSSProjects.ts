@@ -7,6 +7,9 @@ export type OSSProject = {
   description: string;
   name: string;
   url: string;
+  owner: string;
+  stars?: number;
+  forks?: number;
 };
 
 export type GetAllOSSProjectsResponse = {
@@ -22,6 +25,7 @@ export const GET_ALL_OSS_PROJECTS = gql`
       name
       description
       url
+      owner
     }
   }
 `;

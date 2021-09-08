@@ -48,7 +48,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
   const featured = posts.filter((post) => featuredPostsIDs.includes(post.id));
 
   return (
-    <Box textColor="gray.50" pt="48">
+    <Box textColor="gray.50" pt={["24", "24", "48"]}>
       <Center>
         <PageContainer>
           <Text as="h1" fontSize="6xl" fontWeight="bold">
@@ -66,8 +66,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
         <Center>
           <PageContainer>
             <Text as="h2" fontSize="6xl" fontWeight="bold" mt="10">
-              {" "}
-              Featured{" "}
+              Featured
             </Text>
             <Grid
               gridTemplateColumns={["1fr", "1fr 1fr", "repeat(3, 1fr)"]}
