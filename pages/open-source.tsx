@@ -74,7 +74,12 @@ export default function OpenSource({ projects }: { projects: OSSProject[] }) {
     <Box textColor="gray.50" pt={["24", "24", "48"]}>
       <Center>
         <PageContainer>
-          <Text as="h1" fontSize="6xl" fontWeight="bold" lineHeight="shorter">
+          <Text
+            as="h1"
+            fontSize={["4xl", "6xl"]}
+            fontWeight="bold"
+            lineHeight="shorter"
+          >
             My open-source projects and contributions.
           </Text>
           <Text as="p" mt="4" mb="10">

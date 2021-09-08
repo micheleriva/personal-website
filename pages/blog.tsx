@@ -51,7 +51,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
     <Box textColor="gray.50" pt={["24", "24", "48"]}>
       <Center>
         <PageContainer>
-          <Text as="h1" fontSize="6xl" fontWeight="bold">
+          <Text as="h1" fontSize={["4xl", "6xl"]} fontWeight="bold">
             My public domain articles.
           </Text>
           <Text as="p" mt="4" mb="10">
@@ -65,7 +65,7 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
       <Box bgColor="gray.100" textColor="gray.800">
         <Center>
           <PageContainer>
-            <Text as="h2" fontSize="6xl" fontWeight="bold" mt="10">
+            <Text as="h2" fontSize={["4xl", "6xl"]} fontWeight="bold" mt="10">
               Featured
             </Text>
             <Grid
@@ -118,9 +118,8 @@ export default function Blog({ posts }: { posts: BlogPost[] }) {
 
       <Center>
         <PageContainer>
-          <Text as="h2" fontSize="6xl" fontWeight="bold" mt="10">
-            {" "}
-            All the articles{" "}
+          <Text as="h2" fontSize={["4xl", "6xl"]} fontWeight="bold" mt="10">
+            All the articles
           </Text>
           <Grid
             gridTemplateColumns={["1fr", "1fr 1fr", "repeat(3, 1fr)"]}

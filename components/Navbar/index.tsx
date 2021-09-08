@@ -32,12 +32,16 @@ const NavbarElements = [
     href: "/talks",
   },
   {
-    label: "Contacts",
-    href: "/contacts",
-  },
-  {
     label: "Blog",
     href: "/blog",
+  },
+  {
+    label: "Open-Source",
+    href: "/open-source",
+  },
+  {
+    label: "Contacts",
+    href: "/contacts",
   },
   {
     label: "Resume",
