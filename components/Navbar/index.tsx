@@ -45,7 +45,7 @@ const NavbarElements = [
   },
   {
     label: "Resume",
-    href: "https://standardresume.co/r/micheleriva",
+    href: "/resume/Michele_Riva_resume.pdf",
     external: true,
   },
 ];

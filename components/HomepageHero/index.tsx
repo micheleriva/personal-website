@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Badge } from "@chakra-ui/react";
 import personalImage from "../../public/imgs/micheleriva.jpeg";
 import mainShadeImage from "../../public/imgs/shades/main.jpg";
 
