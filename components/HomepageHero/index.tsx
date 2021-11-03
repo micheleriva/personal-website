@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Box, Flex, Text, Spacer } from "@chakra-ui/react";
 import personalImage from "../../public/imgs/micheleriva.jpeg";
 import mainShadeImage from "../../public/imgs/shades/main.jpg";
-import GDE from "../../public/imgs/gde.png";
+import { GDE } from "../../components/Icon";
 
 export default function HomepageHero() {
   return (
@@ -52,30 +52,28 @@ export default function HomepageHero() {
                   International speaker
                 </Text>
                 <Spacer my="4" />
-                <a
-                  href="https://developers.google.com/community/experts"
-                  target="_blank"
-                >
-                  <Flex
-                    pos="absolute"
-                    bgColor="white"
-                    px="4"
-                    py="2"
-                    rounded="md"
-                    textColor="gray.800"
+                <Box display={["none", "block"]}>
+                  <a
+                    href="https://developers.google.com/community/experts"
+                    target="_blank"
                   >
-                    <Box w="5" h="6" mr="2" pos="relative">
-                      <Image
-                        src={GDE.src}
-                        layout="fill"
-                        objectFit="cover"
-                        quality={100}
-                        alt="Michele Riva, Google Developer Expert on Google Cloud Platform"
-                      />
-                    </Box>
-                    Google Developer Expert
-                  </Flex>
-                </a>
+                    <Flex
+                      pos="absolute"
+                      bgColor="white"
+                      px="2.5"
+                      py="1.5"
+                      rounded="md"
+                      textColor="gray.800"
+                    >
+                      <Box w="3" h="4" mr="2" pos="relative">
+                        <GDE width={25} height={20} />
+                      </Box>
+                      <Text fontSize="xs" ml="2.5">
+                        Google Developer Expert
+                      </Text>
+                    </Flex>
+                  </a>
+                </Box>
               </Box>
               <Box pos="relative">
                 <Box
