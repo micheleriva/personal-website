@@ -5,7 +5,6 @@ import {
   Image,
   Text,
   Icon,
-  VStack,
   Flex,
   Divider,
 } from "@chakra-ui/react";
@@ -107,6 +106,7 @@ export default function Footer() {
               Michele Riva
             </Text>
             <Text lineHeight="shorter"> Software Architect </Text>
+            <Text lineHeight="shorter"> Google Developer Expert </Text>
           </Box>
           <Flex flexDir="column">
             <Divider mb="6" display={["block", "none", "none"]} />

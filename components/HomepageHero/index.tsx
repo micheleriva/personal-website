@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { Box, Flex, Text, Badge } from "@chakra-ui/react";
+import { Box, Flex, Text, Spacer } from "@chakra-ui/react";
 import personalImage from "../../public/imgs/micheleriva.jpeg";
 import mainShadeImage from "../../public/imgs/shades/main.jpg";
+import GDE from "../../public/imgs/gde.png";
 
 export default function HomepageHero() {
   return (
@@ -33,22 +34,49 @@ export default function HomepageHero() {
               h="full"
               m="auto"
             >
-              <Text
-                as="h1"
-                fontFamily="heading"
-                fontSize={["3xl", "5xl", "6xl"]}
-                w={["xs", "auto", "auto"]}
-                mt={["6", "12", "0"]}
-                textColor="gray.50"
-                fontWeight="bold"
-                lineHeight="1"
-              >
-                Software architect
-                <br />
-                Book author
-                <br />
-                International speaker
-              </Text>
+              <Box pos="relative">
+                <Text
+                  as="h1"
+                  fontFamily="heading"
+                  fontSize={["3xl", "5xl", "6xl"]}
+                  w={["xs", "auto", "auto"]}
+                  mt={["6", "12", "0"]}
+                  textColor="gray.50"
+                  fontWeight="bold"
+                  lineHeight="1"
+                >
+                  Software architect
+                  <br />
+                  Book author
+                  <br />
+                  International speaker
+                </Text>
+                <Spacer my="4" />
+                <a
+                  href="https://developers.google.com/community/experts"
+                  target="_blank"
+                >
+                  <Flex
+                    pos="absolute"
+                    bgColor="white"
+                    px="4"
+                    py="2"
+                    rounded="md"
+                    textColor="gray.800"
+                  >
+                    <Box w="5" h="6" mr="2" pos="relative">
+                      <Image
+                        src={GDE.src}
+                        layout="fill"
+                        objectFit="cover"
+                        quality={100}
+                        alt="Michele Riva, Google Developer Expert on Google Cloud Platform"
+                      />
+                    </Box>
+                    Google Developer Expert
+                  </Flex>
+                </a>
+              </Box>
               <Box pos="relative">
                 <Box
                   pos="absolute"
