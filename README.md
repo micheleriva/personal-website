@@ -1,3 +1,3 @@
-# My personal website -  build with Next.js
+# My personal website
 
 [https://micheleriva.it](https://micheleriva.it)
