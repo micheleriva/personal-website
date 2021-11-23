@@ -77,14 +77,28 @@ export default function BookHomepageHero() {
                   source.
                 </Text>
                 <Spacer mt="4" mb="4" />
-                <Button
-                  colorScheme="messenger"
-                  as="a"
-                  target="_blank"
-                  href="https://rwnjs.com/order/packt"
+                <Grid
+                  gridTemplateColumns={["1fr", "1fr 1fr"]}
+                  gap={["3", "5"]}
+                  w={["full", "", ""]}
                 >
-                  Preorder now!
-                </Button>
+                  <Button
+                    colorScheme="whatsapp"
+                    as="a"
+                    target="_blank"
+                    href="https://rwnjs.com/order/packt"
+                  >
+                    Preorder on Packt
+                  </Button>
+                  <Button
+                    colorScheme="orange"
+                    as="a"
+                    target="_blank"
+                    href="https://rwnjs.com/order/amazon"
+                  >
+                    Preorder on Amazon
+                  </Button>
+                </Grid>
               </VStack>
               {isTabletOrDesktop && (
                 <Flex alignItems="center" justifyContent="flex-end">
