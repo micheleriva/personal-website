@@ -54,7 +54,7 @@ export default function HomepageHero() {
                 <Spacer my="4" />
                 <Box display={["none", "block"]}>
                   <a
-                    href="https://developers.google.com/community/experts"
+                    href="https://developers.google.com/community/experts/directory/profile/profile-michele-riva"
                     target="_blank"
                   >
                     <Flex
