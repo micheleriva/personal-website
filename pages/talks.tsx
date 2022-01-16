@@ -3,10 +3,9 @@ import {
   Box,
   Text,
   Tag,
-  Grid,
-  Divider,
+  UnorderedList,
+  ListItem,
   Button,
-  Link,
 } from "@chakra-ui/react";
 import dayjs from "dayjs";
 import client from "../graphql";
@@ -44,6 +43,24 @@ export async function getStaticProps() {
 }
 
 export default function Talks({ talks }: TalksProps) {
+  const groupedByYear = talks.reduce((acc, talk) => {
+    const year = dayjs(talk.date).year();
+
+    if (year in acc) {
+      return {
+        ...acc,
+        [year]: [...acc[year], talk],
+      };
+    }
+
+    return {
+      ...acc,
+      [year]: [talk],
+    };
+  }, {});
+
+  console.log(groupedByYear);
+
   return (
     <Box pt={["24", "48"]} textColor="gray.100">
       <Center>
@@ -95,52 +112,50 @@ export default function Talks({ talks }: TalksProps) {
               lineHeight="shorter"
               mb="6"
             >
-              Recent talks
+              Recent (and confirmed) talks
             </Text>
-            <Grid gridTemplateColumns="1fr" gap="4">
-              {talks.map((talk) => (
-                <Box
-                  key={talk.id}
-                  boxShadow="lg"
-                  p="4"
-                  rounded="md"
-                  bgColor="gray.100"
-                >
-                  <Text fontSize="xl" fontWeight="bold">
-                    {talk.title}
-                  </Text>
-                  <Box>
-                    {talk.url && (
-                      <Link
-                        textColor="messenger.500"
-                        href={talk.url}
-                        target="_blank"
-                        fontSize="md"
-                      >
-                        Watch recording
-                      </Link>
-                    )}
-                  </Box>
-                  <Text fontSize="md">
-                    {dayjs(talk.date, "YYYY-MM-DD").format("DD MMM YYYY")} ·{" "}
-                    {talk.venue}
-                  </Text>
-                  <Divider borderColor="gray.300" my="4" />
-                  <Box mt="2">
-                    {talk.tags.split(",").map((tag) => (
-                      <Tag
-                        key={tag}
-                        mb={["2", "2", "0"]}
-                        colorScheme="blackAlpha"
-                        mr="2"
-                      >
-                        {tag}
-                      </Tag>
-                    ))}
-                  </Box>
-                </Box>
-              ))}
-            </Grid>
+            <Box>
+              {Object.keys(groupedByYear)
+                .reverse()
+                .map((year) => {
+                  const yearlyTalks = groupedByYear[year].sort((x, y) =>
+                    dayjs(x.date).isBefore(y.date) ? 1 : -1
+                  );
+
+                  return (
+                    <UnorderedList mb="4">
+                      <Text fontSize="xl" fontWeight="bold" mb="4">
+                        {year}
+                      </Text>
+
+                      {yearlyTalks.map((t) => (
+                        <ListItem>
+                          <Text as="span" color="gray.500">
+                            {" "}
+                            {t.venue} {"- "}{" "}
+                          </Text>
+                          <Text as="span" fontWeight="semibold">
+                            {t.url ? (
+                              <Text
+                                color="blue.500"
+                                as="a"
+                                href={t.url}
+                                target="_new"
+                                _hover={{ textDecor: "underline" }}
+                              >
+                                {" "}
+                                {t.title}{" "}
+                              </Text>
+                            ) : (
+                              t.title
+                            )}
+                          </Text>
+                        </ListItem>
+                      ))}
+                    </UnorderedList>
+                  );
+                })}
+            </Box>
           </PageContainer>
         </Center>
       </Box>
