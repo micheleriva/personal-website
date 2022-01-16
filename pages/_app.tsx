@@ -13,9 +13,7 @@ function MyApp({ Component, pageProps }) {
         }
         @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
           .backdrop-blur {
-            background-color: rgba(255, 255, 255, 0.5);
-            -webkit-backdrop-filter: blur(2em);
-            backdrop-filter: blur(2em);
+            background-color: rgba(0, 0, 0, 0);
           }
         }
       `}</style>
