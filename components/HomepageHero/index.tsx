@@ -17,6 +17,7 @@ export default function HomepageHero() {
             objectPosition="center"
           />
           <Box
+            className="backdrop-blur"
             pos="absolute"
             w="full"
             h={["sm", "xl", "full"]}

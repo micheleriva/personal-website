@@ -51,6 +51,7 @@ export default function Clients(props: ClientProps) {
                 pos="relative"
                 w="full"
                 h="full"
+                className="backdrop-blur"
                 backdropFilter="blur(20px) saturate(1.2)"
                 p="8"
               >
