@@ -20,7 +20,7 @@ type PageProps = {
   projects: GetAllOSSProjectsResponse;
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetStaticProps = async () => {
   const {
     data: { clients },
   } = await apollo.query<GetAllClientsResponse>({

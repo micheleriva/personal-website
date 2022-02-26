@@ -30,7 +30,7 @@ const readyTopics = [
   "Software Architectures",
 ];
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data } = await client.query<TTalks>({
     query: GET_ALL_TALKS,
   });

@@ -31,7 +31,7 @@ export type WatchesProps = {
   watches: GetAllWatchesResponse;
 };
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetStaticProps = async () => {
   const { data } = await client.query<GetAllWatchesResponse>({
     query: GET_ALL_WATCHES,
   });
