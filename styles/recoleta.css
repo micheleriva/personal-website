@@ -1,0 +1,167 @@
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-Thin.eot');
+    src: local('Recoleta Alt Thin'), local('RecoletaAlt-Thin'),
+        url('/recoleta/RecoletaAlt-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-Thin.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-Thin.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-Medium.eot');
+    src: local('Recoleta Medium'), local('Recoleta-Medium'),
+        url('/recoleta/Recoleta-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-Medium.woff2') format('woff2'),
+        url('/recoleta/Recoleta-Medium.woff') format('woff'),
+        url('/recoleta/Recoleta-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-SemiBold.eot');
+    src: local('Recoleta Alt SemiBold'), local('RecoletaAlt-SemiBold'),
+        url('/recoleta/RecoletaAlt-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-SemiBold.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-SemiBold.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-Medium.eot');
+    src: local('Recoleta Alt Medium'), local('RecoletaAlt-Medium'),
+        url('/recoleta/RecoletaAlt-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-Medium.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-Medium.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-Regular.eot');
+    src: local('Recoleta Alt Regular'), local('RecoletaAlt-Regular'),
+        url('/recoleta/RecoletaAlt-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-Regular.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-Regular.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-Thin.eot');
+    src: local('Recoleta Thin'), local('Recoleta-Thin'),
+        url('/recoleta/Recoleta-Thin.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-Thin.woff2') format('woff2'),
+        url('/recoleta/Recoleta-Thin.woff') format('woff'),
+        url('/recoleta/Recoleta-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-Bold.eot');
+    src: local('Recoleta Alt Bold'), local('RecoletaAlt-Bold'),
+        url('/recoleta/RecoletaAlt-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-Bold.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-Bold.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-Black.eot');
+    src: local('Recoleta Alt Black'), local('RecoletaAlt-Black'),
+        url('/recoleta/RecoletaAlt-Black.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-Black.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-Black.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt';
+    src: url('/recoleta/RecoletaAlt-Light.eot');
+    src: local('Recoleta Alt Light'), local('RecoletaAlt-Light'),
+        url('/recoleta/RecoletaAlt-Light.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/RecoletaAlt-Light.woff2') format('woff2'),
+        url('/recoleta/RecoletaAlt-Light.woff') format('woff'),
+        url('/recoleta/RecoletaAlt-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-SemiBold.eot');
+    src: local('Recoleta SemiBold'), local('Recoleta-SemiBold'),
+        url('/recoleta/Recoleta-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-SemiBold.woff2') format('woff2'),
+        url('/recoleta/Recoleta-SemiBold.woff') format('woff'),
+        url('/recoleta/Recoleta-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-Regular.eot');
+    src: local('Recoleta Regular'), local('Recoleta-Regular'),
+        url('/recoleta/Recoleta-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-Regular.woff2') format('woff2'),
+        url('/recoleta/Recoleta-Regular.woff') format('woff'),
+        url('/recoleta/Recoleta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-Bold.eot');
+    src: local('Recoleta Bold'), local('Recoleta-Bold'),
+        url('/recoleta/Recoleta-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-Bold.woff2') format('woff2'),
+        url('/recoleta/Recoleta-Bold.woff') format('woff'),
+        url('/recoleta/Recoleta-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-Black.eot');
+    src: local('Recoleta Black'), local('Recoleta-Black'),
+        url('/recoleta/Recoleta-Black.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-Black.woff2') format('woff2'),
+        url('/recoleta/Recoleta-Black.woff') format('woff'),
+        url('/recoleta/Recoleta-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta';
+    src: url('/recoleta/Recoleta-Light.eot');
+    src: local('Recoleta Light'), local('Recoleta-Light'),
+        url('/recoleta/Recoleta-Light.eot?#iefix') format('embedded-opentype'),
+        url('/recoleta/Recoleta-Light.woff2') format('woff2'),
+        url('/recoleta/Recoleta-Light.woff') format('woff'),
+        url('/recoleta/Recoleta-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

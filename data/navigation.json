@@ -1,0 +1,24 @@
+[
+  {
+    "href": "/",
+    "label": "Home"
+  },
+  {
+    "href": "/talks",
+    "label": "Talks"
+  },
+  {
+    "href": "https://micheleriva.medium.com",
+    "label": "Blog",
+    "external": true
+  },
+  {
+    "href": "/static/resume.pdf",
+    "label": "Resume",
+    "external": true
+  },
+  {
+    "href": "/contact",
+    "label": "Contact"
+  }
+]
