@@ -48,7 +48,7 @@ function Select({ values, title, onSelect }) {
         <Listbox.Button className="bg-white px-2 py-2 rounded-xl w-full capitalize">
           {selected}
         </Listbox.Button>
-        <Listbox.Options className="absolute w-full bg-white mt-5 rounded-xl">
+        <Listbox.Options className="absolute w-full bg-white mt-5 rounded-xl max-h-48 overflow-auto shadow-lg">
           {values.map((value) => (
             <Listbox.Option
               className="capitalize cursor-pointer py-2 hover:bg-orange-50"
@@ -97,12 +97,10 @@ export default function Talks() {
         <div className="grid grid-cols-2">
           <div className="flex justify-center flex-col w-full ">
             <h1 className="text-5xl font-black">
-              {" "}
-              I'm always up for talking at conferences and meetups!{" "}
+              I'm always up for talking at conferences and meetups!
             </h1>
             <p className="mt-2">
-              {" "}
-              Scroll to see my past talks, workshops, and interviews{" "}
+              Scroll to see my past talks, workshops, and interviews
             </p>
             <Nations />
           </div>

@@ -1,8 +1,8 @@
 import "../styles/recoleta.css";
 import "../styles/globals.css";
 
-import { Container } from "../components/Container";
 import { NavBar } from "../components/NavBar";
+import { Footer } from "../components/Footer";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,6 +11,7 @@ function MyApp({ Component, pageProps }) {
       <div className="pt-20">
         <Component {...pageProps} />
       </div>
+      <Footer />
     </div>
   );
 }

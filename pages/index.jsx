@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Container } from "../components/Container";
-import { bio } from "../data/bio.json";
+import events from "../data/events";
 
 export default function Home() {
   const [ratio, setRatio] = useState(16 / 9);
@@ -28,14 +29,13 @@ export default function Home() {
                   target="_blank"
                 >
                   NearForm
-                </a>{" "}
+                </a>
                 <br />
                 Book Author <br />
                 International Speaker
               </h1>
               <h2 className="text-3xl mt-2">
-                {" "}
-                Google Developer Expert, Microsoft MVP{" "}
+                Google Developer Expert, Microsoft MVP
               </h2>
             </div>
           </div>
@@ -43,8 +43,33 @@ export default function Home() {
       </Container>
 
       <Container size="xl">
-        <div className="grid gap-10 grid-cols-2 mt-20">
-          <div>{bio}</div>
+        <div className="grid gap-10 grid-cols-2 mt-24">
+          <p>
+            I'm a passionate and experienced software architect, Google GDE, and
+            Microsoft MVP from Milan, Italy. I've worked as a software engineer
+            and architect for almost ten years in product and consultancy
+            companies, taking the best from both worlds. <br />
+            <br />
+            In 2022, I've published my first book, "Real-World Next.js," where I
+            talk about the web framework that changed forever the way we build
+            web applications.
+            <br />
+            <br />
+            I'm currently working as a <b>Senior Software Architect</b> at{" "}
+            <b>NearForm</b> while contributing to many open-source projects in
+            different languages (TypeScript, Haskell, Golang), writing technical
+            articles, and speaking to many international conferences. <br />
+            <br />
+            Oh,{" "}
+            <a
+              href="https://grnh.se/a9ba47f93us"
+              target="_blank"
+              className="text-pink-500 underline"
+            >
+              we're hiring
+            </a>{" "}
+            full-remote, worldwide.
+          </p>
           <div className="relative">
             <Image
               src="/imgs/micheleriva_bejs.jpg"
@@ -59,7 +84,7 @@ export default function Home() {
 
       <Container
         size="full"
-        className="mt-10 py-10 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100"
+        className="mt-24 py-24 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100"
       >
         <Container size="xl">
           <div className="grid gap-10 grid-cols-2">
@@ -115,6 +140,55 @@ export default function Home() {
             </div>
           </div>
         </Container>
+      </Container>
+
+      <Container className="mt-14">
+        <div className="grid grid-cols-2 gap-5">
+          <div className="flex flex-col justify-center">
+            <h1 className="font-black text-5xl">Events</h1>
+            <p className="mt-2">
+              {" "}
+              Since 2019, I talked to more than {events.length} conferences,
+              meetups, and podcasts.
+            </p>
+            <br />
+            <p>
+              Want to learn more about my events? Check out the{" "}
+              <Link href="/talks" passHref>
+                <a className="text-pink-500 underline">events page</a>
+              </Link>
+              .
+            </p>
+            <p>
+              Want me to talk at your conference?{" "}
+              <Link href="/contacts">
+                <a className="text-pink-500 underline">Let's get in touch</a>
+              </Link>
+              !
+            </p>
+          </div>
+
+          <div className="grid gap-5">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/MGpwKsdZmG0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/hRJ7MYwJezM"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
       </Container>
     </div>
   );
