@@ -8,7 +8,7 @@ export default [
   },
   {
     name: "Github",
-    url: "https://twitter.com/MicheleRiva",
+    url: "https://github.com/MicheleRiva",
     Icon: BsGithub,
   },
   {
