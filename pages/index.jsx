@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div>
       <Container size="2xl">
-        <div className="relative grid grid-cols-2">
-          <div className="relative w-full h-[500px]">
+        <div className="relative grid md:grid-cols-2">
+          <div className="relative w-full h-56 md:h-[500px]">
             <Image
               src="/imgs/micheleriva_codestantine.jpg"
               alt="Michele Riva at CODEStantine 2022, Nis, Serbia"
@@ -19,9 +19,9 @@ export default function Home() {
               objectPosition="center"
             />
           </div>
-          <div className="mt-28 h-full">
-            <div className="-translate-x-10 bg-emerald-100 p-10">
-              <h1 className="font-black text-5xl">
+          <div className="md:-translate-x-8 md:mt-28 h-full w-11/12 md:w-full m-auto md:m-0">
+            <div className="-translate-y-10 md:-translate-x-0 bg-emerald-100 p-5 md:p-10">
+              <h1 className="font-black text-2xl md:text-5xl">
                 Senior Architect at{" "}
                 <a
                   href="https://nearform.com"
@@ -34,7 +34,7 @@ export default function Home() {
                 Book Author <br />
                 International Speaker
               </h1>
-              <h2 className="text-3xl mt-2">
+              <h2 className="text-xl md:text-3xl mt-2">
                 Google Developer Expert, Microsoft MVP
               </h2>
             </div>
@@ -43,7 +43,7 @@ export default function Home() {
       </Container>
 
       <Container size="xl">
-        <div className="grid gap-10 grid-cols-2 mt-24">
+        <div className="grid gap-10 grid-cols-1 md:grid-cols-2 mt-0 md:mt-24">
           <p>
             I'm a passionate and experienced software architect, Google GDE, and
             Microsoft MVP from Milan, Italy. I've worked as a software engineer
@@ -70,7 +70,7 @@ export default function Home() {
             </a>{" "}
             full-remote, worldwide.
           </p>
-          <div className="relative">
+          <div className="relative w-full h-48 md:h-full">
             <Image
               src="/imgs/micheleriva_bejs.jpg"
               alt="Michele Riva at BeJS 2022, Brussels, Belgium"
@@ -87,7 +87,7 @@ export default function Home() {
         className="mt-24 py-24 bg-gradient-to-r from-indigo-100 via-purple-100 to-pink-100"
       >
         <Container size="xl">
-          <div className="grid gap-10 grid-cols-2">
+          <div className="grid gap-10 md:grid-cols-2">
             <div className="relative">
               <Image
                 src="/imgs/micheleriva_real_world_nextjs.png"
@@ -143,11 +143,10 @@ export default function Home() {
       </Container>
 
       <Container className="mt-14">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col justify-center">
             <h1 className="font-black text-5xl">Events</h1>
             <p className="mt-2">
-              {" "}
               Since 2019, I talked to more than {events.length} conferences,
               meetups, and podcasts.
             </p>
@@ -170,8 +169,7 @@ export default function Home() {
 
           <div className="grid gap-5">
             <iframe
-              width="560"
-              height="315"
+              className="w-[100%] md:h-[315px]"
               src="https://www.youtube.com/embed/MGpwKsdZmG0"
               title="YouTube video player"
               frameBorder="0"
@@ -179,8 +177,7 @@ export default function Home() {
               allowFullScreen
             ></iframe>
             <iframe
-              width="560"
-              height="315"
+              className="w-[100%] md:h-[315px]"
               src="https://www.youtube.com/embed/hRJ7MYwJezM"
               title="YouTube video player"
               frameBorder="0"

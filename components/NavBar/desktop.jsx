@@ -1,9 +1,9 @@
 import Link from "next/link";
-import { Container } from "./Container";
-import social from "../data/social";
-import navigationData from "../data/navigation.json";
+import { Container } from "../Container";
+import social from "../../data/social";
+import navigationData from "../../data/navigation.json";
 
-export function NavBar() {
+export function DesktopNavBar() {
   return (
     <nav>
       <div className="p-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400"></div>

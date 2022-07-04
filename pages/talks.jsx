@@ -24,7 +24,7 @@ function Nations() {
   const nations = [...new Set(events.map(({ emoji }) => emoji))];
 
   return (
-    <div className="flex my-2">
+    <div className="grid grid-cols-12 md:flex md:my-2">
       {nations.map((emoji) => (
         <div key={emoji} className="mr-2">
           {emoji}
@@ -94,9 +94,9 @@ export default function Talks() {
   return (
     <>
       <Container>
-        <div className="grid grid-cols-2">
+        <div className="grid md:grid-cols-2">
           <div className="flex justify-center flex-col w-full ">
-            <h1 className="text-5xl font-black">
+            <h1 className="text-2xl md:text-5xl font-black">
               I'm always up for talking at conferences and meetups!
             </h1>
             <p className="mt-2">
@@ -104,7 +104,7 @@ export default function Talks() {
             </p>
             <Nations />
           </div>
-          <div className="relative h-[500px]">
+          <div className="relative h-56 w-full md:h-[500px]">
             <Image
               src="/imgs/micheleriva_codemotion.jpg"
               alt="Michele Riva at Codemotion 2019, Milan, Italy"
@@ -119,9 +119,9 @@ export default function Talks() {
       <div className="mt-24">
         <Container size="2xl">
           <>
-            <div className="text-center">
+            <div className="text-center hidden md:block">
               <p className="text-2xl font-bold">Filter events</p>
-              <div className="grid grid-cols-4 gap-10 my-6">
+              <div className="grid md:grid-cols-4 gap-10 my-6">
                 <Select
                   values={eventTypes}
                   title="Event type"
@@ -147,7 +147,7 @@ export default function Talks() {
 
             {eventsByType.map(({ year, ...types }) => (
               <div key={year} className="mt-24 bg-cyan-50 p-10 rounded-xl">
-                <h2 className="text-4xl font-black mb-10">
+                <h2 className="text-2xl md:text-4xl font-black mb-10">
                   {year}
                   <span className="ml-4 font-normal">
                     (
@@ -161,7 +161,7 @@ export default function Talks() {
                   .sort((type) => (type === "talk" ? -1 : 1))
                   .map((type) => (
                     <div key={type}>
-                      <h3 className="text-3xl capitalize font-bold my-5">
+                      <h3 className="text-2xl md:text-3xl capitalize font-bold my-5">
                         {type}s
                       </h3>
                       {types[type]
@@ -174,10 +174,9 @@ export default function Talks() {
                               "bg-cyan-100 rounded-xl": i % 2 === 0,
                             })}
                           >
-                            <div className="grid grid-cols-[200px_250px_1fr_300px] py-1">
-                              <div className="w-44">
-                                {" "}
-                                {format(e.date, "dd MMM yyyy")}{" "}
+                            <div className="grid md:grid-cols-[200px_250px_1fr_300px] py-1 text-md">
+                              <div className="w-44 text-cyan-800">
+                                {format(e.date, "dd MMM yyyy")}
                               </div>
                               <div className="font-bold w-64"> {event} </div>
                               <div className="w-full">
@@ -194,9 +193,8 @@ export default function Talks() {
                                   e.title
                                 )}
                               </div>
-                              <div>
-                                {" "}
-                                {e.city}, {e.country} {e.emoji}{" "}
+                              <div className="text-cyan-700 md:text-black">
+                                {e.city}, {e.country} {e.emoji}
                               </div>
                             </div>
                           </div>
