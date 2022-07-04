@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "../styles/recoleta.css";
 import "../styles/globals.css";
 
+import { SEO } from "../components/SEO";
 import { NavBar } from "../components/NavBar/index";
 import { Footer } from "../components/Footer";
 
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div className="w-full min-h-screen bg-pink-50 text-xl">
+      <SEO />
       <NavBar show={showMobileNav} onChangeVisibility={setShowMobileNav} />
       <div className="pt-20">
         <Component {...pageProps} />
