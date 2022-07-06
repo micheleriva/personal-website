@@ -1,7 +1,7 @@
 export default [
   // 2019
   {
-    date: new Date(2019, 10, 26),
+    date: new Date(2019, 9, 26),
     event: "Codemotion",
     city: "Milan",
     country: "Italy",
@@ -14,7 +14,7 @@ export default [
   },
   // 2020
   {
-    date: new Date(2020, 6, 16),
+    date: new Date(2020, 5, 16),
     event: "Digital Career Week",
     city: "Milan",
     country: "Italy",
@@ -26,7 +26,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2020, 9, 23),
+    date: new Date(2020, 8, 23),
     event: "Digital Career Week",
     city: "Milan",
     country: "Italy",
@@ -38,7 +38,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2020, 12, 27),
+    date: new Date(2020, 11, 27),
     event: "TomorrowDevs",
     city: "Milan",
     country: "Italy",
@@ -51,7 +51,7 @@ export default [
   },
   // 2021
   {
-    date: new Date(2021, 3, 15),
+    date: new Date(2021, 2, 15),
     event: "Digital Careers Week",
     city: "Milan",
     country: "Italy",
@@ -63,7 +63,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2021, 3, 22),
+    date: new Date(2021, 2, 22),
     event: "Codemotion",
     city: "Milan",
     country: "Italy",
@@ -75,7 +75,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2021, 4, 8),
+    date: new Date(2021, 3, 8),
     event: "Dev WorkSpace Meetup",
     city: "Milan",
     country: "Italy",
@@ -87,7 +87,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2021, 4, 7),
+    date: new Date(2021, 3, 7),
     event: "JSDay",
     city: "Verona",
     country: "Italy",
@@ -99,7 +99,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2021, 7, 6),
+    date: new Date(2021, 6, 6),
     event: "Open Source Day",
     city: "Florence",
     country: "Italy",
@@ -111,7 +111,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2021, 10, 26),
+    date: new Date(2021, 9, 26),
     event: "Codemotion DevCast",
     city: "Milan",
     country: "Italy",
@@ -124,7 +124,7 @@ export default [
   },
   // 2022
   {
-    date: new Date(2022, 1, 16),
+    date: new Date(2022, 0, 16),
     event: "Pointer Podcast",
     city: "Milan",
     country: "Italy",
@@ -136,7 +136,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 2, 7),
+    date: new Date(2022, 1, 7),
     event: "The Developer's Bakery",
     city: "London",
     country: "United Kingdom",
@@ -148,7 +148,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 2, 7),
+    date: new Date(2022, 1, 7),
     event: "Twitch",
     city: "Milan",
     country: "Italy",
@@ -160,7 +160,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 2, 10),
+    date: new Date(2022, 1, 10),
     event: "Twitch",
     city: "Catania",
     country: "Italy",
@@ -172,7 +172,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 3, 9),
+    date: new Date(2022, 2, 9),
     event: "Codemotion",
     city: "Rome",
     country: "Italy",
@@ -184,7 +184,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 3, 23),
+    date: new Date(2022, 2, 23),
     event: "Codemotion",
     city: "Rome",
     country: "Italy",
@@ -196,7 +196,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 4, 21),
+    date: new Date(2022, 3, 21),
     event: "GitBar",
     city: "Rome",
     country: "Italy",
@@ -208,7 +208,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 5, 19),
+    date: new Date(2022, 4, 19),
     event: "UGIdotNet",
     city: "Milan",
     country: "Italy",
@@ -220,7 +220,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 5, 19),
+    date: new Date(2022, 4, 19),
     event: "PodRocket",
     city: "New York",
     country: "United States",
@@ -232,7 +232,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 2, 22),
+    date: new Date(2022, 1, 22),
     event: "Node Congress",
     city: "Amsterdam",
     country: "Netherlands",
@@ -244,7 +244,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 4, 7),
+    date: new Date(2022, 3, 7),
     event: "NearForm",
     city: "Waterford",
     country: "Ireland",
@@ -256,7 +256,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 5, 24),
+    date: new Date(2022, 4, 24),
     event: "Codemotion",
     city: "Rome",
     country: "Italy",
@@ -268,7 +268,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 6, 21),
+    date: new Date(2022, 5, 21),
     event: "React Summit",
     city: "Amsterdam",
     country: "Netherlands",
@@ -280,7 +280,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 1, 18),
+    date: new Date(2022, 0, 18),
     event: "React.js Milan",
     city: "Milan",
     country: "Italy",
@@ -292,7 +292,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 3, 31),
+    date: new Date(2022, 2, 31),
     event: "Commit University",
     city: "Florence",
     country: "Italy",
@@ -304,7 +304,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 3, 31),
+    date: new Date(2022, 2, 31),
     event: "FEVR",
     city: "Verona",
     country: "Italy",
@@ -316,7 +316,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 1, 16),
+    date: new Date(2022, 0, 16),
     event: "Google DevFest Pakistan",
     city: "Islamabad",
     country: "Pakistan",
@@ -328,7 +328,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 1, 20),
+    date: new Date(2022, 0, 20),
     event: "Google DevFest Norway",
     city: "Oslo",
     country: "Norway",
@@ -340,7 +340,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 2, 7),
+    date: new Date(2022, 1, 7),
     event: "GRUSP",
     city: "Verona",
     country: "Italy",
@@ -352,7 +352,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 2, 18),
+    date: new Date(2022, 1, 18),
     event: "Node Congress",
     city: "Amsterdam",
     country: "Netherlands",
@@ -364,7 +364,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 3, 10),
+    date: new Date(2022, 2, 10),
     event: "WebDay",
     city: "Milan",
     country: "Italy",
@@ -376,7 +376,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 3, 24),
+    date: new Date(2022, 2, 24),
     event: "Codemotion",
     city: "Rome",
     country: "Italy",
@@ -388,7 +388,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 4, 22),
+    date: new Date(2022, 3, 22),
     event: "JSDay",
     city: "Verona",
     country: "Italy",
@@ -400,7 +400,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 5, 11),
+    date: new Date(2022, 4, 11),
     event: "Codemotion DevCast",
     city: "Rome",
     country: "Italy",
@@ -412,7 +412,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 5, 13),
+    date: new Date(2022, 4, 13),
     event: "BeJS",
     city: "Brussels",
     country: "Belgium",
@@ -424,7 +424,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 5, 16),
+    date: new Date(2022, 4, 16),
     event: "Sci-fi DevCon",
     city: "Paris",
     country: "France",
@@ -436,7 +436,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 5, 18),
+    date: new Date(2022, 4, 18),
     event: "Codemotion",
     city: "Rome",
     country: "Italy",
@@ -448,7 +448,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 6, 3),
+    date: new Date(2022, 5, 3),
     event: "CODEStantine",
     city: "Nis",
     country: "Serbia",
@@ -460,7 +460,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 6, 15),
+    date: new Date(2022, 5, 15),
     event: "WeAreDevelopers",
     city: "Berlin",
     country: "Germany",
@@ -472,7 +472,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 6, 21),
+    date: new Date(2022, 5, 21),
     event: "React Summit",
     city: "Amsterdam",
     country: "Netherlands",
@@ -484,7 +484,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 6, 21),
+    date: new Date(2022, 5, 21),
     event: "HashiConf Europe",
     city: "Amsterdam",
     country: "Netherlands",
@@ -496,7 +496,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 6, 23),
+    date: new Date(2022, 5, 23),
     event: "SailsConf",
     city: "Abuja",
     country: "Nigeria",
@@ -508,7 +508,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2022, 7, 19),
+    date: new Date(2022, 6, 19),
     event: "StackConf",
     city: "Berlin",
     country: "Germany",
@@ -520,7 +520,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 9, 1),
+    date: new Date(2022, 8, 1),
     event: "DevConf",
     city: "Łódź",
     country: "Poland",
@@ -532,7 +532,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 9, 10),
+    date: new Date(2022, 8, 10),
     event: "VoxxedDays",
     city: "Milan",
     country: "Italy",
@@ -544,7 +544,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 9, 22),
+    date: new Date(2022, 8, 22),
     event: "Web Developer Conf",
     city: "Hamburg",
     country: "Germany",
@@ -556,7 +556,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 9, 29),
+    date: new Date(2022, 8, 29),
     event: "NDC Oslo",
     city: "Oslo",
     country: "Norway",
@@ -568,7 +568,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 10, 10),
+    date: new Date(2022, 9, 10),
     event: "Techorama",
     city: "Amsterdam",
     country: "Netherlands",
@@ -580,7 +580,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 11, 7),
+    date: new Date(2022, 10, 7),
     event: "Øredev",
     city: "Malmö",
     country: "Sweden",
@@ -592,7 +592,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 11, 18),
+    date: new Date(2022, 10, 18),
     event: "Halfstack",
     city: "London",
     country: "United Kingdom",
