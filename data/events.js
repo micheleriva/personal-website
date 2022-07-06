@@ -580,6 +580,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2022, 10, 4),
+    event: "LeadDev",
+    city: "Berlin",
+    country: "Germany",
+    emoji: "🇩🇪",
+    title: "Explaining distributed systems like i\'m five",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2022, 10, 7),
     event: "Øredev",
     city: "Malmö",
