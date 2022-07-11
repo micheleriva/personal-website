@@ -580,6 +580,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2022, 9, 19),
+    event: "TBA",
+    city: "TBA",
+    country: "Italy",
+    emoji: "🇮🇹",
+    title: "TBA",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2022, 10, 4),
     event: "LeadDev",
     city: "Berlin",
