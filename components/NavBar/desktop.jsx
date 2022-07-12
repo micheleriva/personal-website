@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { Container } from "../Container";
+import { Phrase } from "../Phrase";
 import social from "../../data/social";
 import navigationData from "../../data/navigation.json";
 
 export function DesktopNavBar() {
   return (
     <nav>
-      <div className="p-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400"></div>
+      <div className="p-1 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+        <Phrase />
+      </div>
       <Container size="2xl">
         <div className="w-full pt-10">
           <div className="flex justify-between items-center">
