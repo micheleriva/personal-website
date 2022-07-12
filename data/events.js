@@ -508,6 +508,18 @@ export default [
     mode: "remote",
   },
   {
+    date: new Date(2022, 6, 12),
+    event: "20MinJS",
+    city: "Madrid",
+    country: "Spain",
+    emoji: "🇪🇸",
+    title: "Compiling and bundling JavaScript",
+    url: "https://podcast.20minjs.com/1952066/10939084-episode-19-bundling-and-compiling-javascript-with-michele-riva",
+    language: "english",
+    type: "interview",
+    mode: "remote",
+  },
+  {
     date: new Date(2022, 6, 19),
     event: "StackConf",
     city: "Berlin",
