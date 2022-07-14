@@ -490,7 +490,7 @@ export default [
     country: "Netherlands",
     emoji: "🇳🇱",
     title: "Explaining distributed systems like I’m five",
-    url: null,
+    url: "https://www.youtube.com/watch?v=CESKgdNiKJw",
     language: "english",
     type: "talk",
     mode: "in-person",
