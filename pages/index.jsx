@@ -22,7 +22,7 @@ export default function Home() {
           <div className="md:-translate-x-8 md:mt-28 h-full w-11/12 md:w-full m-auto md:m-0">
             <div className="-translate-y-10 md:-translate-x-0 bg-emerald-100 p-5 md:p-10">
               <h1 className="font-black text-2xl md:text-5xl">
-                Senior Architect at{" "}
+                Staff Engineer at{" "}
                 <a
                   href="https://nearform.com"
                   className="underline hover:text-pink-500"
@@ -55,7 +55,7 @@ export default function Home() {
             web applications.
             <br />
             <br />
-            I'm currently working as a <b>Senior Software Architect</b> at{" "}
+            I'm currently working as a <b>Staff Developer Experience Engineer</b> at{" "}
             <b>NearForm</b> while contributing to many open-source projects in
             different languages (TypeScript, Haskell, Golang), writing technical
             articles, and speaking to many international conferences. <br />
