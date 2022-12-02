@@ -724,6 +724,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2022, 11, 2),
+    event: "The Effective Developer",
+    city: "Malmö",
+    country: "Sweden",
+    emoji: "🇸🇪",
+    title: "Interview with Michele Riva",
+    url: null,
+    language: "english",
+    type: "interview",
+    mode: "in-person",
+  },
+  {
     date: new Date(2022, 11, 3),
     event: "Google DevFest",
     city: "Bari",
