@@ -748,6 +748,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2022, 11, 6),
+    event: "Continuous Delivery",
+    city: "Milan",
+    country: "Italy",
+    emoji: "🇮🇹",
+    title: "Open Source frontends, the power of JavaScript frameworks",
+    url: "https://www.youtube.com/watch?v=p7-foWEKPVA",
+    language: "italian",
+    type: "interview",
+    mode: "remote",
+  },
+  {
     date: new Date(2023, 3, 2),
     event: "JSConf",
     city: "Santiago",
