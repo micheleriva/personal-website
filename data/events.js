@@ -772,7 +772,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2023, 16, 2),
+    date: new Date(2023, 2, 16),
     event: "WebDay 2023",
     city: "Milan",
     country: "Italy",
@@ -784,7 +784,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2023, 24, 2),
+    date: new Date(2023, 2, 24),
     event: "TBA",
     city: "Florence",
     country: "Italy",
