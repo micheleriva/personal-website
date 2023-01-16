@@ -761,7 +761,7 @@ export default [
   },
   {
     date: new Date(2023, 0, 18),
-    event: "Start 2022 by Learnn",
+    event: "Start 2023 by Learnn",
     city: "Milan",
     country: "Italy",
     emoji: "🇮🇹",
