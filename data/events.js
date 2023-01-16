@@ -760,6 +760,18 @@ export default [
     mode: "remote",
   },
   {
+    date: new Date(2023, 0, 18),
+    event: "Start 2022 by Learnn",
+    city: "Milan",
+    country: "Italy",
+    emoji: "🇮🇹",
+    title: "Making complexity easy",
+    url: null,
+    language: "italian",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2023, 3, 1),
     event: "JSConf",
     city: "Santiago",
