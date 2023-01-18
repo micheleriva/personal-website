@@ -807,4 +807,16 @@ export default [
     type: "talk",
     mode: "in-person",
   },
+  {
+    date: new Date(2023, 4, 25),
+    event: "DevSum",
+    city: "Stockholm",
+    country: "Sweden",
+    emoji: "🇸🇪",
+    title: "TBA",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
 ];
