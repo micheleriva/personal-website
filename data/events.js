@@ -808,6 +808,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2023, 3, 14),
+    event: "Node Congress",
+    city: "Berlin",
+    country: "Germany",
+    emoji: "🇩🇪",
+    title: "Things I learned while building high-performance JavaScript applications",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2023, 4, 25),
     event: "DevSum",
     city: "Stockholm",
