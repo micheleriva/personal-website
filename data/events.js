@@ -831,4 +831,16 @@ export default [
     type: "talk",
     mode: "in-person",
   },
+  {
+    date: new Date(2023, 4, 26),
+    event: "Offline",
+    city: "Milan",
+    country: "Italy",
+    emoji: "🇮🇹",
+    title: "TBA",
+    url: null,
+    language: "italian",
+    type: "talk",
+    mode: "in-person",
+  },
 ];
