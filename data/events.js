@@ -772,7 +772,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2023, 3, 1),
+    date: new Date(2023, 1, 1),
     event: "JSConf",
     city: "Santiago",
     country: "Chile",
