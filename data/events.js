@@ -406,7 +406,7 @@ export default [
     country: "Italy",
     emoji: "🇮🇹",
     title: "Refactoring large JavaScript codebases",
-    url: null,
+    url: "https://www.youtube.com/watch?v=DAQXFarnpNI",
     language: "english",
     type: "talk",
     mode: "in-person",
