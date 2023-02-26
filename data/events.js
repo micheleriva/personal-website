@@ -832,6 +832,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2023, 4, 12),
+    event: "AppDevCon",
+    city: "Amsterdam",
+    country: "Netherlands",
+    emoji: "🇳🇱",
+    title: "Building a full-text search engine in TypeScript",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2023, 4, 25),
     event: "DevSum",
     city: "Stockholm",
