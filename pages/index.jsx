@@ -22,16 +22,16 @@ export default function Home() {
           <div className="md:-translate-x-8 md:mt-28 h-full w-11/12 md:w-full m-auto md:m-0">
             <div className="-translate-y-10 md:-translate-x-0 bg-emerald-100 p-5 md:p-10">
               <h1 className="font-black text-2xl md:text-5xl">
-                Staff Engineer at{" "}
+                Co-Founder @{" "}
                 <a
-                  href="https://nearform.com"
+                  href="https://oramasearch.com"
                   className="underline hover:text-pink-500"
                   target="_blank"
                 >
-                  NearForm
+                  OramaSearch
                 </a>
                 <br />
-                Book Author <br />
+                Published Author <br />
                 International Speaker
               </h1>
               <h2 className="text-xl md:text-3xl mt-2">
@@ -45,8 +45,8 @@ export default function Home() {
       <Container size="xl">
         <div className="grid gap-10 grid-cols-1 md:grid-cols-2 mt-0 md:mt-24">
           <p>
-            I'm a passionate and experienced software architect, Google GDE, and
-            Microsoft MVP from Milan, Italy. I've worked as a software engineer
+            I'm a passionate and experienced software engineer, <b>Google GDE</b>, and&nbsp;
+            <b>Microsoft MVP</b> from Milan, Italy. <br /><br />I've worked as a software engineer
             and architect for almost ten years in product and consultancy
             companies, taking the best from both worlds. <br />
             <br />
@@ -55,24 +55,11 @@ export default function Home() {
             web applications.
             <br />
             <br />
-            I'm currently working as a <b>Staff Developer Experience Engineer</b> at{" "}
-            <b>NearForm</b> while contributing to many open-source projects in
-            different languages (TypeScript, Haskell, Golang), writing technical
-            articles, and speaking to many international conferences. <br />
-            <br />
-            Oh,{" "}
-            <a
-              href="https://grnh.se/a9ba47f93us"
-              target="_blank"
-              className="text-pink-500 underline"
-            >
-              we're hiring
-            </a>{" "}
-            full-remote, worldwide.
+            In 2023, I've co-founded <a className='text-pink-500 underline' href="https://oramasearch.com">OramaSearch</a>, where I am working as a <b>CTO</b> building the new generation of search engines.
           </p>
           <div className="relative w-full h-48 md:h-full">
             <Image
-              src="/imgs/micheleriva_bejs.jpg"
+              src="/imgs/micheleriva-leaddev.JPG"
               alt="Michele Riva at BeJS 2022, Brussels, Belgium"
               layout="fill"
               objectFit="cover"
