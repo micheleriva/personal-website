@@ -867,4 +867,16 @@ export default [
     type: "talk",
     mode: "in-person",
   },
+  {
+    date: new Date(2023, 5, 21),
+    event: "KCDC",
+    city: "Kansas City",
+    country: "United States",
+    emoji: "🇺🇸",
+    title: "Refactoring Large JavaScript Codebases",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
 ];
