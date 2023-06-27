@@ -929,7 +929,7 @@ export default [
   },
   {
     date: new Date(2023, 6, 28),
-    event: "WeAreDevs WorldCongress",
+    event: "WeAreDevs",
     city: "Berlin",
     country: "Germany",
     emoji: "🇩🇪",
