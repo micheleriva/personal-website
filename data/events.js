@@ -909,7 +909,7 @@ export default [
     city: "Milan",
     country: "Italy",
     emoji: "🇮🇹",
-    title: "TBA",
+    title: "How we founded a startup in Silicon Valley",
     url: null,
     language: "italian",
     type: "talk",
