@@ -927,4 +927,16 @@ export default [
     type: "talk",
     mode: "in-person",
   },
+  {
+    date: new Date(2023, 6, 28),
+    event: "WeAreDevs WorldCongress",
+    city: "Berlin",
+    country: "Germany",
+    emoji: "🇩🇪",
+    title: "Things I learned while writing high-performance JavaScript applications",
+    url: null,
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
 ];
