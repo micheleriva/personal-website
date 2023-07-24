@@ -928,6 +928,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2023, 6, 23),
+    event: "Code Ryan Podcast",
+    city: "San Francisco",
+    country: "USA",
+    emoji: "🇺🇸",
+    title: "JavaScript Full Text Search, Entrepreneurship, and AI",
+    url: "https://www.youtube.com/watch?v=XRb9ZEfnszg",
+    language: "english",
+    type: "interview",
+    mode: "remote",
+  },
+  {
     date: new Date(2023, 6, 28),
     event: "WeAreDevelopers",
     city: "Berlin",
