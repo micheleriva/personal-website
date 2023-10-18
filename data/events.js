@@ -964,7 +964,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2023, 10, 19),
+    date: new Date(2023, 8, 19),
     event: "JavaScript Global Summit",
     city: "Washington",
     country: "USA",
@@ -976,7 +976,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2023, 11, 19),
+    date: new Date(2023, 9, 19),
     event: "Codemotion",
     city: "Milan",
     country: "Italy",
