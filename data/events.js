@@ -987,4 +987,16 @@ export default [
     type: "talk",
     mode: "in-person",
   },
+  {
+    date: new Date(2022, 10, 16),
+    event: "YouTube",
+    city: "Milan",
+    country: "Italy",
+    emoji: "🇮🇹",
+    title: "Being a successful developer under 30",
+    url: "https://www.youtube.com/watch?v=w6HihAlvozI",
+    language: "italian",
+    type: "interview",
+    mode: "remote",
+  },
 ];
