@@ -970,7 +970,7 @@ export default [
     country: "Germany",
     emoji: "🇩🇪",
     title: "Things I learned while writing high-performance JavaScript applications",
-    url: null,
+    url: "https://www.wearedevelopers.com/en/videos/729/things-i-learned-while-writing-high-performance-javascript-applications",
     language: "english",
     type: "talk",
     mode: "in-person",
