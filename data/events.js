@@ -892,6 +892,18 @@ export default [
     mode: "remote",
   },
   {
+    date: new Date(2023, 4, 10),
+    event: "Codemotion Madrid",
+    city: "Madrid",
+    country: "Spain",
+    emoji: "🇪🇸",
+    title: "Making Complexity Simple",
+    url: "https://talks.codemotion.com/making-complexity-simple",
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2023, 4, 12),
     event: "BeJs",
     city: "Bruessel",
