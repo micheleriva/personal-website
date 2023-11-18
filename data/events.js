@@ -897,7 +897,7 @@ export default [
     city: "Madrid",
     country: "Spain",
     emoji: "🇪🇸",
-    title: "Making Complexity Simple",
+    title: "Making complexity easy",
     url: "https://talks.codemotion.com/making-complexity-simple",
     language: "english",
     type: "talk",
@@ -1000,7 +1000,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2022, 10, 16),
+    date: new Date(2023, 10, 16),
     event: "YouTube",
     city: "Milan",
     country: "Italy",
