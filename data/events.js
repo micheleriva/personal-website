@@ -976,6 +976,18 @@ export default [
     mode: "in-person",
   },
   {
+    date: new Date(2023, 7, 16),
+    event: "DevX Interviews",
+    city: "Rome",
+    country: "Italy",
+    emoji: "🇮🇹",
+    title: "Soft skills, networking, and technical knowledge",
+    url: "https://www.codemotion.com/magazine/it/interviste/devx-interview-con-michele-riva/",
+    language: "italy",
+    type: "interview",
+    mode: "remote",
+  },
+  {
     date: new Date(2023, 8, 19),
     event: "JavaScript Global Summit",
     city: "Washington",
