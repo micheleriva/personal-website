@@ -1026,7 +1026,7 @@ export default [
   // 2024
   {
     date: new Date(2024, 06, 06),
-    event: "LambdaCong",
+    event: "LambdaConf",
     city: "Estes Park",
     country: "USA",
     emoji: "🇺🇸",
