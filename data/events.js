@@ -1025,7 +1025,7 @@ export default [
   },
   // 2024
   {
-    date: new Date(2024, 06, 6),
+    date: new Date(2024, 6, 6),
     event: "LambdaConf",
     city: "Estes Park",
     country: "USA",
