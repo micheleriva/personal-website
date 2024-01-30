@@ -1025,19 +1025,19 @@ export default [
   },
   // 2024
   {
-    date: new Date(2024, 6, 6),
+    date: new Date(2024, 5, 6),
     event: "LambdaConf",
     city: "Estes Park",
     country: "USA",
     emoji: "🇺🇸",
-    title: "The faster, the cheaper. How a functional architecture makes a complex distributed system fast and cheap under high traffic",
+    title: "The faster, the cheaper. Orama & functional architectures.",
     url: null,
     language: "english",
     type: "talk",
     mode: "in-person",
   },
   {
-    date: new Date(2024, 7, 28),
+    date: new Date(2024, 6, 28),
     event: "Coderful",
     city: "Catania",
     country: "Italy",
