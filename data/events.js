@@ -1025,7 +1025,7 @@ export default [
   },
   // 2024
   {
-    date: new Date(2024, 06, 06),
+    date: new Date(2024, 06, 6),
     event: "LambdaConf",
     city: "Estes Park",
     country: "USA",
@@ -1037,7 +1037,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2024, 07, 28),
+    date: new Date(2024, 7, 28),
     event: "Coderful",
     city: "Catania",
     country: "Italy",
