@@ -1025,7 +1025,7 @@ export default [
   },
   // 2024
   {
-    date: new Date(2024, 2, 5),
+    date: new Date(2024, 1, 5),
     event: "Luciano Mammino YouTube Channel",
     city: "Dublin",
     country: "Ireland",
@@ -1037,7 +1037,7 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2024, 5, 6),
+    date: new Date(2024, 4, 6),
     event: "LambdaConf",
     city: "Estes Park",
     country: "USA",
@@ -1049,7 +1049,7 @@ export default [
     mode: "in-person",
   },
   {
-    date: new Date(2024, 6, 28),
+    date: new Date(2024, 5, 28),
     event: "Coderful",
     city: "Catania",
     country: "Italy",
