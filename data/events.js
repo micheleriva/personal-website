@@ -1025,7 +1025,7 @@ export default [
   },
   // 2024
   {
-    date: new Date(2023, 2, 5),
+    date: new Date(2024, 2, 5),
     event: "Luciano Mammino YouTube Channel",
     city: "Dublin",
     country: "Ireland",
