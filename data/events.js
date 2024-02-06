@@ -1025,6 +1025,18 @@ export default [
   },
   // 2024
   {
+    date: new Date(2023, 2, 5),
+    event: "Luciano Mammino YouTube Channel",
+    city: "Dublin",
+    country: "Ireland",
+    emoji: "🇮🇪",
+    title: "Exploring OramaSearch",
+    url: "https://www.youtube.com/watch?v=WO1KqYD2akQ",
+    language: "english",
+    type: "interview",
+    mode: "remote",
+  },
+  {
     date: new Date(2024, 5, 6),
     event: "LambdaConf",
     city: "Estes Park",
