@@ -1061,6 +1061,18 @@ export default [
     mode: "remote",
   },
   {
+    date: new Date(2024, 6, 5),
+    event: "LambdaConf",
+    city: "Estes Park, Colorado",
+    country: "USA",
+    emoji: "🇺🇸",
+    title: "The faster, the cheaper",
+    url: "https://www.youtube.com/watch?v=Sqq7EoXzEkM",
+    language: "english",
+    type: "talk",
+    mode: "in-person",
+  },
+  {
     date: new Date(2024, 5, 28),
     event: "Coderful",
     city: "Catania",
