@@ -1055,7 +1055,7 @@ export default [
     country: "Italy",
     emoji: "🇮🇹",
     title: "From ravioli maker to Silicon Valley startup",
-    url: null,
+    url: "https://www.youtube.com/watch?v=PCCRTuisKuM",
     language: "italian",
     type: "interview",
     mode: "remote",
