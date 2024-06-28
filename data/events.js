@@ -1061,18 +1061,6 @@ export default [
     mode: "remote",
   },
   {
-    date: new Date(2024, 5, 26),
-    event: "Codemotion",
-    city: "Rome",
-    country: "Italy",
-    emoji: "🇮🇹",
-    title: "Doing startup is everything but intuitive!",
-    url: "https://www.youtube.com/live/7MK-CMrCJ9c",
-    language: "italian",
-    type: "interview",
-    mode: "remote",
-  },
-  {
     date: new Date(2024, 5, 28),
     event: "Coderful",
     city: "Catania",
