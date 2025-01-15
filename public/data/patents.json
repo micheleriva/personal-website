@@ -1,0 +1,18 @@
+[
+  {
+    "id": "US11829426B1",
+    "name": "Operating a distributed search index in a content delivery network",
+    "description": "A facility for distributing a search index for a corpus of documents is described. The facility accesses multiple search index segments collectively making up the search index. Each of the segments is executable to traverse an index subtree embedded in the segment to find in the index subtree a node representing a query term specified in an argument. Each of the segments corresponds to a particular indexed document field that is indexed by the search index. For each of the segments, the index subtree embedded the segment has nodes representing query terms that all produce a particular hash result. The facility calls a programmatic publication interface for a content delivery network to publish the plurality of search index segments on the content delivery network.",
+    "url": "https://patents.google.com/patent/US11829426B1/en",
+    "issued": true,
+    "date": "2023-11-28"
+  },
+  {
+    "id": "63/633,411",
+    "name": "Operating in a content delivery network a distributed search index based on an automatically-selected set of documents properties",
+    "description": "A facility is described for automatically selecting document properties to be included in an index on a corpus of documents. In some cases, the facility performs this automatic selection by subjecting a list of the document properties for which the documents have contents to an inference model. In some cases, the facility conducts this automatic selection by submitting to a large language model a prompt automatically constructed to include, for each of one or more documents, the document's contents for each document property, in each case together with the document property's name.",
+    "url": null,
+    "issued": false,
+    "date": "2023-04-12"
+  }
+]

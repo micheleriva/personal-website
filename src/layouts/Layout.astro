@@ -1,0 +1,52 @@
+---
+import clx from 'classnames';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	cover: string;
+}
+
+const { title, cover } = Astro.props;
+
+const linkClasses = 'transition-all ml-4';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-neutral-900 text-neutral-200 text-base">
+		<nav class="flex justify-between w-full py-4 text-xs md:text-base">
+			<div class="flex justify-between w-11/12 md:w-8/12 m-auto">
+				<div>
+					<a class={clx(linkClasses)} href="/">Michele Riva</a>
+				</div>
+				<div>
+					<a class={clx(linkClasses)} href="/public-speaking">Public Speaking</a>
+					<a class={clx(linkClasses)} href="/blog">Blog</a>
+					<a class={clx(linkClasses)} href="/resume.pdf" target="_blank">Resume</a>
+					<a class={clx(linkClasses)} href="/contacts">Contacts</a>
+				</div>
+			</div>
+		</nav>
+
+		{cover && ( <div class={clx('bg-cover bg-center h-40 lg:h-72 w-full')} style={{ backgroundImage: `url(/${cover})` }} />)}
+
+		<div class="mt-8">
+			<slot />
+		</div>
+
+		<footer>
+			<div class="w-8/12 m-auto pb-8 text-center text-xs">
+				© {new Date().getFullYear()} Michele Riva
+			</div>
+		</footer>
+	</body>
+</html>

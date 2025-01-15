@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Content from '../components/Content.astro'
+
+import patents from '../../public/data/patents.json'
+import media from '../../public/data/media.json'
+import honors from '../../public/data/honors.json'
+
+const paragraphClass = 'my-4'
+---
+
+<Layout title="Michele Riva" cover="michele-riva-lead-dev.jpg">
+  <Content title="Michele Riva" divider>
+    <img src="/micheleriva.jpg" alt="Michele Riva" class="w-40 h-40 my-8" />
+
+    <p class={paragraphClass}>
+      I’m a software engineer and entrepreneur based in Milan, Italy. I'm currently leading the engineering team at <a href="https://orama.com">Orama</a>, which I co-founded in 2023 with <a href="https://www.linkedin.com/in/issacroth/">Issac Roth</a> (CEO) and <a href="https://www.linkedin.com/in/angeliningl/">Angela Angelini</a> (CDO). 
+    </p>
+
+    <p class={paragraphClass}>
+      For over a decade, I've worked with startups and large companies in both product development and consultancy roles, gleaning insights from both worlds.
+    </p>
+
+    <p class={paragraphClass}>
+      In 2022, I authored "Real-World Next.js," published by <a href="https://www.packtpub.com/">Packt Publishing</a>. You can find it on <a href="https://www.amazon.com/Real-World-Next-js-high-performance-applications-production/dp/180107349X">Amazon</a>. The book draws inspiration from my work on Paramount's platform team, where I designed and implemented a high-performance, multitenant Node.js application server. This server powered over 250 streaming websites from a single, medium EC2 instance, handling up to 14,000 requests per second, with Next.js serving the front-end.
+    </p>
+
+    <p class={paragraphClass}>
+      As a Staff Software Engineer at <a href="https://www.nearform.com">Nearform</a>, I designed and built <a href="https://github.com/oramasearch/orama">Orama</a>—an incredibly fast and portable full-text and vector search engine. It's written entirely in TypeScript without any external dependencies.
+    </p>
+
+    <p class={paragraphClass}>
+      In 2023, I founded a company based on Orama. Today, it powers millions of monthly search requests on major websites including <a href="https://nodejs.org/">nodejs.org</a>, <a href="https://tanstack.com/">tanstack.com</a>, and <a href="https://docs.deno.com/">docs.deno.com</a>, among others.
+    </p>
+
+    <p class={paragraphClass}>
+      Over the past few years, I've spoken at approximately a hundred international conferences and meetups, covering topics such as software architecture, computer science, and more.
+    </p>
+  </Content>
+
+  <Content title="Patents" divider>
+    <div class="grid grid-cols-1 gap-4">
+      {patents.map((patent) => (
+        <div class="border border-neutral-500 p-4 rounded-lg bg-neutral-950 bg-opacity-15">
+          <div class="text-neutral-400 text-xs"> {patent.id} - {patent.issued ? 'Issued' : 'Filed'} </div>
+          <div> {patent.name} </div>
+          <div class="text-neutral-400 mt-2 text-xs"> {patent.description.slice(0, 225)}... </div>
+        </div>
+      ))}
+    </div>
+  </Content>
+
+  <Content title="In the media" divider>
+    <div class="grid grid-cols-1 gap-4">
+      {media.map((article) => (
+        <a href={article.url} class="border border-neutral-500 p-4 rounded-lg bg-neutral-950 bg-opacity-15 no-underline">
+          <div class="flex items-center">
+            <img class="favicon" src={`https://www.google.com/s2/favicons?domain=${article.url}`} alt={`${article.publisher} favicon`} class="w-6 h-6 mr-2" />
+            <span class="text-white ml-2"> {article.publisher} </span>
+          </div>
+          <div class="mt-2"> {article.title} </div>
+        </a>
+      ))}
+    </div>
+  </Content>
+
+  <Content title="Honors and Awards">
+    <div class="grid grid-cols-1 gap-4">
+      {honors.map((honor) => (
+        <a href={honor.url} class="border border-neutral-500 p-4 rounded-lg bg-neutral-950 bg-opacity-15 no-underline">
+          <div class="flex items-center">
+            <img class="favicon" src={`https://www.google.com/s2/favicons?domain=${honor.url}`} alt={`${honor.name} favicon`} class="w-6 h-6 mr-2" />
+            <span class="text-white ml-2"> {honor.name} ({honor.multiple && (honor.multiple)})</span>
+          </div>
+          <div class="mt-2"> {honor.description} </div>
+        </a>
+      ))}
+    </div>
+  </Content>
+</Layout>

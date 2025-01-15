@@ -1,28 +1,27 @@
 {
   "name": "personal-website",
-  "version": "0.1.0",
-  "private": true,
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.5",
-    "classnames": "^2.3.1",
-    "date-fns": "^2.28.0",
-    "next": "12.2.0",
-    "next-seo": "^5.4.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.19.0",
-    "eslint-config-next": "12.2.0",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.4"
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/react": "^4.1.4",
+    "@astrojs/tailwind": "^5.1.2",
+    "@types/react": "^19.0.6",
+    "@types/react-dom": "^19.0.3",
+    "astro": "^4.16.10",
+    "classnames": "^2.5.1",
+    "date-fns": "^4.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-super-responsive-table": "^6.0.1",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3"
   }
 }

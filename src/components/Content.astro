@@ -1,0 +1,18 @@
+---
+interface Props {
+	title: string;
+  divider?: boolean;
+}
+
+const { title, divider = false } = Astro.props;
+---
+
+<div class="w-10/12 lg:w-5/12 m-auto text-justify">
+  <h2 class="text-4xl font-bold">{title}</h2>
+  <div class="mt-8">
+    <slot />
+  </div>
+
+  {divider && (<hr class="border-b border-t-0 border-neutral-600 my-12" />)}
+  {!divider && (<div class="my-12" />)}
+</div>

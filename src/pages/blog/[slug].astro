@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import { format } from 'date-fns';
+import Layout from '../../layouts/Layout.astro';
+import Content from '../../components/Content.astro';
+import '../../styles/blog.css';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('blog');
+  
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content: BlogContent } = await entry.render();
+---
+
+<Layout title={`${entry.data.title} | Michele Riva`} cover={entry.data.image}>
+  <article class="prose lg:prose-xl dark:prose-invert mx-auto px-4">
+    <Content title={entry.data.title}>
+      <div class="flex items-center gap-4 mb-8">
+        <div class="text-neutral-400">
+          <time datetime={entry.data.pubDate.toISOString()}>
+            {format(entry.data.pubDate, 'MMMM d, yyyy')}
+          </time>
+        </div>
+      </div>
+      <div class="mt-8">
+        <BlogContent />
+      </div>
+    </Content>
+  </article>
+</Layout>

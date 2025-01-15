@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Microsoft MVP",
+    "multiple": "x3",
+    "url": "https://mvp.microsoft.com/en-US/mvp/profile/2c56ed60-4a7f-ec11-8d21-0022482837b1",
+    "description": "The Microsoft MVP (Most Valuable Professional) Award is a prestigious recognition given by Microsoft to exceptional technology experts who passionately share their knowledge and contribute to the tech community through leadership, advocacy, and technical expertise."
+  },
+  {
+    "name": "Google Developer Expert",
+    "multiple": "x3",
+    "url": "https://developers.google.com/profile/u/micheleriva",
+    "description": "The Google Developer Expert (GDE) program is a global recognition for experienced professionals who demonstrate exceptional expertise in Google technologies and actively contribute to the developer community through advocacy, education, and collaboration."
+  }
+]
