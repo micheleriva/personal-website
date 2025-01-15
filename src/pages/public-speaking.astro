@@ -44,7 +44,7 @@ const emojiMap = {
           <div class="border border-neutral-700 p-1.5 rounded-lg bg-neutral-950 bg-opacity-15 no-underline mb-2">
             <p class='font-bold'> {talk.title} </p>
             <div class='text-neutral-400 text-xs'>
-              {format(talk.date, 'dd MMM yyyy')} - {talk.event} - {talk.city}, {talk.country} <span>{emojiMap[talk.country.toLowerCase()]}</span>
+              {format(talk.date, 'dd MMM yyyy')} - {talk.event} - {talk.city}, {talk.country} <span>{(emojiMap as any)[talk.country.toLowerCase()]}</span>
             </div>
 
             {talk.url ? (

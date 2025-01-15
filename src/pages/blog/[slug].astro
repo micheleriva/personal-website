@@ -18,7 +18,7 @@ const { entry } = Astro.props;
 const { Content: BlogContent } = await entry.render();
 ---
 
-<Layout title={`${entry.data.title} | Michele Riva`} cover={entry.data.image}>
+<Layout title={`${entry.data.title} | Michele Riva`} cover={entry.data.image!}>
   <article class="prose lg:prose-xl dark:prose-invert mx-auto px-4">
     <Content title={entry.data.title}>
       <div class="flex items-center gap-4 mb-8">

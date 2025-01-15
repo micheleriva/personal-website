@@ -5,7 +5,7 @@ import '../styles/blog.css'
 
 const { frontmatter } = Astro.props;
 ---
-<Layout cover={frontmatter.image}>
+<Layout cover={frontmatter.image} title={`${frontmatter.title} | Michele Riva`}>
   <article class="prose lg:prose-xl mx-auto px-4">
     <Content title={frontmatter.title}>
       <slot />
