@@ -1102,5 +1102,17 @@
     "language": "english",
     "type": "talk",
     "mode": "in-person"
-  }
+  },
+  {
+    "date": "2024-05-15T22:00:00.000Z",
+    "event": "Google Developer Group On Campus",
+    "city": "Milan",
+    "country": "Italy",
+    "emoji": "🇮🇹",
+    "title": "Building AI Architectures (All you need to know)",
+    "url": null,
+    "language": "english",
+    "type": "talk",
+    "mode": "in-person"
+  },
 ]
