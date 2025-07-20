@@ -1,0 +1,19 @@
+---
+interface Props {
+  tweetId: string;
+  username: string;
+  displayName: string;
+  date: string;
+  content: string;
+}
+
+const { tweetId, username, displayName, date, content } = Astro.props;
+---
+
+<center>
+  <blockquote class="twitter-tweet">
+    <p lang="en" dir="ltr" set:html={content}></p>
+    &mdash; {displayName} (@{username}) <a href={`https://twitter.com/${username}/status/${tweetId}?ref_src=twsrc%5Etfw`}>{date}</a>
+  </blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center> 

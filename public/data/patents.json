@@ -14,5 +14,13 @@
     "url": null,
     "issued": false,
     "date": "2023-04-12"
+  },
+  {
+    "id": "19/015,402",
+    "name": "Operating in a content delivery network a distributed search index for performing vector search",
+    "description": "An index shard data structure that is part of a search index is described. The data structure includes an executable routine that takes as an argument a semantic meaning representation of a query, embeds list of mappings from semantic meaning representations each of a different one of the documents of the corpus to a document ID identifying the document, traverses the list of mappings to select the document IDs mapped-to from semantic meaning representations that are within a threshold level of similarity to the semantic meaning representation of a query contained by the argument, and returns a list of the selected document identifiers, and such that a particular shard can be executed with respect to a distinguished query semantic meaning representation to obtain a list of document identifiers that identify documents of the corpus each having similar semantic meaning representations. An index shard data structure that is part of a search index is described. The data structure includes an executable routine that takes as an argument a semantic meaning representation of a query, embeds list of mappings from semantic meaning representations each of a different one of the documents of the corpus to a document ID identifying the document, traverses the list of mappings to select the document IDs mapped-to from semantic meaning representations that are within a threshold level of similarity to the semantic meaning representation of a query contained by the argument, and returns a list of the selected document identifiers, and such that a particular shard can be executed with respect to a distinguished query semantic meaning representation to obtain a list of document identifiers that identify documents of the corpus each having similar semantic meaning representations.",
+    "url": null,
+    "issued": false,
+    "date": "2025-07-10"
   }
 ]
