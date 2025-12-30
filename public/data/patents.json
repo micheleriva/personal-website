@@ -8,19 +8,19 @@
     "date": "2023-11-28"
   },
   {
-    "id": "63/633,411",
+    "id": "US20250322019A1",
     "name": "Operating in a content delivery network a distributed search index based on an automatically-selected set of documents properties",
     "description": "A facility is described for automatically selecting document properties to be included in an index on a corpus of documents. In some cases, the facility performs this automatic selection by subjecting a list of the document properties for which the documents have contents to an inference model. In some cases, the facility conducts this automatic selection by submitting to a large language model a prompt automatically constructed to include, for each of one or more documents, the document's contents for each document property, in each case together with the document property's name.",
-    "url": null,
-    "issued": false,
+    "url": "https://patents.google.com/patent/US20250322019A1/en",
+    "issued": true,
     "date": "2023-04-12"
   },
   {
-    "id": "19/015,402",
+    "id": "US20250225170A1",
     "name": "Operating in a content delivery network a distributed search index for performing vector search",
     "description": "An index shard data structure that is part of a search index is described. The data structure includes an executable routine that takes as an argument a semantic meaning representation of a query, embeds list of mappings from semantic meaning representations each of a different one of the documents of the corpus to a document ID identifying the document, traverses the list of mappings to select the document IDs mapped-to from semantic meaning representations that are within a threshold level of similarity to the semantic meaning representation of a query contained by the argument, and returns a list of the selected document identifiers, and such that a particular shard can be executed with respect to a distinguished query semantic meaning representation to obtain a list of document identifiers that identify documents of the corpus each having similar semantic meaning representations. An index shard data structure that is part of a search index is described. The data structure includes an executable routine that takes as an argument a semantic meaning representation of a query, embeds list of mappings from semantic meaning representations each of a different one of the documents of the corpus to a document ID identifying the document, traverses the list of mappings to select the document IDs mapped-to from semantic meaning representations that are within a threshold level of similarity to the semantic meaning representation of a query contained by the argument, and returns a list of the selected document identifiers, and such that a particular shard can be executed with respect to a distinguished query semantic meaning representation to obtain a list of document identifiers that identify documents of the corpus each having similar semantic meaning representations.",
-    "url": null,
-    "issued": false,
+    "url": "https://patents.google.com/patent/US20250225170A1/en",
+    "issued": true,
     "date": "2025-07-10"
   }
 ]
