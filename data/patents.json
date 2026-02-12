@@ -1,0 +1,26 @@
+[
+  {
+    "id": "US11829426B1",
+    "name": "Operating a distributed search index in a content delivery network",
+    "description": "The system breaks a document search index into segments organized by document field and hash-based groupings of query terms, each containing a traversable index subtree, and publishes them on a content delivery network for distributed access.",
+    "url": "https://patents.google.com/patent/US11829426B1/en",
+    "issued": true,
+    "date": "2023-11-28"
+  },
+  {
+    "id": "US20250322019A1",
+    "name": "Operating in a content delivery network a distributed search index based on an automatically-selected set of documents properties",
+    "description": "A system automatically selects which document properties to include in a search index by using an inference model or by prompting a large language model with document contents and their associated property names.",
+    "url": "https://patents.google.com/patent/US20250322019A1/en",
+    "issued": true,
+    "date": "2023-04-12"
+  },
+  {
+    "id": "US20250225170A1",
+    "name": "Operating in a content delivery network a distributed search index for performing vector search",
+    "description": "A search index shard contains an executable routine that takes a query's semantic meaning representation, compares it against stored semantic representations of documents, and returns the IDs of documents whose meanings are within a threshold level of similarity to the query.",
+    "url": "https://patents.google.com/patent/US20250225170A1/en",
+    "issued": true,
+    "date": "2025-07-10"
+  }
+]

@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Ivory/cream academic paper background */
+    --background: 40 33% 97%;
+    --foreground: 220 20% 18%;
+    --card: 40 25% 95%;
+    --card-foreground: 220 20% 18%;
+    --popover: 40 33% 97%;
+    --popover-foreground: 220 20% 18%;
+    /* Deep navy for primary elements */
+    --primary: 220 40% 20%;
+    --primary-foreground: 40 33% 97%;
+    /* Warm light gray for secondary */
+    --secondary: 40 15% 92%;
+    --secondary-foreground: 220 20% 18%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 220 10% 46%;
+    /* Muted burgundy accent for links/highlights */
+    --accent: 0 45% 35%;
+    --accent-foreground: 40 33% 97%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 40 15% 82%;
+    --input: 40 15% 85%;
+    --ring: 220 40% 20%;
+    --radius: 0.25rem;
+    --sidebar-background: 40 25% 95%;
+    --sidebar-foreground: 220 20% 18%;
+    --sidebar-primary: 220 40% 20%;
+    --sidebar-primary-foreground: 40 33% 97%;
+    --sidebar-accent: 40 15% 92%;
+    --sidebar-accent-foreground: 220 20% 18%;
+    --sidebar-border: 40 15% 82%;
+    --sidebar-ring: 220 40% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
