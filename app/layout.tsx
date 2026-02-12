@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lora, Source_Sans_3 } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 
 import "./globals.css";
 
@@ -29,6 +30,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className={`${lora.variable} ${sourceSans.variable}`}>
 			<body className="font-serif antialiased leading-relaxed">{children}</body>
+      <Analytics />
 		</html>
 	);
 }
