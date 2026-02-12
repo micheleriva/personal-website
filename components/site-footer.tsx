@@ -11,7 +11,7 @@ export function SiteFooter() {
           </p>
           <div className="flex gap-4">
             <a
-              href="https://github.com/MicheleRi662"
+              href="https://github.com/MicheleRiva"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
@@ -27,12 +27,12 @@ export function SiteFooter() {
               LinkedIn
             </a>
             <a
-              href="https://bsky.app/profile/riva.wtf"
+              href="https://twitter.com/MicheleRivaCode"
               target="_blank"
               rel="noopener noreferrer"
               className="underline decoration-border underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
             >
-              Bluesky
+              Twitter
             </a>
           </div>
         </div>
