@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   description: "Selected writings on software engineering, computer science, culture, and technology.",
   openGraph: {
     title: "Selected Writings | Michele Riva",
-    description: "Essays and commentaries on software engineering, computer science, culture, and the technology industry.",
+    description: "Essays and commentaries, mostly on philosophy, phenomenology, metaethics, and cognitive science.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Selected Writings | Michele Riva",
-    description: "Essays and commentaries on software engineering, computer science, culture, and the technology industry.",
+    description: "Essays and commentaries, mostly on philosophy, phenomenology, metaethics, and cognitive science.",
   },
 }
 
