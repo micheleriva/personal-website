@@ -41,9 +41,7 @@ export function BiographySection() {
 					>
 						Orama
 					</a>
-					, which I co-founded in 2023 with Issac Roth (CEO) and Angela Angelini
-					(CDO).
-				</p>
+					, which I co-founded in 2023.
 
 				<p>
 					For over a decade, I have worked with startups and large companies in
