@@ -42,6 +42,7 @@ export function BiographySection() {
 						Orama
 					</a>
 					, which I co-founded in 2023.
+				</p>
 
 				<p>
 					For over a decade, I have worked with startups and large companies in
