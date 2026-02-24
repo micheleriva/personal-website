@@ -1,7 +1,7 @@
 import { Metadata } from "next"
-import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
+import { WritingsFilter } from "@/components/writings-filter"
 import { getAllWritings } from "@/lib/writings-data"
 
 export const metadata: Metadata = {
@@ -22,6 +22,10 @@ export const metadata: Metadata = {
 export default function WritingsPage() {
   const writings = getAllWritings()
 
+  const categories = Array.from(
+    new Set(writings.flatMap((w) => w.categories))
+  ).sort()
+
   return (
     <div className="min-h-screen">
       <SiteHeader />
@@ -37,44 +41,7 @@ export default function WritingsPage() {
           </p>
         </header>
 
-        <section aria-label="Writing references">
-          <ol className="space-y-8 list-none">
-            {writings.map((writing) => (
-              <li key={writing.slug}>
-                <article className="group">
-                  {/* APA-style reference */}
-                  <p className="text-base leading-relaxed">
-                    <span className="text-primary">Riva, M.</span>{" "}
-                    <span className="text-muted-foreground">
-                      ({writing.date}).
-                    </span>{" "}
-                    <Link
-                      href={`/writings/${writing.slug}`}
-                      className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
-                    >
-                      {writing.title}
-                    </Link>
-                    .
-                  </p>
-                  {/* Abstract */}
-                  <div className="mt-3 border-l-2 border-border pl-4">
-                    <p className="font-sans text-sm leading-relaxed text-muted-foreground">
-                      <span className="font-semibold text-primary">Abstract:</span>{" "}
-                      {writing.abstract}
-                    </p>
-                  </div>
-                  {/* Keywords */}
-                  <div className="mt-2 pl-4">
-                    <p className="font-sans text-xs text-muted-foreground">
-                      <span className="italic">Keywords:</span>{" "}
-                      {writing.keywords.join(", ")}
-                    </p>
-                  </div>
-                </article>
-              </li>
-            ))}
-          </ol>
-        </section>
+        <WritingsFilter writings={writings} categories={categories} />
       </main>
       <SiteFooter />
     </div>

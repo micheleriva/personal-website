@@ -106,6 +106,21 @@ export default async function WritingPage({
 								{writing.keywords.join(", ")}
 							</p>
 						</div>
+						{writing.categories.length > 0 && (
+							<div className="mt-3 flex flex-wrap gap-1.5">
+								{writing.categories.map((category) => (
+									<span
+										key={category}
+										className="rounded-sm border border-border bg-secondary px-2 py-0.5 font-sans text-xs text-muted-foreground"
+									>
+										{category
+											.split("-")
+											.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+											.join(" ")}
+									</span>
+								))}
+							</div>
+						)}
 					</section>
 
 					{/* Authorship Verification */}

@@ -10,6 +10,7 @@ export interface Writing {
   abstract: string
   content: string
   keywords: string[]
+  categories: string[]
   image?: string
   authorshipReportUrl?: string
 }
@@ -49,6 +50,7 @@ export function getAllWritings(): Writing[] {
         abstract: data.description,
         content: content,
         keywords,
+        categories: data.categories || [],
         image: data.image,
         authorshipReportUrl: data.authorshipReportUrl,
       }
@@ -81,6 +83,7 @@ export function getWritingBySlug(slug: string): Writing | undefined {
       abstract: data.description,
       content: content,
       keywords,
+      categories: data.categories || [],
       image: data.image,
       authorshipReportUrl: data.authorshipReportUrl,
     }
