@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { CitationBox } from "@/components/citation-box";
 import { getWritingBySlug, getAllWritings } from "@/lib/writings-data";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import { mdxHeadings } from "@/components/mdx-headings";
 
 export async function generateStaticParams() {
 	return getAllWritings().map((writing) => ({ slug: writing.slug }));
@@ -153,10 +154,22 @@ export default async function WritingPage({
 
 					{/* Body */}
 					<div className="prose prose-sm sm:prose-base max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-p:indent-12 prose-a:text-accent prose-a:underline prose-a:decoration-accent/30 prose-a:underline-offset-4 hover:prose-a:decoration-accent prose-blockquote:border-l-accent prose-blockquote:font-normal prose-blockquote:not-italic">
-						<MDXRemote source={writing.content} />
+						<MDXRemote source={writing.content} components={mdxHeadings} options={{ blockJS: false }} />
 					</div>
 
 					<Separator className="my-10" />
+
+					{/* Disclaimer */}
+					{writing.disclaimer && (
+						<section className="mb-6 rounded-sm border border-red-700/30 bg-red-700/5 p-4 sm:p-6">
+							<h2 className="mb-2 font-sans text-xs font-semibold uppercase tracking-widest text-red-700">
+								Disclaimer
+							</h2>
+							<p className="font-sans text-sm leading-relaxed text-foreground/90">
+								{writing.disclaimer}
+							</p>
+						</section>
+					)}
 
 					{/* Citation block */}
 					<CitationBox

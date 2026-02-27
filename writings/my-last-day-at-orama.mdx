@@ -1,0 +1,139 @@
+---
+title: "My Last Day at Orama"
+description: "After three years building Orama from a conference demo to half a million weekly downloads, today is my last day. This is a thank you letter to the people who made it possible, a request to the community, and a few thoughts on what comes next."
+pubDate: 2026-02-28
+authorshipReportUrl: https://authorship.grammarly.com/reports/e_Kf4mFh_T2ywNjvmwXk3Q1AbipI1H3K79ZtHhg3LBo
+keywords: ["orama", "startup"]
+categories: ["essay"]
+disclaimer: "This post reflects my personal views and is based on publicly available information. I'm not speaking on behalf of Oramasearch, Inc. or any other entity."
+---
+
+Today marks my last day at Orama. I would like to say this is a bittersweet moment, but it's just bitter. I want to take a moment to acknowledge the achievements and results of the past three years, the people I had the absolute honor to work with, the partners who trusted the project, and to clarify the future of the open-source project.
+
+I suspect some of you may be reading this with a very specific question in mind, so here's a small index of the topics I'll be treating in this post:
+
+1. [A regrettably short history of Orama](#a-regrettably-short-history-of-orama)
+2. [Acknowledgement for the open-source community](#acknowledgement-for-the-open-source-community)
+3. [A celebration of the people I worked with](#a-celebration-of-the-people-i-worked-with)
+4. [A short message to my enablers](#a-short-message-to-my-enablers)
+5. [The future of Orama and open-source](#the-future-of-orama-and-open-source)
+6. [Conclusion and what's next for me](#conclusion-and-whats-next-for-me)
+
+I decided I don't want to compromise my thoughts by keeping them too short; if you like, bear with me. Or skip directly to the point you're most interested in. This story will take the time it deserves. And now, let's start by contradicting myself immediately with the first section.
+
+## A Regrettably Short History of Orama
+
+I personally started the project in 2022, having the unique opportunity to speak at the WeAreDevelopers conference in Berlin. I created a small full-text search engine in pure JavaScript, made it run in the browser, and benchmarked it. It was fast. And accurate. People liked it so much that we gained 3,000 GitHub stars in just three days after the conference.
+
+At the time, I was working full-time at NearForm. My manager, Paula, and the founder, Cian, provided me with immense help and support in setting up a company out of this project. My colleagues Angela and Paolo gave me the motivation and the insights I was missing to take the _leap of faith_ and do it. Without them, my life would have been so much different.
+
+We eventually incorporated the company in early 2023, shipped the first version of Orama Cloud running on the CDN, wrote three patents around it, and onboarded the first clients–mostly open source projects that trusted us, and to whom I'll be eternally grateful for the support.
+
+We grew the company and eventually did what every JavaScript developer does: we rewrote everything in Rust, made it a huge distributed system, and powered many big websites with exceptional performance and–after a bit of fine-tuning–reliability.
+
+I still remember when we launched the search feature in the beautiful nodejs.org website redesign, and included a “small” bug that caused an infinite loop calling our search APIs. We reached 15k queries per second, and our alerting system didn't even trigger, because resource utilization was too low. We thought we weren't prepared for that, but it took us two days to notice. Good architectural design (and Cloudflare) can work miracles.
+
+There have been moments when I had no idea how we could develop a single feature, others when I had no idea how we could support a specific use case, and yet somehow we did it.
+
+We've been through many changes, but given the place where Angela and I (and Paolo too at the beginning) came from, there were a few things that were imperative when it came to hiring:
+
+1. **Professionals must be autonomous.** The reason why you want to hire the best is to let them make decisions. There is absolutely no point in imposing your decisions on someone who is better at their job than you are. And if you're hiring someone who's not better than you, you're hiring wrong. People must have the trust and autonomy needed to make even wrong decisions.
+2. **Humans and dignity before all.** This is the hill I will die on. And this thought came later in time with the advent of ChatGPT and various AI tools. Telling (or threatening) people that their job can be replaced with AI, that they would be better professionals if they used AI, and similar bullshits, is just offensive. Real professionals know how to work with AI. Real professionals use it already. There's no need to move the relationship dynamic to forcing people to use more AI to squeeze out more productivity. We're all at capacity already. We should just assume that every professional is already boosting their productivity; there's no other reason to push. This is something we learned on day zero when ChatGPT was released and has been confirmed over time. Don't make people feel frustrated because they're “lesser professionals” now that there is a tool that can partially do or help with their jobs. Dignity comes first. Also, as managers, we have to recognize that most of our jobs can be replaced more easily by AI than IC jobs. We all think that and still, we fail to say it out loud. Why?
+3. **Let's pay real salaries.** That may sound a bit materialistic. But all of our job postings included the real salaries we eventually paid our colleagues. And since we wanted the best of the best, we decided not to hire in Italy “because it's cheaper,” but because this is where you can find real talent. Of course, Brazil, Mexico, Spain, and the UK are no exception. But coming from Italy, that was the natural talent pool to hire from. And that was not to reduce expenses. If you saw one of our job postings, you know what I'm talking about.
+
+There are so many learnings that would require a separate post, so I won't develop any thoughts on fundraising, product strategy, or innovation here.
+
+<Quotation
+  author="Wittgenstein"
+  text="Whereof one cannot speak, therefore one must remain silent."
+/>
+
+But before I conclude this short section, I want to state a couple of more things. Paolo left Orama a few months after its inception for personal reasons. We had a few little disagreements, and I truly believe they were also due to my inexperience as a founder. Regardless, I just want to reiterate how essential his contribution has been during the initial phase of Orama. We're now getting close to half a million downloads per week, and without him, we would still be at zero. I think I've never taken a chance to publicly thank him for the immense support he gave to the Orama project since the very beginning.
+
+Angela left Orama early this year. When we started the company, I had big doubts and anxieties. “It's just a search engine”, I once told her. “Google was just a search engine too”, she replied. Losing her as a designer and business partner meant losing the foundation of everything that Orama was meant to be.
+
+I am leaving this company today. I'll keep the reasons private, at least for now. I just want everyone to know that Angela and I spent endless, sleepless nights trying to make things work, but goodwill and good execution are not enough. Disagreement prevailed and it brought us to this point.
+
+<Quotation
+  author="Persian proverb"
+  text="The river does all the work, and the boat takes all the praise."
+/>
+
+## Acknowledgement for the Open-Source Community
+
+The thought of Orama powering thousands of websites, including those of big communities like Node.js, Deno, Solid.js, and more, is an achievement I never thought I could reach.
+
+I just want to take a moment to personally thank one by one the people and the communities that allowed the project to grow and become a little part of the JavaScript open-source ecosystem. In no particular order, I want to thank:
+
+- **Claudio and OpenJS Foundation.** Possibly the first one to trust us to the point of letting us power the Node.js website. Thank you from the bottom of my heart.
+- **Leo and the Deno company.** Not just a great opportunity, but also the best debugging buddies one can hope to find when releasing a product. The skills I found in the Deno team are impressive. Amazing team and amazing product. Thank you all.
+- **Tanner from the TanStack.** Although not an user anymore, it helped us learn a lot. Thank you for the trust and for the honest feedback.
+- **Atila from Solid.js.** Another great project. Extremely positive and responsive people, I truly enjoyed working together–even if that was brief. Thank you for your trust.
+- **Fuma from FumaDocs.** Possibly one of the greatest driving forces for the adoption of Orama. Fuma is gonna be one of the greatest design engineers in the world in the next couple of years. Thank you again for all your hard work on FumaDocs. I look forward to continuing to support you with that.
+- **Ulises and OpenJS Foundation.** Honestly, one of the best teams one can help to work with. It has been amazing to interact with you all. Thank you again for the chance to work with you.
+
+The number of great professionals we worked with in the open-source community is incredible. One must have hope in this community because the level of competence, taste, and skills is something that you cannot find anywhere else. I am astonished and inspired by their dedication and work ethic. Something that many for-profit companies really miss. If I have a little bit of faith left for this world, it all comes from you.
+
+## A Celebration of The People I Worked With
+
+This is probably going to be the hardest section to write. Building a company means having the unique opportunity to choose the people you want to work with. And I believe Angela, Paolo, and I made the right choice.
+
+Most of the people who joined Orama left their stable jobs at big corporations to work together again. This level of trust and respect has no equals, and I will hardly feel as content as I am today, reminding myself of the risk they took because they wanted to look in the same direction I looked.
+
+To those who are no longer working at Orama: I failed you, and I'm sorry. If you were there, that's because I really wanted you to be there. If it didn't work out, that was my failure. To those who are still there: I failed you too. Because I meant to work with you for longer than this. You too were there because I wanted to work with you. And since that's not happening, I take accountability for that failure.
+
+I only have good memories of you all, and on both personal and professional levels, I thank you from the bottom of my heart for the time you spent with me during this journey.
+
+Aileen, Alberto G., Alberto M., Angela, Davide, Elena, Fausto, Francesca, Giovanni, Lucas, Matija, Nilton, Paolo, Tommaso, Rafael, Rodrigo, Sara: most of you I miss since the day you left; all the others, I'll miss starting today. None of you is forgotten.
+
+You truly were–and still are–the best of the best. And I couldn't ask for anyone better to spend a weekend in Franciacorta, a day of coworking in Monza, a week in Vancouver, or a week in San Francisco. I will also miss our Secret Santas and the mayonnaise jar as gift for Alberto G. I still can't remember who the genius behind that one was, but it makes me laugh every time. Oramas knows.
+
+<Quotation
+  author="Seneca"
+  text="Omnia, Lucili, aliena sunt, tempus tantum nostrum est."
+/>
+
+## A Short Message to My Enablers
+
+I want to take a moment to dedicate a few words to the people who believed in the project from day zero.
+
+The first person I really need to thank is, and will forever be, Paula. Not only did she make it possible for all of this to happen, but she kept helping me over the years without expecting anything in return. I find it incredible how certain people can just walk into your life, change it forever, and then move on to the next adventure. Paula, if you're reading this, I want you to know that I will be forever grateful and in your debt.
+
+Cian also played a pivotal role in all of this. You won't easily find another person who cares as much about community and open source. He has enabled me as much as Paula did, so thank you so much for that.
+
+There are other people I want to explicitly mention and thank: Manuel, Matteo, Filippo, among others. They too believed in the project and provided exceptional support from day zero.
+
+None of you could ever be forgotten. And to those I feel in debt to, I'll pay back.
+
+## The Future of Orama and Open-Source
+
+I am no longer the person who can make decisions about the Orama project. The decision-making process is in someone else's hands. We're approaching 500,000 weekly downloads on npm, and 10,200 GitHub stars, and Orama needs maintenance and support. Some may say “Just use Claude Code to maintain it”, but it's not so easy. I wish it were. I tried to make it work. But innovation does not live in existing patterns. It requires original thinking and experience-led intuition. Then, you can use AI to do the heavy lifting. But no muscle moves without the brain, not even the heart.
+
+**I hereby request that the Orama project be released back to the community, either through a foundation or as an independent project.** I will be glad to maintain it and expand it for free. But again, I'm not the decision-maker here.
+
+**I cannot guarantee that the Orama project will remain public, as the decision is no longer mine to make. My strong hope is that Oramasearch, Inc. will continue to uphold the open-source standards that have been central to the project since its inception. I believe the best path forward would be to release it back to the community, either through a foundation or as an independent project. Whatever happens, any changes to the project's public availability do not reflect my wishes. I remain committed to supporting the community regardless of what comes next.**
+
+If you're an Open Source project and fear you could lose access to Orama Cloud for free, that's not in the plans for as far as I can tell, and you have no reason to fear for that. Oramasearch, Inc. will continue to support you. If not, I will personally take accountability and help you migrate to and maintain an alternative service if and when you decide to do so. I am on the OpenJS Slack, and my contact information is easy to find. I am not leaving you alone.
+
+## Conclusion and What's Next for Me
+
+I am ready for what's next. I have an exciting future ahead of me, and outside of tech, I'll take the opportunity to dedicate more free time to philosophy and neuroscience. After 12 years as a professional, self-taught software developer, I am graduating in March with a B.Sc. in IT/Computer Science from Purdue. I discovered a deep love for academia and submitted an application for another degree to eventually get more involved in any neuroscience discourse. Although I would love to study full-time, I also love working as an engineer, so I'll keep doing that while studying part-time. I also have a couple of new projects on the way, so let's stay in touch.
+
+People move to San Francisco for different reasons. I thought I would move here for the tech scene, but I discovered a community of passionate philosophers and thinkers that made my past few months truly beautiful, and I want to contribute more to it.
+
+I have my first _big ass_ neuroethics academic paper under peer review, and I am writing two others–I want to dedicate more free time as an independent researcher in the field of metaethics, neuroethics, philosophy of mind, and nihilism.
+
+I think I'm all set, and I am where I am supposed to be. If anything changes, I will be where I need to be. These past three years have been extremely intense; the highs were high, and the lows were low. Now I'm at peace.
+
+If you found your name in this post, it's because you made my life better, even in a small way. I just wanted to make sure you knew it, in a way or another.
+
+Living in California, I found that going for a couple of days in the desert, alone, and meditate on how I'm living your life worked pretty well for me. I feel good now. And I realized I am not miserable enough to want to become a millionaire, let alone a billionaire. My life is good. I am good. I am awake. I am loved, and I am alive. Are you?
+
+Before I leave you with my favorite poem, which is a good representation of how I feel my life has changed in the past three years, let me give one last tip to everyone who is thinking to move here to work in tech and change their lives (a lot of people are still writing to me about this): don't put yourself for sale. Money is worthless. Status is even more so. People who make you miserable once will make you miserable twice, and then three times, and then four times, and will never stop. Happiness is never built from circumstances, but regardless of them. We keep hoping for tomorrow, but tomorrow only gets us one day closer to death. Your life is not gonna change when you make your first million dollars. You're not finally gonna be happy when you raise your 15-million-dollar series A. Peace and happiness are something that you consciously choose within your current circumstances. So if you want to come here, I'm sure you'll find the best place on earth to exercise your peace and your happiness. But first, you have to realize that they already exist in you; they're not conditioned by the place you live in or the job you do. Don't leave everything you have for the prospect of a better life. Live your better life first, and then keep living it here, or anywhere else.
+
+Above all, thank you, Angela, Paolo, Paula, Tommaso, and Francesca.
+
+<Quotation
+  author="Rūmī, The Worm's Waking (Trans. Coleman Barks)"
+  text={"This is how human beings can change:\nthere's a worm addicted to eating\ngrapes leaves.\n    Suddenly, he wakes up,\ncall it grace, whatever, something\nwakes him, and he's no longer a worm.\n    He's the entire vineyard,\nand the orchard too, the fruit, the trunks,\na growing wisdom and joy\nthat doesn't need\nto devour."}
+/>

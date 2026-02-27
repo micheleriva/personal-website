@@ -13,6 +13,7 @@ export interface Writing {
   categories: string[]
   image?: string
   authorshipReportUrl?: string
+  disclaimer?: string
 }
 
 const writingsDirectory = path.join(process.cwd(), 'writings')
@@ -53,6 +54,7 @@ export function getAllWritings(): Writing[] {
         categories: data.categories || [],
         image: data.image,
         authorshipReportUrl: data.authorshipReportUrl,
+        disclaimer: data.disclaimer,
       }
     })
 
@@ -86,6 +88,7 @@ export function getWritingBySlug(slug: string): Writing | undefined {
       categories: data.categories || [],
       image: data.image,
       authorshipReportUrl: data.authorshipReportUrl,
+      disclaimer: data.disclaimer,
     }
   } catch {
     return undefined
