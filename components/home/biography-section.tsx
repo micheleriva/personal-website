@@ -31,17 +31,11 @@ export function BiographySection() {
 
 			<div className="space-y-4 text-base leading-relaxed">
 				<p>
-					I am a software engineer and entrepreneur based in San Francisco,
-					California. I currently lead the engineering team at{" "}
-					<a
-						href="https://orama.com"
-						target="_blank"
-						rel="noopener noreferrer"
-						className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
-					>
-						Orama
-					</a>
-					, which I co-founded in 2023.
+					I am a software engineer and independent researcher based in San Francisco. My research focuses on philosophy of mind, phenomenology, and neuroethics.
+				</p>
+
+				<p>
+					Previously, I was co-founder and CTO of <a href="https://orama.com" target="_blank" rel="noopener noreferrer" className="font-medium text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent">Orama</a>, a company focused on search infrastructure.
 				</p>
 
 				<p>
