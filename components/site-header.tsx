@@ -10,7 +10,6 @@ const navItems = [
 	{ label: "Home", href: "/" },
 	{ label: "Writings", href: "/writings" },
 	{ label: "Publications & Talks", href: "/publications" },
-	{ label: "Resume", href: "/resume.pdf" },
 ];
 
 export function SiteHeader() {
