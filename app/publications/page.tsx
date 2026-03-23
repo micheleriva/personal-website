@@ -16,7 +16,7 @@ const book = {
 	year: 2022,
 	description:
 		"A comprehensive guide to building production-ready applications with Next.js, drawing on experience from building high-performance, multitenant Node.js application servers at Paramount.",
-	url: "https://www.amazon.com/Real-World-Next-js-high-performance-applications-production/dp/1801073496",
+	url: "https://www.amazon.com/Real-World-Next-js-high-performance-applications-production/dp/180107349X/ref=sr_1_1",
 };
 
 interface Talk {
