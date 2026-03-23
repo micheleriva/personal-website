@@ -128,9 +128,10 @@ export default function ContactPage() {
 							overrides: {
 								landingPage: "CHAT",
 							},
+							containerId: "delphi-page-container",
 							container: {
 								width: "100%",
-								height: "100%",
+								height: "700px",
 							},
 						};
 					`,
