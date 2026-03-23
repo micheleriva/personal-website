@@ -110,7 +110,7 @@ export default function ContactPage() {
 							</h3>
 						</div>
 
-						<div className="overflow-hidden rounded-sm border border-border bg-card h-[700px]">
+						<div className="overflow-hidden rounded-sm border border-border bg-card h-screen max-h-[900px]">
 							<iframe
 								src="https://delphi.ai/embeddable/config/1eee4bf4-ec08-4666-b631-0fdd28b8f983"
 								allow="camera *; microphone *"
