@@ -106,7 +106,7 @@ export default function ContactPage() {
 								/>
 							</svg>
 							<h3 className="font-sans text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-								Talk to Michele's Digital Mind
+								Talk to my digital mind
 							</h3>
 						</div>
 
@@ -115,7 +115,7 @@ export default function ContactPage() {
 								src="https://delphi.ai/embeddable/config/1eee4bf4-ec08-4666-b631-0fdd28b8f983"
 								allow="camera *; microphone *"
 								style={{ border: "none", height: "100%", width: "100%" }}
-								title="Talk to Michele's Digital Mind"
+								title="Talk to my digital mind"
 							/>
 						</div>
 					</div>
