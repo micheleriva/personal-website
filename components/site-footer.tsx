@@ -1,26 +1,26 @@
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react"
+import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6"
 
 export function SiteFooter() {
   const socialLinks = [
     {
       name: "GitHub",
       href: "https://github.com/MicheleRiva",
-      icon: Github,
+      icon: FaGithub,
     },
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/micheleriva95/",
-      icon: Linkedin,
+      icon: FaLinkedin,
     },
     {
       name: "Twitter",
       href: "https://twitter.com/MicheleRivaCode",
-      icon: Twitter,
+      icon: FaXTwitter,
     },
     {
       name: "Instagram",
       href: "https://www.instagram.com/micheleriva.js",
-      icon: Instagram,
+      icon: FaInstagram,
     },
   ]
 
@@ -43,7 +43,7 @@ export function SiteFooter() {
                   className="transition-colors hover:text-accent"
                   aria-label={link.name}
                 >
-                  <Icon className="h-4 w-4" fill="currentColor" />
+                  <Icon className="h-4 w-4" />
                 </a>
               )
             })}
