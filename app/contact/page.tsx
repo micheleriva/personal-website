@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { EmailReveal } from "@/components/email-reveal";
-import { DelphiWidget } from "@/components/delphi-widget";
+
 import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { Mail } from "lucide-react";
 
@@ -48,7 +48,7 @@ export default function ContactPage() {
 						Contacts
 					</h2>
 					<p className="mt-3 font-sans text-sm leading-relaxed text-muted-foreground">
-						Feel free to reach out through social media or chat with my AI assistant.
+						Feel free to reach out via email or connect with me on social media.
 					</p>
 				</header>
 
@@ -110,8 +110,13 @@ export default function ContactPage() {
 							</h3>
 						</div>
 
-						<div className="overflow-hidden rounded-sm border border-border bg-card">
-							<DelphiWidget />
+						<div className="overflow-hidden rounded-sm border border-border bg-card h-screen max-h-[900px]">
+							<iframe
+								src="https://delphi.ai/embeddable/config/1eee4bf4-ec08-4666-b631-0fdd28b8f983"
+								allow="camera *; microphone *"
+								style={{ border: "none", height: "100%", width: "100%" }}
+								title="Talk to Michele's Digital Mind"
+							/>
 						</div>
 					</div>
 				</div>
