@@ -1,13 +1,13 @@
 import { Metadata } from "next";
-import Script from "next/script";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { EmailReveal } from "@/components/email-reveal";
+import { DelphiWidget } from "@/components/delphi-widget";
 import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-	title: "Contact | Michele Riva",
+	title: "Contacts | Michele Riva",
 	description: "Get in touch with Michele Riva or connect on social networks.",
 };
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
 			<main className="mx-auto max-w-5xl px-4 py-8 sm:px-6 sm:py-10">
 				<header className="mb-8 sm:mb-10">
 					<h2 className="text-2xl font-bold tracking-tight text-primary text-balance sm:text-3xl">
-						Contact
+						Contacts
 					</h2>
 					<p className="mt-3 font-sans text-sm leading-relaxed text-muted-foreground">
 						Feel free to reach out through social media or chat with my AI assistant.
@@ -111,33 +111,12 @@ export default function ContactPage() {
 						</div>
 
 						<div className="overflow-hidden rounded-sm border border-border bg-card">
-							<div id="delphi-page-container" className="h-[600px] w-full lg:h-[700px]" />
+							<DelphiWidget />
 						</div>
 					</div>
 				</div>
 			</main>
 			<SiteFooter />
-
-			<Script
-				id="delphi-page-script"
-				dangerouslySetInnerHTML={{
-					__html: `
-						window.delphi = {...(window.delphi ?? {}) };
-						window.delphi.page = {
-							config: "1eee4bf4-ec08-4666-b631-0fdd28b8f983",
-							overrides: {
-								landingPage: "CHAT",
-							},
-							containerId: "delphi-page-container",
-							container: {
-								width: "100%",
-								height: "700px",
-							},
-						};
-					`,
-				}}
-			/>
-			<Script id="delphi-page-bootstrap" src="https://embed.delphi.ai/loader.js" />
 		</div>
 	);
 }
