@@ -106,7 +106,7 @@ export default function ContactPage() {
 								/>
 							</svg>
 							<h3 className="font-sans text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-								Chat with AI Michele
+								Talk to Michele's Digital Mind
 							</h3>
 						</div>
 
