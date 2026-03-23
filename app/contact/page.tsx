@@ -48,7 +48,7 @@ export default function ContactPage() {
 						Contacts
 					</h2>
 					<p className="mt-3 font-sans text-sm leading-relaxed text-muted-foreground">
-						Feel free to reach out through social media or chat with my AI assistant.
+						Feel free to reach out via email or connect with me on social media.
 					</p>
 				</header>
 
