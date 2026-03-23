@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Script from "next/script";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { EmailReveal } from "@/components/email-reveal";
 import { FaGithub, FaLinkedin, FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { Mail } from "lucide-react";
 
@@ -62,6 +63,7 @@ export default function ContactPage() {
 						</div>
 
 						<div className="space-y-4">
+							<EmailReveal />
 							{socialLinks.map((link) => {
 								const Icon = link.icon;
 								return (
