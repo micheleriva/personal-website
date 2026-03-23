@@ -43,7 +43,7 @@ export function SiteFooter() {
                   className="transition-colors hover:text-accent"
                   aria-label={link.name}
                 >
-                  <Icon className="h-4 w-4" />
+                  <Icon className="h-4 w-4" fill="currentColor" />
                 </a>
               )
             })}
