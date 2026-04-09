@@ -8,7 +8,7 @@ import { PatentsSection } from "@/components/home/patents-section";
 
 export const metadata: Metadata = {
 	title: "Publications & Talks | Michele Riva",
-	description: "Books, patents, and conference presentations by Michele Riva.",
+	description: "Books, research papers, patents, and conference presentations by Michele Riva.",
 };
 
 const book = {
@@ -102,9 +102,7 @@ export default function PublicationsPage() {
 						Publications & Talks
 					</h2>
 					<p className="mt-3 font-sans text-sm leading-relaxed text-muted-foreground">
-						A bibliography of books, patent filings, and conference
-						presentations. References are formatted in accordance with APA
-						guidelines (7th ed.).
+						A bibliography of books, research papers, patent filings, and conference presentations.
 					</p>
 				</header>
 
