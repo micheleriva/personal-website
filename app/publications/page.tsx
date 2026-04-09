@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { BookOpen, Mic, Video, Users, Wrench } from "lucide-react";
+import { BookOpen, Mic, Video, Users, Wrench, FileText } from "lucide-react";
 import talksData from "@/data/talks.json";
+import papersData from "@/data/papers.json";
 import { PatentsSection } from "@/components/home/patents-section";
 
 export const metadata: Metadata = {
 	title: "Publications & Talks | Michele Riva",
-	description: "Books, patents, and conference presentations by Michele Riva.",
+	description: "Books, research papers, patents, and conference presentations by Michele Riva.",
 };
 
 const book = {
@@ -101,9 +102,7 @@ export default function PublicationsPage() {
 						Publications & Talks
 					</h2>
 					<p className="mt-3 font-sans text-sm leading-relaxed text-muted-foreground">
-						A bibliography of books, patent filings, and conference
-						presentations. References are formatted in accordance with APA
-						guidelines (7th ed.).
+						A bibliography of books, research papers, patent filings, and conference presentations.
 					</p>
 				</header>
 
@@ -139,6 +138,46 @@ export default function PublicationsPage() {
 				</section>
 
 				<PatentsSection />
+
+				{/* Research Papers */}
+				<section aria-labelledby="papers-heading" className="mt-10">
+					<div className="mb-4 flex items-center gap-2">
+						<FileText className="h-4 w-4 text-accent" />
+						<h3
+							id="papers-heading"
+							className="font-sans text-xs font-semibold uppercase tracking-widest text-muted-foreground"
+						>
+							Research Papers
+						</h3>
+					</div>
+
+					<div className="space-y-3">
+						{papersData.map((paper) => (
+							<article
+								key={paper.title}
+								className="rounded-sm border border-border bg-card p-4 sm:p-6"
+							>
+								<p className="text-base leading-relaxed">
+									Riva, M. ({paper.year}).{" "}
+									<a
+										href={paper.url}
+										target="_blank"
+										rel="noopener noreferrer"
+										className="font-medium italic text-accent underline decoration-accent/30 underline-offset-4 transition-colors hover:decoration-accent"
+									>
+										{paper.title}
+									</a>
+									. <span className="italic">{paper.journal}</span>.
+								</p>
+								{paper.abstract && (
+									<p className="mt-3 font-sans text-sm leading-relaxed text-muted-foreground">
+										{paper.abstract}
+									</p>
+								)}
+							</article>
+						))}
+					</div>
+				</section>
 
 				{/* Talks */}
 				<section aria-labelledby="talks-heading" className="mt-10">
