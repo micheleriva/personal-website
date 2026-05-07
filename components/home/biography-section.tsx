@@ -85,6 +85,10 @@ export function BiographySection() {
 					international conferences and meetups, covering topics such as
 					software architecture, computer science, and related fields.
 				</p>
+
+				<p>
+					Occasionally, I invest in angel rounds for small startups, and I serve as a tech, product, and business advisor.
+				</p>
 			</div>
 
 			<Separator className="mt-10" />
