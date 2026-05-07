@@ -13,7 +13,7 @@ export function BiographySection() {
 
 			<div className="mb-8 flex flex-col items-center gap-5 sm:flex-row sm:items-start sm:gap-6">
 				<Image
-					src="/michele_riva.JPG"
+					src="/micheleriva.jpg"
 					alt="Portrait of Michele Riva"
 					width={160}
 					height={160}
