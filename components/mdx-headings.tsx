@@ -1,5 +1,6 @@
 import React from "react";
 import { Quotation } from "@/components/quotation";
+import { Reference, ReferenceItem, References } from "@/components/references";
 
 function slugify(text: string): string {
   return text
@@ -55,4 +56,7 @@ export const mdxHeadings = {
   h4: makeHeading("h4"),
   h5: makeHeading("h5"),
   Quotation,
+  References,
+  Reference,
+  ReferenceItem,
 };
