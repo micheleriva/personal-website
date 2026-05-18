@@ -18,6 +18,21 @@ export interface Writing {
 
 const writingsDirectory = path.join(process.cwd(), 'writings')
 
+function parsePubDate(pubDate: string | Date): Date {
+  if (pubDate instanceof Date) {
+    return pubDate
+  }
+
+  const dateOnlyMatch = pubDate.match(/^(\d{4})-(\d{2})-(\d{2})$/)
+
+  if (dateOnlyMatch) {
+    const [, year, month, day] = dateOnlyMatch
+    return new Date(Number(year), Number(month) - 1, Number(day))
+  }
+
+  return new Date(pubDate)
+}
+
 export function getAllWritings(): Writing[] {
   // Get all MDX files from the writings directory
   const fileNames = fs.readdirSync(writingsDirectory)
@@ -35,7 +50,7 @@ export function getAllWritings(): Writing[] {
       const { data, content } = matter(fileContents)
 
       // Parse the date
-      const pubDate = new Date(data.pubDate)
+      const pubDate = parsePubDate(data.pubDate)
       const year = pubDate.getFullYear()
       const month = pubDate.toLocaleDateString('en-US', { month: 'long' })
       const day = pubDate.getDate()
@@ -55,11 +70,14 @@ export function getAllWritings(): Writing[] {
         image: data.image,
         authorshipReportUrl: data.authorshipReportUrl,
         disclaimer: data.disclaimer,
+        pubDateTimestamp: pubDate.getTime(),
       }
     })
 
   // Sort writings by date in descending order
-  return writings.sort((a, b) => b.year - a.year)
+  return writings
+    .sort((a, b) => b.pubDateTimestamp - a.pubDateTimestamp)
+    .map(({ pubDateTimestamp, ...writing }) => writing)
 }
 
 export function getWritingBySlug(slug: string): Writing | undefined {
@@ -69,7 +87,7 @@ export function getWritingBySlug(slug: string): Writing | undefined {
     const { data, content } = matter(fileContents)
 
     // Parse the date
-    const pubDate = new Date(data.pubDate)
+    const pubDate = parsePubDate(data.pubDate)
     const year = pubDate.getFullYear()
     const month = pubDate.toLocaleDateString('en-US', { month: 'long' })
     const day = pubDate.getDate()
